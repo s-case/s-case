@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ===================================================================== -->
+<!-- -->
+<!-- Logback Configuration -->
+<!-- -->
+<!-- ===================================================================== -->
+
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder>
+        <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{5}:%L - %msg%n</pattern>
+        </encoder>
+
+    </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>erp.out</file>
+    <append>false</append>
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default
+    -->
+    <encoder>
+        <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{5}:%L - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+    <smtpHost>mx.tdh.de</smtpHost>
+    <to>tdh_error@list.spree.de</to>
+    <from>erp_application@tdh.de</from>
+    <subject>ERP: %logger{20} - %m</subject>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+        <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5level %logger{5}:%L - %msg%n</pattern>
+    </layout>       
+  </appender>
+
+  <logger name="org.hibernate.cache.ehcache" level="ERROR"/>
+
+
+<!-- 
+    <logger name="org.hibernate" level="INFO" />
+ -->
+    <!-- Logged das SQL Parameter-Binding -->
+    <!-- logger name="org.hibernate.type" level="TRACE">
+      <appender-ref ref="CONSOLE"/>
+    </logger-->
+    
+    <!-- Logged die SQL Statements leider doppelt -->
+    <!-- logger name="org.hibernate.SQL" level="DEBUG">
+      <appender-ref ref="CONSOLE"/>
+    </logger-->
+    
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+        <!--
+        <appender-ref ref="EMAIL" />
+        -->
+    </root>
+
+</configuration>
