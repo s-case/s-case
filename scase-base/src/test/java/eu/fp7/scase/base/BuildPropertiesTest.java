@@ -1,8 +1,6 @@
 package eu.fp7.scase.base;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.isEmptyOrNullString;
-import static org.hamcrest.Matchers.not;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -20,7 +18,7 @@ public class BuildPropertiesTest
         
         String version = BuildProperties.getBuildVersion();
         
-        assertThat(version, not(isEmptyOrNullString()));
+        assertThat(version).isNotNull().isNotEmpty();
     }
 
     @Test
@@ -30,7 +28,7 @@ public class BuildPropertiesTest
         
         String timeStamp = BuildProperties.getBuildTimestamp();
         
-        assertThat(timeStamp, not(isEmptyOrNullString()));
+        assertThat(timeStamp).isNotNull().isNotEmpty();
     }
 
 }
