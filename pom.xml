@@ -15,6 +15,12 @@
 	<name>scase</name>
 	<url></url>
 
+        <scm>
+            <connection>scm:ssh://3d8d55cf75d04c68acff7d27aba037ab@scase-openshift.ats.de/~/git/scase.git/</connection>
+            <developerConnection>scm:ssh://3d8d55cf75d04c68acff7d27aba037ab@scase-openshift.ats.de/~/git/scase.git/</developerConnection>
+            <url>http://scase-openshift.ats.de/</url>
+        </scm>
+
 	<modules>
 		<module>scase-build</module>
 		<module>scase-base</module>
