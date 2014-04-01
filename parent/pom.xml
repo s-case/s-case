@@ -48,7 +48,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>findbugs-maven-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>2.5.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -96,8 +96,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <configuration>
-                    <effort>Default</effort>
-                    <threshold>Normal</threshold>
                     <excludeFilterFile>${basedir}/src/main/config/findbugs/exclude.xml</excludeFilterFile>
                     <xmlOutput>true</xmlOutput>
                 </configuration>
