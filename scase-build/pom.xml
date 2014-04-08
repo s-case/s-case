@@ -4,6 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>scase-build</artifactId>
+	<name>SCASE - Build</name>
+        <description>Build meta data (findbugs and checkstyle configuration</description>
 	<parent>
 		<groupId>eu.fp7</groupId>
 		<artifactId>scase</artifactId>

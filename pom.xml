@@ -4,6 +4,9 @@
 
 	<artifactId>scase</artifactId>
 	<packaging>pom</packaging>
+        <name>SCASE</name>
+        <description>root pom</description>
+	<url></url>
 
 	<parent>
 		<groupId>eu.fp7</groupId>
@@ -12,8 +15,6 @@
 		<relativePath>./parent</relativePath>
 	</parent>
 
-	<name>scase</name>
-	<url></url>
 
         <scm>
             <connection>scm:ssh://3d8d55cf75d04c68acff7d27aba037ab@scase-openshift.ats.de/~/git/scase.git/</connection>

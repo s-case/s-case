@@ -6,6 +6,8 @@
     <artifactId>scase-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>SCASE - Parent</name>
+    <description>manage dependencies and plugins</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
