@@ -6,11 +6,19 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * test class for BuildProperties.
+ * @author rmagnus
+ *
+ */
 public class BuildPropertiesTest
 {
 
     private static final Logger LOG = LoggerFactory.getLogger(BuildPropertiesTest.class);
 
+    /**
+     * tests get the build version.
+     */
     @Test
     public void testGetBuildVersion()
     {
@@ -21,6 +29,9 @@ public class BuildPropertiesTest
         assertThat(version).isNotNull().isNotEmpty();
     }
 
+    /**
+     * tests get the build time stamp.
+     */
     @Test
     public void testGetBuildTimeStamp()
     {

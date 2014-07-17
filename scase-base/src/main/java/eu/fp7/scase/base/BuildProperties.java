@@ -6,6 +6,11 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * class for providing build information. That are (pom) version and timestamp. 
+ * @author rmagnus
+ *
+ */
 public final class BuildProperties
 {
 
@@ -29,11 +34,20 @@ public final class BuildProperties
         }   
     }   
 
+    
+    /**
+     * returns the build version.
+     * @return build version
+     */
     public static String getBuildVersion()
     {
         return buildVersion;
     }
     
+    /**
+     * returns the build time stamp.
+     * @return build time stamp
+     */
     public static String getBuildTimestamp()
     {
         return buildTimestamp;
