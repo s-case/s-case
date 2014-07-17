@@ -14,12 +14,12 @@ public final class BuildProperties
     private static String buildVersion;
     private static String buildTimestamp;
 
-    private BuildProperties() {};
+    private BuildProperties() {}
         
     static {
         Properties props = new Properties();
         try {
-            props.load(Thread.currentThread().getContextClassLoader()
+            props.load(BuildProperties.class.getClassLoader()
                     .getResourceAsStream("build.properties"));
             buildVersion = props.getProperty("build.version");
             buildTimestamp = props.getProperty("build.timestamp");
