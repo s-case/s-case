@@ -105,6 +105,6 @@
         <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="allow to suppress CheckStyle warnings/errors if you have a good reason"/>
     </module>
     <module name="SuppressionFilter">
-        <property name="file" value="${root.basedir}/src/main/resources/checkstyle/suppressions.xml"/>
+        <property name="file" value="${checkstyle_location}/suppressions.xml"/>
     </module>
 </module>
