@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ScaseEclipeHelloWorld
+Bundle-SymbolicName: eu.fp7.scase.scaseEclipse.scaseEclipeHelloWorld;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SCASE
+Require-Bundle: org.eclipse.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
