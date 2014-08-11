@@ -24,6 +24,7 @@
 	<modules>
 		<module>scase-build</module>
 		<module>scase-base</module>
+		<module>scase-eclipse</module>
 	</modules>
 
 	<prerequisites>
