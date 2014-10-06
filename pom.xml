@@ -25,6 +25,7 @@
 		<module>scase-build</module>
 		<module>scase-base</module>
 		<module>scase-eclipse</module>
+		<module>scase-wp2-kyrcha-test</module>
 	</modules>
 
 	<prerequisites>
