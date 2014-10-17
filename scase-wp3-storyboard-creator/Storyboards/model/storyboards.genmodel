@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Storyboards/src" modelPluginID="Storyboards" modelName="Storyboards"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>storyboards.ecore</foreignModel>
+  <genPackages prefix="Storyboards" disposableProviderFactory="true" ecorePackage="storyboards.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="storyboards.ecore#//ActionEnum">
+      <genEnumLiterals ecoreEnumLiteral="storyboards.ecore#//ActionEnum/Create"/>
+      <genEnumLiterals ecoreEnumLiteral="storyboards.ecore#//ActionEnum/Read"/>
+      <genEnumLiterals ecoreEnumLiteral="storyboards.ecore#//ActionEnum/Update"/>
+      <genEnumLiterals ecoreEnumLiteral="storyboards.ecore#//ActionEnum/Delete"/>
+      <genEnumLiterals ecoreEnumLiteral="storyboards.ecore#//ActionEnum/Other"/>
+    </genEnums>
+    <genClasses ecoreClass="storyboards.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//Property/name"/>
+      <genOperations ecoreOperation="storyboards.ecore#//Property/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//Property/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//Property/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//StoryboardDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardactions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardproperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardconditions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardstartnode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardendnode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//StoryboardDiagram/storyboardstoryboards"/>
+      <genOperations ecoreOperation="storyboards.ecore#//StoryboardDiagram/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//StoryboardDiagram/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//StoryboardDiagram/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference storyboards.ecore#//Action/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//Action/type"/>
+      <genOperations ecoreOperation="storyboards.ecore#//Action/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//Action/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//Action/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="storyboards.ecore#//Node"/>
+    <genClasses ecoreClass="storyboards.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//Condition/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference storyboards.ecore#//Condition/conditionPaths"/>
+      <genOperations ecoreOperation="storyboards.ecore#//Condition/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//Condition/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//Condition/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//StartNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//StartNode/Precondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference storyboards.ecore#//StartNode/firstNode"/>
+      <genOperations ecoreOperation="storyboards.ecore#//StartNode/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//StartNode/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//StartNode/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//EndNode">
+      <genOperations ecoreOperation="storyboards.ecore#//EndNode/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//EndNode/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//EndNode/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//ConditionPath">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//ConditionPath/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference storyboards.ecore#//ConditionPath/nextConditionNode"/>
+    </genClasses>
+    <genClasses ecoreClass="storyboards.ecore#//Storyboard">
+      <genOperations ecoreOperation="storyboards.ecore#//Storyboard/validate">
+        <genParameters ecoreParameter="storyboards.ecore#//Storyboard/validate/diagnostic"/>
+        <genParameters ecoreParameter="storyboards.ecore#//Storyboard/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="storyboards.ecore#//ActionNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference storyboards.ecore#//ActionNode/nextNode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute storyboards.ecore#//ActionNode/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

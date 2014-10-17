@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="storyboardsPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="storyboards">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Storyboard"
+          description="Create new Storyboard">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Storyboard.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/Storyboard.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Property"
+          description="Create new Property">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Property.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/Property.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Action"
+          description="Create new Action">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Action.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/Action.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Path"
+          description="Create new Path">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Path.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/Path.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Condition"
+          description="Create new Condition">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/Condition.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/Condition.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="StartNode"
+          description="Create new StartNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/StartNode.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/StartNode.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="EndNode"
+          description="Create new EndNode">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj16/EndNode.gif"
+            bundle="Storyboards.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/EndNode.gif"
+            bundle="Storyboards.edit"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>
