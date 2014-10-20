@@ -7,4 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>RESTfulMDEEngine</name>
   <url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>eu.fp7</groupId>
+		<artifactId>scase</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
 </project>
