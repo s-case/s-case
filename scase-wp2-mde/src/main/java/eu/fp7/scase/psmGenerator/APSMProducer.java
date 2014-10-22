@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmGenerator;
+package eu.fp7.scase.psmGenerator;
 
-import main.java.scase.pimMetaModel.SystemPIM;
-import main.java.scase.psmMetaModel.SystemPSM;
+import eu.fp7.scase.pimMetaModel.SystemPIM;
+import eu.fp7.scase.psmMetaModel.SystemPSM;
 
 
 public abstract class APSMProducer{

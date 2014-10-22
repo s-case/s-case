@@ -17,21 +17,21 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.pimGenerator;
+package eu.fp7.scase.pimGenerator;
 
 import java.util.Iterator;
 
-import main.java.scase.cimMetaModel.Resource;
-import main.java.scase.cimMetaModel.SystemCIM;
-import main.java.scase.pimMetaModel.AlgoResourceController;
-import main.java.scase.pimMetaModel.AlgoResourceModel;
-import main.java.scase.pimMetaModel.RDBMSTable;
-import main.java.scase.pimMetaModel.RDBMSTableColumn;
-import main.java.scase.pimMetaModel.ResourceController;
-import main.java.scase.pimMetaModel.ResourceControllerManager;
-import main.java.scase.pimMetaModel.ResourceModel;
-import main.java.scase.pimMetaModel.ResourceModelManager;
-import main.java.scase.pimMetaModel.SystemPIM;
+import eu.fp7.scase.cimMetaModel.Resource;
+import eu.fp7.scase.cimMetaModel.SystemCIM;
+import eu.fp7.scase.pimMetaModel.AlgoResourceController;
+import eu.fp7.scase.pimMetaModel.AlgoResourceModel;
+import eu.fp7.scase.pimMetaModel.RDBMSTable;
+import eu.fp7.scase.pimMetaModel.RDBMSTableColumn;
+import eu.fp7.scase.pimMetaModel.ResourceController;
+import eu.fp7.scase.pimMetaModel.ResourceControllerManager;
+import eu.fp7.scase.pimMetaModel.ResourceModel;
+import eu.fp7.scase.pimMetaModel.ResourceModelManager;
+import eu.fp7.scase.pimMetaModel.SystemPIM;
 
 public class CorePIMProducer extends APIMProducer{
 	

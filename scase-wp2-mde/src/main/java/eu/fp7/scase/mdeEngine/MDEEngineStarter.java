@@ -18,22 +18,22 @@
 */
 
 
-package main.java.scase.mdeEngine;
+package eu.fp7.scase.mdeEngine;
 
 
-import main.java.scase.cimGenerator.ACIMProducer;
-import main.java.scase.cimGenerator.CoreCIMProducer;
-import main.java.scase.pimGenerator.APIMProducer;
-import main.java.scase.pimGenerator.CorePIMProducer;
-import main.java.scase.pimMetaModel.SystemPIM;
-import main.java.scase.psmGenerator.APSMProducer;
-import main.java.scase.psmGenerator.CorePSMProducer;
-import main.java.scase.psmMetaModel.SystemPSM;
-import main.java.scase.codeGenerator.ACodeProducer;
-import main.java.scase.codeGenerator.CoreCodeProducer;
-import main.java.scase.codeMetaModel.SystemCode;
-import main.java.scase.cimMetaModel.SystemCIM;
-import main.java.scase.inputParsing.TextFileInputParserImplementation;
+import eu.fp7.scase.cimGenerator.ACIMProducer;
+import eu.fp7.scase.cimGenerator.CoreCIMProducer;
+import eu.fp7.scase.pimGenerator.APIMProducer;
+import eu.fp7.scase.pimGenerator.CorePIMProducer;
+import eu.fp7.scase.pimMetaModel.SystemPIM;
+import eu.fp7.scase.psmGenerator.APSMProducer;
+import eu.fp7.scase.psmGenerator.CorePSMProducer;
+import eu.fp7.scase.psmMetaModel.SystemPSM;
+import eu.fp7.scase.codeGenerator.ACodeProducer;
+import eu.fp7.scase.codeGenerator.CoreCodeProducer;
+import eu.fp7.scase.codeMetaModel.SystemCode;
+import eu.fp7.scase.cimMetaModel.SystemCIM;
+import eu.fp7.scase.inputParsing.TextFileInputParserImplementation;
 
 
 public class MDEEngineStarter
@@ -51,7 +51,7 @@ public class MDEEngineStarter
 		//check input arguments sanity
 		if(args.length != 7)
 		{
-			System.out.println("Usage: java -cp target/RESTfulMDEEngine-1.0-SNAPSHOT.jar main.java.scase.mdeEngine.MDEEngineStarter input_CIM_file_path project_Name output_path database_ip database_port database_username database_password");
+			System.out.println("Usage: java -cp target/RESTfulMDEEngine-1.0-SNAPSHOT.jar eu.fp7.scase.mdeEngine.MDEEngineStarter input_CIM_file_path project_Name output_path database_ip database_port database_username database_password");
 			return;
 		}
 		

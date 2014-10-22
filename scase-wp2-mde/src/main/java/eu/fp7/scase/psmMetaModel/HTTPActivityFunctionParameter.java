@@ -17,9 +17,9 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmMetaModel;
+package eu.fp7.scase.psmMetaModel;
 
-import main.java.scase.pimMetaModel.FunctionParameter;
+import eu.fp7.scase.pimMetaModel.FunctionParameter;
 
 public class HTTPActivityFunctionParameter extends FunctionParameter{
 

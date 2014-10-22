@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmMetaModel;
+package eu.fp7.scase.psmMetaModel;
 
 import java.util.ArrayList;
 

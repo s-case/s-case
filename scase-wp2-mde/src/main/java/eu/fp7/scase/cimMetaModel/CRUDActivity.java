@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.cimMetaModel;
+package eu.fp7.scase.cimMetaModel;
 
 
-import main.java.scase.customUtilities.UniqueIdProducer;
+import eu.fp7.scase.customUtilities.UniqueIdProducer;
 public class CRUDActivity
 {
 	private int iActivityId;

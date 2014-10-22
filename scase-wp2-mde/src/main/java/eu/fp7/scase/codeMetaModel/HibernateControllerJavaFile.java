@@ -7,8 +7,8 @@
  * Intelligent Systems & Software Engineering Lab
  *
  * Project             : S-CASE
- * WorkFile            : 
- * Compiler            : 
+ * WorkFile            :
+ * Compiler            :
  * File Description    :
  * Document Description:
 * Related Documents	   :
@@ -17,29 +17,27 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.psmMetaModel.HibernateController;
-import main.java.scase.psmMetaModel.JavaResourceController;
-import main.java.scase.psmMetaModel.JavaResourceControllerManager;
-import main.java.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.HibernateController;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
 
 public class HibernateControllerJavaFile extends AJavaFile{
-	
-	private HibernateController oParentHibernateController;
-	private ArrayList<JavaResourceModel> listOfSystemJavaModels;
-	
+
+	private final HibernateController oParentHibernateController;
+	private final ArrayList<JavaResourceModel> listOfSystemJavaModels;
+
 	public HibernateControllerJavaFile(HibernateController oParentHibernateController, String strProjectName, String strPackageStamp, ArrayList<JavaResourceModel> listOfSystemJavaModels){
 		super(oParentHibernateController.getHibernateControllerName(), strProjectName, strPackageStamp);
 		this.oParentHibernateController = oParentHibernateController;
 		this.listOfSystemJavaModels = listOfSystemJavaModels;
 	}
-	
+
 	@Override
 	public void printJavaFile(){
-		System.out.println("The Hibernate Controller File: " + this.getJavaFileName() + " is added to software code project because " + this.oParentHibernateController.getHibernateControllerName() + " exists in PSM");
+		System.out.println("The Hibernate Controller File: " + getJavaFileName() + " is added to software code project because " + this.oParentHibernateController.getHibernateControllerName() + " exists in PSM");
 	}
 
 	@Override
@@ -49,15 +47,15 @@ public class HibernateControllerJavaFile extends AJavaFile{
 
 	@Override
 	public String addAuthorComment() {
-		oFileAuthorComment = new FileAuthorComment();
-		oFileAuthorComment.setProject(this.strProjectName);
-		oFileAuthorComment.setWorkFile("");
-		oFileAuthorComment.setCompiler("");
-		oFileAuthorComment.setFileDescription("");
-		oFileAuthorComment.setDocumentDescription("");
-		oFileAuthorComment.setRelatedDocuments("");
-		oFileAuthorComment.setNote("");
-		return oFileAuthorComment.exportFileAuthorComment();
+		this.oFileAuthorComment = new FileAuthorComment();
+		this.oFileAuthorComment.setProject(this.strProjectName);
+		this.oFileAuthorComment.setWorkFile("");
+		this.oFileAuthorComment.setCompiler("");
+		this.oFileAuthorComment.setFileDescription("");
+		this.oFileAuthorComment.setDocumentDescription("");
+		this.oFileAuthorComment.setRelatedDocuments("");
+		this.oFileAuthorComment.setNote("");
+		return this.oFileAuthorComment.exportFileAuthorComment();
 	}
 
 	@Override
@@ -107,17 +105,17 @@ public class HibernateControllerJavaFile extends AJavaFile{
 		this.strClassTail = "}";
 		return this.strClassTail;
 	}
-	
+
 	private void addConstructor(){
 		this.strClassFunctions = String.format("%s%sprivate HibernateController(){}\n\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 	}
-	
+
 	private void addSingletonAccessorFunction(){
 		this.strClassFunctions = String.format("%s%spublic static HibernateController getHibernateControllerHandle(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		this.strClassFunctions = String.format("%s%sreturn oHibernateController;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
-	
+
 	private void addInsertActivityFunctions(){
 		for(int n = 0; n < this.oParentHibernateController.getControllerHibernateActivities().size(); n++){
 			if(this.oParentHibernateController.getControllerHibernateActivities().get(n).getHibernateActivityVerb().equalsIgnoreCase("POST")){
@@ -137,13 +135,13 @@ public class HibernateControllerJavaFile extends AJavaFile{
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(),
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(),
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
-				this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), 
+				this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
 				this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 			}
 		}
 	}
-	
+
 	private void addUpdateActivityFunctions(){
 		for(int n = 0; n < this.oParentHibernateController.getControllerHibernateActivities().size(); n++){
 			if(this.oParentHibernateController.getControllerHibernateActivities().get(n).getHibernateActivityVerb().equalsIgnoreCase("PUT")){
@@ -164,7 +162,7 @@ public class HibernateControllerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void addSelectActivityFunctions(){
 		for(int n = 0; n < this.oParentHibernateController.getControllerHibernateActivities().size(); n++){
 			if(this.oParentHibernateController.getControllerHibernateActivities().get(n).getHibernateActivityVerb().equalsIgnoreCase("GET") &&
@@ -190,7 +188,7 @@ public class HibernateControllerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void addDeleteActivityFunctions(){
 		for(int n = 0; n < this.oParentHibernateController.getControllerHibernateActivities().size(); n++){
 			if(this.oParentHibernateController.getControllerHibernateActivities().get(n).getHibernateActivityVerb().equalsIgnoreCase("DELETE") &&
@@ -222,11 +220,11 @@ public class HibernateControllerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void addSelectListActivityFunctions(){
 		for(int n = 0; n < this.oParentHibernateController.getControllerHibernateActivities().size(); n++){
 			if(this.oParentHibernateController.getControllerHibernateActivities().get(n).getHibernateActivityVerb().equalsIgnoreCase("GET") &&
-					this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager() != null && 
+					this.oParentHibernateController.getControllerHibernateActivities().get(n).getParentJavaControllerManager() != null &&
 					this.oParentHibernateController.getControllerHibernateActivities().get(n).getIncomingJavaModel() != null){
 				this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getIncomingJavaModel().getJavaResourceModelName(),
@@ -243,7 +241,7 @@ public class HibernateControllerJavaFile extends AJavaFile{
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 				this.strClassFunctions = String.format("%s%shibernateTransaction.commit();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 				this.strClassFunctions = String.format("%s%shibernateSession.close();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-				this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), 
+				this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 						this.oParentHibernateController.getControllerHibernateActivities().get(n).getIncomingJavaModel().getJavaResourceModelName());
 				this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 			}

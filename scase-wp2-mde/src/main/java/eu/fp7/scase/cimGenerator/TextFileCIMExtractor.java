@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.cimGenerator;
+package eu.fp7.scase.cimGenerator;
 
 public class TextFileCIMExtractor
 {

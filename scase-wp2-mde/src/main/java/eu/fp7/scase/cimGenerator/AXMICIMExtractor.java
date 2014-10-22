@@ -18,7 +18,7 @@
 */
 
 
-package main.java.scase.cimGenerator;
+package eu.fp7.scase.cimGenerator;
 
 public class AXMICIMExtractor
 {

@@ -17,12 +17,12 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 
-import main.java.scase.psmMetaModel.HTTPActivity;
-import main.java.scase.psmMetaModel.HTTPActivityHandler;
-import main.java.scase.psmMetaModel.JavaResourceController;
+import eu.fp7.scase.psmMetaModel.HTTPActivity;
+import eu.fp7.scase.psmMetaModel.HTTPActivityHandler;
+import eu.fp7.scase.psmMetaModel.JavaResourceController;
 
 public class ResourceControllerJavaFile extends AJavaFile{
 	

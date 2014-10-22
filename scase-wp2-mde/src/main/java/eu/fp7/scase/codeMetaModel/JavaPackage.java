@@ -17,12 +17,12 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.cimMetaModel.Resource;
-import main.java.scase.customUtilities.UniqueIdProducer;
+import eu.fp7.scase.cimMetaModel.Resource;
+import eu.fp7.scase.customUtilities.UniqueIdProducer;
 
 public class JavaPackage{
 	

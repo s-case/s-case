@@ -7,8 +7,8 @@
  * Intelligent Systems & Software Engineering Lab
  *
  * Project             : S-CASE
- * WorkFile            : 
- * Compiler            : 
+ * WorkFile            :
+ * Compiler            :
  * File Description    :
  * Document Description:
 * Related Documents	   :
@@ -17,47 +17,47 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
-import main.java.scase.psmMetaModel.HTTPActivityHandler;
-import main.java.scase.psmMetaModel.HibernateController;
-import main.java.scase.psmMetaModel.PSMHypermediaLink;
+import eu.fp7.scase.psmMetaModel.HTTPActivityHandler;
+import eu.fp7.scase.psmMetaModel.HibernateController;
+import eu.fp7.scase.psmMetaModel.PSMHypermediaLink;
 
 public class HTTPHandlerJavaFile extends AJavaFile{
-	
-	private HTTPActivityHandler oParentHTTPHandler;
+
+	private final HTTPActivityHandler oParentHTTPHandler;
 	String strSelfRelationPatch = "";
 	String strSourceIdentifier = "";
 	String strSourceIdentifierSignature = "";
-	
+
 	public HTTPHandlerJavaFile(HTTPActivityHandler oParentHTTPHandler, String strProjectName, String strPackageStamp){
 		super(oParentHTTPHandler.getHTTPActivityHandlerName(), strProjectName, strPackageStamp);
 		this.oParentHTTPHandler = oParentHTTPHandler;
 		if(this.oParentHTTPHandler.getJavaAlgoResourceController() == null){
 			if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
-				strSourceIdentifier = this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName();
+				this.strSourceIdentifier = this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName();
 				if(this.oParentHTTPHandler.getParentJavaController() != null){
 					if(this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceId() == this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId()){
-						strSelfRelationPatch = "Source";
+						this.strSelfRelationPatch = "Source";
 					}
 				}
 				else if(this.oParentHTTPHandler.getParentJavaControllerManager() != null){
 					if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceId() == this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId()){
-						strSelfRelationPatch = "Source";
+						this.strSelfRelationPatch = "Source";
 					}
 				}
-				strSourceIdentifierSignature = String.format("int %s%s, ", strSelfRelationPatch, strSourceIdentifier);
+				this.strSourceIdentifierSignature = String.format("int %s%s, ", this.strSelfRelationPatch, this.strSourceIdentifier);
 			}
 		}
 	}
-	
+
 	public HTTPActivityHandler getParentHTTPHandler(){
 		return this.oParentHTTPHandler;
 	}
-	
+
 	@Override
 	public void printJavaFile(){
-		System.out.println("The HTTP Activity Handler File: " + this.getJavaFileName() + " is added to software code project because: " + this.oParentHTTPHandler.getHTTPActivityHandlerName() + " exists in PSM");
+		System.out.println("The HTTP Activity Handler File: " + getJavaFileName() + " is added to software code project because: " + this.oParentHTTPHandler.getHTTPActivityHandlerName() + " exists in PSM");
 	}
 
 	@Override
@@ -67,15 +67,15 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 
 	@Override
 	public String addAuthorComment() {
-		oFileAuthorComment = new FileAuthorComment();
-		oFileAuthorComment.setProject(this.strProjectName);
-		oFileAuthorComment.setWorkFile("");
-		oFileAuthorComment.setCompiler("");
-		oFileAuthorComment.setFileDescription("");
-		oFileAuthorComment.setDocumentDescription("");
-		oFileAuthorComment.setRelatedDocuments("");
-		oFileAuthorComment.setNote("");
-		return oFileAuthorComment.exportFileAuthorComment();
+		this.oFileAuthorComment = new FileAuthorComment();
+		this.oFileAuthorComment.setProject(this.strProjectName);
+		this.oFileAuthorComment.setWorkFile("");
+		this.oFileAuthorComment.setCompiler("");
+		this.oFileAuthorComment.setFileDescription("");
+		this.oFileAuthorComment.setDocumentDescription("");
+		this.oFileAuthorComment.setRelatedDocuments("");
+		this.oFileAuthorComment.setNote("");
+		return this.oFileAuthorComment.exportFileAuthorComment();
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.oJavaFileIdentation.increaseIdentation();
 		return this.strClassHeader;
 	}
-	
+
 	@Override
 	public String addClassProperties() {
 		if(this.oParentHTTPHandler.getJavaAlgoResourceController() == null){
@@ -146,7 +146,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.strClassTail = "}";
 		return this.strClassTail;
 	}
-	
+
 	private void produceHandlerConstructor(){
 		if(this.oParentHTTPHandler.getJavaAlgoResourceController() == null){
 			if(this.oParentHTTPHandler.getParentJavaControllerManager() != null){
@@ -170,33 +170,33 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void producePostHandlerConstructor(){
-		this.strClassFunctions = String.format("%s%spublic %s(%s%s o%s, UriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), strSourceIdentifierSignature, this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
+		this.strClassFunctions = String.format("%s%spublic %s(%s%s o%s, UriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), this.strSourceIdentifierSignature, this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%sthis.o%s = o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%sthis.oHibernateController = HibernateController.getHibernateControllerHandle();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		this.strClassFunctions = String.format("%s%sthis.oApplicationUri = oApplicationUri;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
-			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
+			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
+			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 			this.strClassFunctions = String.format("%s%so%s.setO%s(this.o%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(),
-					this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
+					this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
 		}
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
-	
+
 	private void produceGetListHandlerConstructor(){
-		this.strClassFunctions = String.format("%s%spublic %s(%sUriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), strSourceIdentifierSignature);
+		this.strClassFunctions = String.format("%s%spublic %s(%sUriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), this.strSourceIdentifierSignature);
 		this.strClassFunctions = String.format("%s%sthis.oHibernateController = HibernateController.getHibernateControllerHandle();\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
 		this.strClassFunctions = String.format("%s%sthis.oApplicationUri = oApplicationUri;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
-			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
+			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
+			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 		}
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
-	
+
 	private void produceGetHandlerConstructor(){
 		this.strClassFunctions = String.format("%s%spublic %s(int %s, UriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 		this.strClassFunctions = String.format("%s%so%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
@@ -205,40 +205,27 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.strClassFunctions = String.format("%s%sthis.oApplicationUri = oApplicationUri;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
-	
+
 	private void producePutHandlerConstructor(){
-		this.strClassFunctions = String.format("%s%spublic %s(%sint %s, %s o%s, UriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), strSourceIdentifierSignature, this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
+		this.strClassFunctions = String.format("%s%spublic %s(%sint %s, %s o%s, UriInfo oApplicationUri){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getHTTPActivityHandlerName(), this.strSourceIdentifierSignature, this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%sthis.o%s = o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%sthis.o%s.set%s(%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 		this.strClassFunctions = String.format("%s%sthis.oHibernateController = HibernateController.getHibernateControllerHandle();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		this.strClassFunctions = String.format("%s%sthis.oApplicationUri = oApplicationUri;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
-			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
+			this.strClassFunctions = String.format("%s%so%s%s = new %s();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
+			this.strClassFunctions = String.format("%s%so%s%s.set%s(%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getModelPrimaryIdentifierName());
 			this.strClassFunctions = String.format("%s%so%s.setO%s(this.o%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
-					this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(), strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());	
+					this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
 		}
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
-	
+
 	private void produceDeleteHandlerConstructor(){
 		produceGetHandlerConstructor(); //since it is the same code
 	}
-	
-	private void produceHandlerPropertyAccessors(){
-		if((this.oParentHTTPHandler.getJavaAlgoResourceController() == null) && (this.oParentHTTPHandler.getIncomingJavaModel() != null)){
-			if(this.oParentHTTPHandler.getHTTPActivityHandlerVerb().equalsIgnoreCase("POST") || this.oParentHTTPHandler.getHTTPActivityHandlerVerb().equalsIgnoreCase("PUT")){
-				this.strClassFunctions = String.format("%s%spublic void set%s(%s o%s%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-				this.strClassFunctions = String.format("%s%sthis.o%s%s = o%s%s;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-				this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-				this.strClassFunctions = String.format("%s%spublic %s get%s(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(), this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-				this.strClassFunctions = String.format("%s%sreturn this.o%s%s;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation(), this.strSelfRelationPatch, this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName());
-				this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-			}
-		}
-	}
-	
+
 	private void produceHibernateAccessor(){
 		if(this.oParentHTTPHandler.getJavaAlgoResourceController() == null){
 			if(this.oParentHTTPHandler.getParentJavaControllerManager() == null){
@@ -265,7 +252,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void produceHypermediaFunction(){
 		if(this.oParentHTTPHandler.getJavaAlgoResourceController() == null){
 			if(this.oParentHTTPHandler.getParentJavaControllerManager() == null){
@@ -289,7 +276,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 			}
 		}
 	}
-	
+
 	private void produceGetHypermediaFunction(){
 		this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 												this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
@@ -306,7 +293,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		if(this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().hasDeleteActivity()){
 			addSiblingHypermediLink("DELETE", "Sibling" , false);
 		}
-		
+
 		this.strClassFunctions = String.format("%s%sString oRelativePath;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		for(int n = 0; n < this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().size(); n++){
 			//if this hypermedia link is of "child" type and has as target a controller manager
@@ -317,23 +304,23 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 						this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPSMHypermediaLinkVerb().equalsIgnoreCase("POST") ? String.format("Create a new %s for this %s", this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
-						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) : 
+						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) :
 						 String.format("Get all the %ss of this %s", this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
 																	this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPSMHypermediaLinkVerb());
 			}
 		}
 
-		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() && 
+		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() &&
 				this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()){
 			this.strClassFunctions = String.format("%s%sint iLastSlashIndex = String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).lastIndexOf(\"/\");\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"POST\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 		else{
@@ -345,19 +332,19 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), String.format(\"%%s\", oApplicationUri.getPath()).replaceAll(\"multi%s\",\"multi%sManager\")).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 
 		this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation() );
 	}
-	
+
 	private void producePutHypermediaFunction(){
 		this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 												this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
@@ -374,7 +361,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		if(this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().hasDeleteActivity()){
 			addSiblingHypermediLink("DELETE", "Sibling" , false);
 		}
-		
+
 		this.strClassFunctions = String.format("%s%sString oRelativePath;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		for(int n = 0; n < this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().size(); n++){
 			//if this hypermedia link is of "child" type and has as target a controller manager
@@ -385,23 +372,23 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 						this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPSMHypermediaLinkVerb().equalsIgnoreCase("POST") ? String.format("Create a new %s for this %s", this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
-						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) : 
+						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) :
 						 String.format("Get all the %ss of this %s", this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
 																	this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()),
 						this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getHypermediaLinks().get(n).getPSMHypermediaLinkVerb());
 			}
 		}
 
-		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() && 
+		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() &&
 				this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()){
 			this.strClassFunctions = String.format("%s%sint iLastSlashIndex = String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).lastIndexOf(\"/\");\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"POST\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 		else{
@@ -413,33 +400,33 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), String.format(\"%%s\", oApplicationUri.getPath()).replaceAll(\"multi%s\",\"multi%sManager\")).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 		this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation() );
 	}
-	
+
 	// 		this.strClassFunctions = String.format("%s%s \n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation() );
 
-	
+
 	private void produceDeleteHypermediaFunction(){
 		this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getHTTPHandlerHypermediaFunction().getJavaFunctionName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
-		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() && 
+		if(this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() &&
 				this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()){
 			this.strClassFunctions = String.format("%s%sint iLastSlashIndex = String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).lastIndexOf(\"/\");\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"POST\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 		else{
@@ -451,18 +438,18 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()));
-			
+
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), String.format(\"%%s\", oApplicationUri.getPath()).replaceAll(\"multi%s\",\"multi%sManager\")).substring(0, iLastSlashIndex), \"%s\", \"GET\", \"Parent\"));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
-					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +  
+					String.format("Get all %ss", this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName()) +
 							( this.oParentHTTPHandler.getIncomingJavaModel() != null ? " of this " + this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceName() : ""));
 		}
 		this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation() );
 	}
-	
+
 	private void producePostHypermediaFunction(){
 		this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 												this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(),
@@ -472,7 +459,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.oJavaFileIdentation.increaseIdentation();
 		addSiblingHypermediLink("GET", "Sibling", true);
 		addSiblingHypermediLink("POST", "Sibling", true);
-		
+
 		this.strClassFunctions = String.format("%s%sString oRelativePath;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
 		if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() || !this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasIncomingRelations()){
 			this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
@@ -506,10 +493,10 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 												this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getNamingPropertyNameValue(),
 												this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getIdentifyingPropertyIdValue());
 		}
-		
+
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
 			//if both this resource and the and the parent ones are related of at most one resource
-			if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 			   (!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() || this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				if(!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource()){
 					this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
@@ -526,7 +513,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 							this.oParentHTTPHandler.getIncomingJavaModel().getIncomingJavaModels().get(0).getPIMParentResourceModel().getModelPrimaryIdentifierName());
 				}
 			}//else if this resource is related of at most one other resource and the parent resource is related of at least two others
-			else if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() && !this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				this.strClassFunctions = String.format("%s%sthis.o%s = HibernateController.getHibernateControllerHandle().get%s(this.o%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -552,7 +539,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.strClassFunctions = String.format("%s%s}\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 				}
 			}//else if this resource is related of at least two other resources and the parent one is related of at most one other resource
-			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() || this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				if(!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource()){
 					this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath().replaceAll(\"multi%sManager/\",\"\");\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
@@ -571,7 +558,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 							this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceName());
 				}
 			}//if both this resource and the parent one are related resources of at least two other
-			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() && !this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				this.strClassFunctions = String.format("%s%sthis.o%s%s = HibernateController.getHibernateControllerHandle().get%s(this.o%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch,
 						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -604,9 +591,9 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.strClassFunctions = String.format("%s%s}\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 				}
 			}
-			
+
 			//if it self relation
-//			if(this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId() == 
+//			if(this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId() ==
 //					this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceId()){
 //				this.strClassFunctions = String.format("%s%soSource%s = oHibernateController.get%s(oSource%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 //						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -650,7 +637,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation() );
 	}
-	
+
 	private void produceGetListHypermediaFunction(){
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
 			this.strClassFunctions = String.format("%s%spublic %s %s(%s o%s){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
@@ -690,7 +677,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName(),
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
-			this.strClassFunctions = String.format("%s%soNext%s = setIterator.next();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), 
+			this.strClassFunctions = String.format("%s%soNext%s = setIterator.next();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName());
 			this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s/%%d\", oApplicationUri.getBaseUri(), oRelativePath, oNext%s.get%s()), String.format(\"%%s\", oNext%s.%s), \"GET\", \"Child\", oNext%s.%s));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getJavaResourceModelManagerName(),
@@ -705,7 +692,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null){
 			//if both this resource and the and the parent ones are related of at most one resource
-			if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 			   (!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() || this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				if(!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource()){
 					this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath();\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
@@ -722,7 +709,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 							this.oParentHTTPHandler.getIncomingJavaModel().getIncomingJavaModels().get(0).getPIMParentResourceModel().getModelPrimaryIdentifierName());
 				}
 			}//else if this resource is related of at most one other resource and the parent resource is related of at least two others
-			else if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() && !this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				this.strClassFunctions = String.format("%s%sthis.o%s = HibernateController.getHibernateControllerHandle().get%s(this.o%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -748,7 +735,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.strClassFunctions = String.format("%s%s}\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 				}
 			}//else if this resource is related of at least two other resources and the parent one is related of at most one other resource
-			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() || this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				if(!this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource()){
 					this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath().replaceAll(\"multi%sManager/\",\"\");\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
@@ -767,7 +754,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 							this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceName());
 				}
 			}//if both this resource and the parent one are related resources of at least two other
-			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() && 
+			else if(!this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().hasUniqueIncomingRelation() &&
 					   (this.oParentHTTPHandler.getIncomingJavaModel().isRelatedResource() && !this.oParentHTTPHandler.getIncomingJavaModel().hasUniqueIncomingRelation())){
 				this.strClassFunctions = String.format("%s%sthis.o%s%s = HibernateController.getHibernateControllerHandle().get%s(this.o%s%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.strSelfRelationPatch,
 						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -800,9 +787,9 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 					this.strClassFunctions = String.format("%s%s}\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 				}
 			}
-			
+
 			//if it self relation
-///			if(this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId() == 
+///			if(this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId() ==
 	//				this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceId()){
 		//		this.strClassFunctions = String.format("%s%soSource%s = oHibernateController.get%s(oSource%s);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 //						this.oParentHTTPHandler.getIncomingJavaModel().getJavaResourceModelName(),
@@ -846,7 +833,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		this.strClassFunctions = String.format("%s%sreturn o%s;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getJavaResourceModelManagerName());
 		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation() );
 	}
-	
+
 	private void addSiblingHypermediLink(String strHTTPVerb, String strLinkType, boolean isManagerLink){
 		String strRelMessage = "";
 		if(strHTTPVerb.equalsIgnoreCase("GET") && !isManagerLink){
@@ -864,16 +851,16 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 		else if(strHTTPVerb.equalsIgnoreCase("POST")){
 			strRelMessage = String.format("Create a new %s", this.oParentHTTPHandler.getParentJavaControllerManager().getPIMParentResourceControllerManager().getParentCIMResource().getResourceName());
 		}
-		
-		this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()), \"%s\", \"%s\", \"%s\"));\n", 
+
+		this.strClassFunctions = String.format("%s%so%s.getLinkList().add(new HypermediaLink(String.format(\"%%s%%s\", oApplicationUri.getBaseUri(), oApplicationUri.getPath()), \"%s\", \"%s\", \"%s\"));\n",
 				this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 				!isManagerLink ? this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getJavaResourceModelName() : (this.oParentHTTPHandler.getHTTPActivityHandlerVerb().equalsIgnoreCase("GET") ? this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getJavaResourceModelManagerName() : this.oParentHTTPHandler.getParentJavaControllerManager().getRelatedJavaResourceModelManager().getRelatedJavaResourceModel().getJavaResourceModelName()),
 				strRelMessage, strHTTPVerb, strLinkType);
 	}
-	
+
 	private void calculateChildUri(PSMHypermediaLink oHypermdiaLink){
 		//if both this resource and the target resource are related resource of at most one other resources
-		if((!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() || 
+		if((!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() ||
 		   this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()) &&
 		   oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().hasUniqueIncomingRelation()){
 			if(!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource()){
@@ -884,7 +871,7 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());
 			}
 		}//else if this resource is related of at most one other resource but the target resource is related of at least two
-		else if((!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() || 
+		else if((!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() ||
 			    this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()) &&
 				!oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().hasUniqueIncomingRelation()){
 			if(!this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource()){
@@ -896,26 +883,26 @@ public class HTTPHandlerJavaFile extends AJavaFile{
 						oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
 						this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());
 			}
-					
+
 		}//else if this resource is related of at least two other resources while the target resource is related of at most one
-		else if((this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() && 
+		else if((this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() &&
 			    !this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()) &&
 			    oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().hasUniqueIncomingRelation()){
 			this.strClassFunctions = String.format("%s%soRelativePath = oApplicationUri.getPath().replaceAll(\"multi%s/\",\"\").substring(oApplicationUri.getPath().indexOf(\"/%s\") + 1);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().getPIMParentResourceModel().getParentCIMResource().getResourceName(),
-					this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());	
+					this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());
 		}//else if both this resource and the target resource are related of at least two resources
-		else if((this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() && 
+		else if((this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().isRelatedResource() &&
 			    !this.oParentHTTPHandler.getParentJavaController().getRelatedJavaResourceModel().hasUniqueIncomingRelation()) &&
 				!oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().hasUniqueIncomingRelation()){
 			this.strClassFunctions = String.format("%s%soRelativePath = String.format(\"multi%sManager/%%s\", oApplicationUri.getPath().substring(oApplicationUri.getPath().indexOf(\"/%s/\") + 1));\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),
 					oHypermdiaLink.getPIMParentHypermediaLink().getTargetResourceControllerManager().getParentCIMResource().getResourceName(),
-					this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());	
+					this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceName());
 		}
-		
+
 		//if it is self relation
 		if(this.oParentHTTPHandler.getIncomingJavaModel() != null &&
-		  (this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceId() == 
+		  (this.oParentHTTPHandler.getParentJavaController().getPIMParentResourceController().getParentCIMResource().getResourceId() ==
 		   this.oParentHTTPHandler.getIncomingJavaModel().getPIMParentResourceModel().getParentCIMResource().getResourceId())){
 			this.strClassFunctions = String.format("%s%soRelativePath = oRelativePath.replaceAll(String.format(\"%s/[0-9]*/%s/%%d\", o%s.get%s()), String.format(\"%s/%%d\", o%s.get%s())); \n",
 													this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(),

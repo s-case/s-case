@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.pimMetaModel;
+package eu.fp7.scase.pimMetaModel;
 
-import main.java.scase.cimMetaModel.Property;
-import main.java.scase.customUtilities.UniqueIdProducer;
+import eu.fp7.scase.cimMetaModel.Property;
+import eu.fp7.scase.customUtilities.UniqueIdProducer;
 
 
 public class PIMComponentProperty{

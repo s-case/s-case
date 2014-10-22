@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.pimMetaModel;
+package eu.fp7.scase.pimMetaModel;
 
 import java.util.ArrayList;
 import java.util.Iterator;

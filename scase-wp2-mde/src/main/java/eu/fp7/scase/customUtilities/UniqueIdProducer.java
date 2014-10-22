@@ -7,8 +7,8 @@
  * Intelligent Systems & Software Engineering Lab
  *
  * Project             : S-CASE
- * WorkFile            : 
- * Compiler            : 
+ * WorkFile            :
+ * Compiler            :
  * File Description    :
  * Document Description:
 * Related Documents	   :
@@ -18,16 +18,15 @@
 */
 
 
-package main.java.scase.customUtilities;
+package eu.fp7.scase.customUtilities;
 
 
 public class UniqueIdProducer {
-    private static final UniqueIdProducer oUniqueIdProducer = new UniqueIdProducer();
     private static int iIdCounter;
     private UniqueIdProducer() {
     	iIdCounter = 1;
     }
-    
+
     public static int getNewUniqueId()
     {
     	return iIdCounter++;

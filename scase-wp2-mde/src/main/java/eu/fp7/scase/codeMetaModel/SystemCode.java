@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.io.BufferedWriter;
 import java.io.File;
