@@ -7,20 +7,32 @@
     <artifactId>scase</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>eu.fp7</groupId>
   <artifactId>scase-wp3-nlp-parser</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>scase-wp3-nlp-parser</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+  	<dependency>
+  		<groupId>com.googlecode.mate-tools</groupId>
+  		<artifactId>anna</artifactId>
+  		<version>3.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>edu.stanford.nlp</groupId>
+  		<artifactId>stanford-parser</artifactId>
+  		<version>3.4.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>de.bwaldvogel</groupId>
+  		<artifactId>liblinear</artifactId>
+  		<version>1.94</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.jena</groupId>
+  		<artifactId>jena-core</artifactId>
+  		<version>2.12.1</version>
+  	</dependency>
   </dependencies>
 </project>
