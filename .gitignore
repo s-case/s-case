@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings
+.*.swp
+target
+scase.out
+scase-eclipse/scase-eclipse-helloWorld/bin

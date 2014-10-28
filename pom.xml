@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>scase</artifactId>
+	<packaging>pom</packaging>
+        <name>SCASE</name>
+        <description>root pom</description>
+	<url/>
+
+	<parent>
+		<groupId>eu.fp7</groupId>
+		<artifactId>scase-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>./parent</relativePath>
+	</parent>
+
+        <scm>
+            <connection>scm:ssh://3d8d55cf75d04c68acff7d27aba037ab@scase-openshift.ats.de/~/git/scase.git/</connection>
+            <developerConnection>scm:ssh://3d8d55cf75d04c68acff7d27aba037ab@scase-openshift.ats.de/~/git/scase.git/</developerConnection>
+            <url>http://scase-openshift.ats.de/</url>
+        </scm>
+
+	<modules>
+		<module>scase-build</module>
+		<module>scase-base</module>
+		<module>scase-eclipse</module>
+		<module>scase-wp2-kyrcha-test</module>
+		<module>scase-wp2-mde</module>
+    <module>scase-wp3-nlp-parser</module>
+  </modules>
+
+	<prerequisites>
+		<maven>3.0.0</maven>
+	</prerequisites>
+
+</project>

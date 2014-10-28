@@ -1,0 +1,7 @@
+# Tracing options for the Storyboards.diagram plug-in
+
+# Common issues
+Storyboards.diagram/debug=false
+
+# Visual IDs
+Storyboards.diagram/debug/visualID=false
