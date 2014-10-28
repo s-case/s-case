@@ -17,14 +17,14 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.cimGenerator;
+package eu.fp7.scase.cimGenerator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import main.java.scase.cimMetaModel.Resource;
-import main.java.scase.cimMetaModel.SystemCIM;
-import main.java.scase.inputParsing.IInputParserImplementation;
+import eu.fp7.scase.cimMetaModel.Resource;
+import eu.fp7.scase.cimMetaModel.SystemCIM;
+import eu.fp7.scase.inputParsing.IInputParserImplementation;
 
 
 

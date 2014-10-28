@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.pimMetaModel;
+package eu.fp7.scase.pimMetaModel;
 
 public class ResourceRepresentationMarshallingFunction extends APIMFunction{
 	

@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
-import main.java.scase.psmMetaModel.JavaResourceModel;
-import main.java.scase.psmMetaModel.JavaResourceModelProperty;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceModelProperty;
 
 public class ResourceModelJavaFile extends AJavaFile{
 	

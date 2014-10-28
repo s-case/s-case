@@ -17,32 +17,32 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeGenerator;
+package eu.fp7.scase.codeGenerator;
 
-import main.java.scase.cimMetaModel.Resource;
-import main.java.scase.codeMetaModel.AlgoResourceControllerJavaFile;
-import main.java.scase.codeMetaModel.AlgoResourceModelJavaFile;
-import main.java.scase.codeMetaModel.HTTPHandlerJavaFile;
-import main.java.scase.codeMetaModel.HibernateConfigurationFile;
-import main.java.scase.codeMetaModel.HibernateControllerJavaFile;
-import main.java.scase.codeMetaModel.HibernateUtilJavaFile;
-import main.java.scase.codeMetaModel.HypermediaLinkJavaFile;
-import main.java.scase.codeMetaModel.JAXRSPublisherJavaFile;
-import main.java.scase.codeMetaModel.JavaPackage;
-import main.java.scase.codeMetaModel.MavenConfigurationFile;
-import main.java.scase.codeMetaModel.ResourceControllerJavaFile;
-import main.java.scase.codeMetaModel.ResourceControllerManagerJavaFile;
-import main.java.scase.codeMetaModel.ResourceModelJavaFile;
-import main.java.scase.codeMetaModel.ResourceModelManagerJavaFile;
-import main.java.scase.codeMetaModel.SystemCode;
-import main.java.scase.codeMetaModel.WebXMLConfigurationFile;
-import main.java.scase.psmMetaModel.JavaAlgoResourceController;
-import main.java.scase.psmMetaModel.JavaAlgoResourceModel;
-import main.java.scase.psmMetaModel.JavaResourceController;
-import main.java.scase.psmMetaModel.JavaResourceControllerManager;
-import main.java.scase.psmMetaModel.JavaResourceModel;
-import main.java.scase.psmMetaModel.JavaResourceModelManager;
-import main.java.scase.psmMetaModel.SystemPSM;
+import eu.fp7.scase.cimMetaModel.Resource;
+import eu.fp7.scase.codeMetaModel.AlgoResourceControllerJavaFile;
+import eu.fp7.scase.codeMetaModel.AlgoResourceModelJavaFile;
+import eu.fp7.scase.codeMetaModel.HTTPHandlerJavaFile;
+import eu.fp7.scase.codeMetaModel.HibernateConfigurationFile;
+import eu.fp7.scase.codeMetaModel.HibernateControllerJavaFile;
+import eu.fp7.scase.codeMetaModel.HibernateUtilJavaFile;
+import eu.fp7.scase.codeMetaModel.HypermediaLinkJavaFile;
+import eu.fp7.scase.codeMetaModel.JAXRSPublisherJavaFile;
+import eu.fp7.scase.codeMetaModel.JavaPackage;
+import eu.fp7.scase.codeMetaModel.MavenConfigurationFile;
+import eu.fp7.scase.codeMetaModel.ResourceControllerJavaFile;
+import eu.fp7.scase.codeMetaModel.ResourceControllerManagerJavaFile;
+import eu.fp7.scase.codeMetaModel.ResourceModelJavaFile;
+import eu.fp7.scase.codeMetaModel.ResourceModelManagerJavaFile;
+import eu.fp7.scase.codeMetaModel.SystemCode;
+import eu.fp7.scase.codeMetaModel.WebXMLConfigurationFile;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceController;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceController;
+import eu.fp7.scase.psmMetaModel.JavaResourceControllerManager;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceModelManager;
+import eu.fp7.scase.psmMetaModel.SystemPSM;
 
 public class CoreCodeProducer extends ACodeProducer{
 	

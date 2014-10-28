@@ -18,14 +18,14 @@
 */
 
 
-package main.java.scase.cimMetaModel;
+package eu.fp7.scase.cimMetaModel;
 
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import main.java.scase.cimMetaModel.Resource;
+import eu.fp7.scase.cimMetaModel.Resource;
 
 
 public class SystemCIM

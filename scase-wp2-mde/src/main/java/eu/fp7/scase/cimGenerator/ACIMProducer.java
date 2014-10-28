@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.cimGenerator;
+package eu.fp7.scase.cimGenerator;
 
-import main.java.scase.cimMetaModel.SystemCIM;
-import main.java.scase.inputParsing.IInputParserImplementation;
+import eu.fp7.scase.cimMetaModel.SystemCIM;
+import eu.fp7.scase.inputParsing.IInputParserImplementation;
 
 public abstract class ACIMProducer
 {

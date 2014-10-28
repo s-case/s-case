@@ -17,20 +17,20 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmGenerator;
+package eu.fp7.scase.psmGenerator;
 
-import main.java.scase.pimMetaModel.CRUDActivityHandler;
-import main.java.scase.pimMetaModel.FunctionParameter;
-import main.java.scase.pimMetaModel.SystemPIM;
-import main.java.scase.psmMetaModel.HTTPActivityHandler;
-import main.java.scase.psmMetaModel.JavaAlgoResourceController;
-import main.java.scase.psmMetaModel.JavaAlgoResourceModel;
-import main.java.scase.psmMetaModel.JavaResourceController;
-import main.java.scase.psmMetaModel.JavaResourceControllerManager;
-import main.java.scase.psmMetaModel.JavaResourceModel;
-import main.java.scase.psmMetaModel.JavaResourceModelManager;
-import main.java.scase.psmMetaModel.SystemPSM;
-import main.java.scase.psmMetaModel.HibernateController;
+import eu.fp7.scase.pimMetaModel.CRUDActivityHandler;
+import eu.fp7.scase.pimMetaModel.FunctionParameter;
+import eu.fp7.scase.pimMetaModel.SystemPIM;
+import eu.fp7.scase.psmMetaModel.HTTPActivityHandler;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceController;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceController;
+import eu.fp7.scase.psmMetaModel.JavaResourceControllerManager;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceModelManager;
+import eu.fp7.scase.psmMetaModel.SystemPSM;
+import eu.fp7.scase.psmMetaModel.HibernateController;
 
 public class CorePSMProducer extends APSMProducer
 {

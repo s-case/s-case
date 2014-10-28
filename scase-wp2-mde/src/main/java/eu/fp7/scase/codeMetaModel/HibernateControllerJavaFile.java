@@ -17,14 +17,14 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.psmMetaModel.HibernateController;
-import main.java.scase.psmMetaModel.JavaResourceController;
-import main.java.scase.psmMetaModel.JavaResourceControllerManager;
-import main.java.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.HibernateController;
+import eu.fp7.scase.psmMetaModel.JavaResourceController;
+import eu.fp7.scase.psmMetaModel.JavaResourceControllerManager;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
 
 public class HibernateControllerJavaFile extends AJavaFile{
 	

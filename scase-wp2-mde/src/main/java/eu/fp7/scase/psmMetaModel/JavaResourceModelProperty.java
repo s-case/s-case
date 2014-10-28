@@ -17,9 +17,9 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmMetaModel;
+package eu.fp7.scase.psmMetaModel;
 
-import main.java.scase.pimMetaModel.ResourceModelProperty;
+import eu.fp7.scase.pimMetaModel.ResourceModelProperty;
 
 public class JavaResourceModelProperty extends PSMComponentProperty{
 	

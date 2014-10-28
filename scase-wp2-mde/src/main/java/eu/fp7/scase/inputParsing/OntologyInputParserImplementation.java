@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.inputParsing;
+package eu.fp7.scase.inputParsing;
 
 public class OntologyInputParserImplementation
 {

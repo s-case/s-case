@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.pimGenerator;
+package eu.fp7.scase.pimGenerator;
 
-import main.java.scase.cimMetaModel.SystemCIM;
-import main.java.scase.pimMetaModel.SystemPIM;
+import eu.fp7.scase.cimMetaModel.SystemCIM;
+import eu.fp7.scase.pimMetaModel.SystemPIM;
 
 
 public abstract class APIMProducer{

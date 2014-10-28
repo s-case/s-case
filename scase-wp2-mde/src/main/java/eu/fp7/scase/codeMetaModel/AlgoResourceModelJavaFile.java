@@ -17,9 +17,9 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
-import main.java.scase.psmMetaModel.JavaAlgoResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceModel;
 
 public class AlgoResourceModelJavaFile extends AJavaFile{
 	

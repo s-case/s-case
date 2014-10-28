@@ -17,13 +17,13 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.psmMetaModel.JavaAlgoResourceController;
-import main.java.scase.psmMetaModel.JavaResourceController;
-import main.java.scase.psmMetaModel.JavaResourceControllerManager;
+import eu.fp7.scase.psmMetaModel.JavaAlgoResourceController;
+import eu.fp7.scase.psmMetaModel.JavaResourceController;
+import eu.fp7.scase.psmMetaModel.JavaResourceControllerManager;
 
 public class JAXRSPublisherJavaFile extends AJavaFile{
 	

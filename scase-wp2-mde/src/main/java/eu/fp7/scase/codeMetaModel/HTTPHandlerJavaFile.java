@@ -17,11 +17,11 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
-import main.java.scase.psmMetaModel.HTTPActivityHandler;
-import main.java.scase.psmMetaModel.HibernateController;
-import main.java.scase.psmMetaModel.PSMHypermediaLink;
+import eu.fp7.scase.psmMetaModel.HTTPActivityHandler;
+import eu.fp7.scase.psmMetaModel.HibernateController;
+import eu.fp7.scase.psmMetaModel.PSMHypermediaLink;
 
 public class HTTPHandlerJavaFile extends AJavaFile{
 	

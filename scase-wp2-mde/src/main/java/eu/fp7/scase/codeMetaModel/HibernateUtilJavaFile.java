@@ -17,11 +17,11 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeMetaModel;
+package eu.fp7.scase.codeMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.psmMetaModel.JavaResourceModel;
+import eu.fp7.scase.psmMetaModel.JavaResourceModel;
 
 public class HibernateUtilJavaFile extends AJavaFile{
 	

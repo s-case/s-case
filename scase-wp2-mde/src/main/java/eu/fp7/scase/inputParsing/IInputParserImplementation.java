@@ -18,11 +18,11 @@
 */
 
 
-package main.java.scase.inputParsing;
+package eu.fp7.scase.inputParsing;
 
 import java.util.ArrayList;
 
-import main.java.scase.cimMetaModel.Resource;
+import eu.fp7.scase.cimMetaModel.Resource;
 
 
 public interface IInputParserImplementation

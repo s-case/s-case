@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmMetaModel;
+package eu.fp7.scase.psmMetaModel;
 
-import main.java.scase.customUtilities.UniqueIdProducer;
-import main.java.scase.pimMetaModel.CRUDActivityHandler;
+import eu.fp7.scase.customUtilities.UniqueIdProducer;
+import eu.fp7.scase.pimMetaModel.CRUDActivityHandler;
 
 public class HTTPActivityHandler{
 	

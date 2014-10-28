@@ -18,7 +18,7 @@
 */
 
 
-package main.java.scase.customUtilities;
+package eu.fp7.scase.customUtilities;
 
 
 public class UniqueIdProducer {

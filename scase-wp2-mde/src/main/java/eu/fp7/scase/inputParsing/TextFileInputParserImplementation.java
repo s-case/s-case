@@ -17,7 +17,7 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.inputParsing;
+package eu.fp7.scase.inputParsing;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -26,9 +26,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.scase.cimMetaModel.CRUDActivity;
-import main.java.scase.cimMetaModel.Property;
-import main.java.scase.cimMetaModel.Resource;
+import eu.fp7.scase.cimMetaModel.CRUDActivity;
+import eu.fp7.scase.cimMetaModel.Property;
+import eu.fp7.scase.cimMetaModel.Resource;
 
 public class TextFileInputParserImplementation implements IInputParserImplementation{
 	

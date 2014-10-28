@@ -17,14 +17,14 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.psmMetaModel;
+package eu.fp7.scase.psmMetaModel;
 
 import java.util.ArrayList;
 
-import main.java.scase.customUtilities.UniqueIdProducer;
-import main.java.scase.pimMetaModel.ResourceControllerCRUDActivity;
-import main.java.scase.pimMetaModel.ResourceInputRepresentation;
-import main.java.scase.pimMetaModel.ResourceOutputRepresentation;
+import eu.fp7.scase.customUtilities.UniqueIdProducer;
+import eu.fp7.scase.pimMetaModel.ResourceControllerCRUDActivity;
+import eu.fp7.scase.pimMetaModel.ResourceInputRepresentation;
+import eu.fp7.scase.pimMetaModel.ResourceOutputRepresentation;
 
 
 public class HTTPActivity{

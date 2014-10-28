@@ -17,10 +17,10 @@
 * Contact			   : christopherzolotas@issel.ee.auth.gr
 */
 
-package main.java.scase.codeGenerator;
+package eu.fp7.scase.codeGenerator;
 
-import main.java.scase.codeMetaModel.SystemCode;
-import main.java.scase.psmMetaModel.SystemPSM;
+import eu.fp7.scase.codeMetaModel.SystemCode;
+import eu.fp7.scase.psmMetaModel.SystemPSM;
 
 
 public abstract class ACodeProducer{
