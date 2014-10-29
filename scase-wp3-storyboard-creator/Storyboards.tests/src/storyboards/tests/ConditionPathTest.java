@@ -13,7 +13,6 @@ import storyboards.StoryboardsFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Condition Path</b></em>'.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class ConditionPathTest extends TestCase {
@@ -22,7 +21,6 @@ public class ConditionPathTest extends TestCase {
 	 * The fixture for this Condition Path test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ConditionPath fixture = null;
@@ -30,7 +28,6 @@ public class ConditionPathTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -41,7 +38,6 @@ public class ConditionPathTest extends TestCase {
 	 * Constructs a new Condition Path test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ConditionPathTest(String name) {
@@ -52,7 +48,6 @@ public class ConditionPathTest extends TestCase {
 	 * Sets the fixture for this Condition Path test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void setFixture(ConditionPath fixture) {
@@ -63,7 +58,6 @@ public class ConditionPathTest extends TestCase {
 	 * Returns the fixture for this Condition Path test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ConditionPath getFixture() {
@@ -73,7 +67,6 @@ public class ConditionPathTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -85,7 +78,6 @@ public class ConditionPathTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */

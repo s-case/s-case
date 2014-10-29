@@ -11,19 +11,19 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Storyboard</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardactions <em>Storyboardactions</em>}</li>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardproperties <em>Storyboardproperties</em>}</li>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardconditions <em>Storyboardconditions</em>}</li>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}</li>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardendnode <em>Storyboardendnode</em>}</li>
- * <li>{@link storyboards.StoryboardDiagram#getStoryboardstoryboards <em>Storyboardstoryboards</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardactions <em>Storyboardactions</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardproperties <em>Storyboardproperties</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardconditions <em>Storyboardconditions</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardendnode <em>Storyboardendnode</em>}</li>
+ *   <li>{@link storyboards.StoryboardDiagram#getStoryboardstoryboards <em>Storyboardstoryboards</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see storyboards.StoryboardsPackage#getStoryboardDiagram()
  * @model
  * @generated
@@ -38,7 +38,6 @@ public interface StoryboardDiagram extends EObject {
 	 * more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardactions</em>' containment reference list.
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardactions()
 	 * @model containment="true"
@@ -55,7 +54,6 @@ public interface StoryboardDiagram extends EObject {
 	 * be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardproperties</em>' containment reference list.
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardproperties()
 	 * @model containment="true"
@@ -72,7 +70,6 @@ public interface StoryboardDiagram extends EObject {
 	 * be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardconditions</em>' containment reference list.
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardconditions()
 	 * @model containment="true"
@@ -88,7 +85,6 @@ public interface StoryboardDiagram extends EObject {
 	 * more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardstartnode</em>' containment reference.
 	 * @see #setStoryboardstartnode(StartNode)
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardstartnode()
@@ -98,11 +94,9 @@ public interface StoryboardDiagram extends EObject {
 	StartNode getStoryboardstartnode();
 
 	/**
-	 * Sets the value of the '{@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}'
-	 * containment reference.
+	 * Sets the value of the '{@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>Storyboardstartnode</em>' containment reference.
 	 * @see #getStoryboardstartnode()
 	 * @generated
@@ -117,7 +111,6 @@ public interface StoryboardDiagram extends EObject {
 	 * of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardendnode</em>' containment reference.
 	 * @see #setStoryboardendnode(EndNode)
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardendnode()
@@ -127,11 +120,9 @@ public interface StoryboardDiagram extends EObject {
 	EndNode getStoryboardendnode();
 
 	/**
-	 * Sets the value of the '{@link storyboards.StoryboardDiagram#getStoryboardendnode <em>Storyboardendnode</em>}'
-	 * containment reference.
+	 * Sets the value of the '{@link storyboards.StoryboardDiagram#getStoryboardendnode <em>Storyboardendnode</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>Storyboardendnode</em>' containment reference.
 	 * @see #getStoryboardendnode()
 	 * @generated
@@ -147,7 +138,6 @@ public interface StoryboardDiagram extends EObject {
 	 * more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Storyboardstoryboards</em>' containment reference list.
 	 * @see storyboards.StoryboardsPackage#getStoryboardDiagram_Storyboardstoryboards()
 	 * @model containment="true"
@@ -158,7 +148,6 @@ public interface StoryboardDiagram extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @model
 	 * @generated
 	 */

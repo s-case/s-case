@@ -14,11 +14,9 @@ import storyboards.StoryboardsFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate
- * </em>}</li>
+ *   <li>{@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class StoryboardTest extends ActionNodeTest {
@@ -26,7 +24,6 @@ public class StoryboardTest extends ActionNodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -37,7 +34,6 @@ public class StoryboardTest extends ActionNodeTest {
 	 * Constructs a new Storyboard test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardTest(String name) {
@@ -48,18 +44,16 @@ public class StoryboardTest extends ActionNodeTest {
 	 * Returns the fixture for this Storyboard test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected Storyboard getFixture() {
-		return (Storyboard) fixture;
+		return (Storyboard)fixture;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -71,7 +65,6 @@ public class StoryboardTest extends ActionNodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -81,11 +74,9 @@ public class StoryboardTest extends ActionNodeTest {
 	}
 
 	/**
-	 * Tests the '{@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Tests the '{@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */

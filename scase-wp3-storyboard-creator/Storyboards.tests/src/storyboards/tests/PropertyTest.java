@@ -16,11 +16,9 @@ import storyboards.StoryboardsFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate
- * </em>}</li>
+ *   <li>{@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class PropertyTest extends TestCase {
@@ -29,7 +27,6 @@ public class PropertyTest extends TestCase {
 	 * The fixture for this Property test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected Property fixture = null;
@@ -37,7 +34,6 @@ public class PropertyTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -48,7 +44,6 @@ public class PropertyTest extends TestCase {
 	 * Constructs a new Property test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public PropertyTest(String name) {
@@ -59,7 +54,6 @@ public class PropertyTest extends TestCase {
 	 * Sets the fixture for this Property test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void setFixture(Property fixture) {
@@ -70,7 +64,6 @@ public class PropertyTest extends TestCase {
 	 * Returns the fixture for this Property test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected Property getFixture() {
@@ -80,7 +73,6 @@ public class PropertyTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -92,7 +84,6 @@ public class PropertyTest extends TestCase {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -102,11 +93,9 @@ public class PropertyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Tests the '{@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */

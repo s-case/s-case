@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Action Enum</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * 
  * @see storyboards.StoryboardsPackage#getActionEnum()
  * @model
  * @generated
@@ -23,7 +22,6 @@ public enum ActionEnum implements Enumerator {
 	 * The '<em><b>Create</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #CREATE_VALUE
 	 * @generated
 	 * @ordered
@@ -34,7 +32,6 @@ public enum ActionEnum implements Enumerator {
 	 * The '<em><b>Read</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #READ_VALUE
 	 * @generated
 	 * @ordered
@@ -45,7 +42,6 @@ public enum ActionEnum implements Enumerator {
 	 * The '<em><b>Update</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #UPDATE_VALUE
 	 * @generated
 	 * @ordered
@@ -56,7 +52,6 @@ public enum ActionEnum implements Enumerator {
 	 * The '<em><b>Delete</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #DELETE_VALUE
 	 * @generated
 	 * @ordered
@@ -67,7 +62,6 @@ public enum ActionEnum implements Enumerator {
 	 * The '<em><b>Other</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #OTHER_VALUE
 	 * @generated
 	 * @ordered
@@ -82,7 +76,6 @@ public enum ActionEnum implements Enumerator {
 	 * description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #CREATE
 	 * @model name="Create"
 	 * @generated
@@ -98,7 +91,6 @@ public enum ActionEnum implements Enumerator {
 	 * here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #READ
 	 * @model name="Read"
 	 * @generated
@@ -114,7 +106,6 @@ public enum ActionEnum implements Enumerator {
 	 * description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #UPDATE
 	 * @model name="Update"
 	 * @generated
@@ -130,7 +121,6 @@ public enum ActionEnum implements Enumerator {
 	 * description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #DELETE
 	 * @model name="Delete"
 	 * @generated
@@ -146,7 +136,6 @@ public enum ActionEnum implements Enumerator {
 	 * description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #OTHER
 	 * @model name="Other"
 	 * @generated
@@ -158,16 +147,20 @@ public enum ActionEnum implements Enumerator {
 	 * An array of all the '<em><b>Action Enum</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
-	private static final ActionEnum[] VALUES_ARRAY = new ActionEnum[] { CREATE, READ, UPDATE, DELETE, OTHER, };
+	private static final ActionEnum[] VALUES_ARRAY = new ActionEnum[] {
+			CREATE,
+			READ,
+			UPDATE,
+			DELETE,
+			OTHER,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>Action Enum</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static final List<ActionEnum> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -176,7 +169,6 @@ public enum ActionEnum implements Enumerator {
 	 * Returns the '<em><b>Action Enum</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static ActionEnum get(String literal) {
@@ -193,7 +185,6 @@ public enum ActionEnum implements Enumerator {
 	 * Returns the '<em><b>Action Enum</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static ActionEnum getByName(String name) {
@@ -210,21 +201,15 @@ public enum ActionEnum implements Enumerator {
 	 * Returns the '<em><b>Action Enum</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static ActionEnum get(int value) {
 		switch (value) {
-		case CREATE_VALUE:
-			return CREATE;
-		case READ_VALUE:
-			return READ;
-		case UPDATE_VALUE:
-			return UPDATE;
-		case DELETE_VALUE:
-			return DELETE;
-		case OTHER_VALUE:
-			return OTHER;
+			case CREATE_VALUE: return CREATE;
+			case READ_VALUE: return READ;
+			case UPDATE_VALUE: return UPDATE;
+			case DELETE_VALUE: return DELETE;
+			case OTHER_VALUE: return OTHER;
 		}
 		return null;
 	}
@@ -232,7 +217,6 @@ public enum ActionEnum implements Enumerator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private final int value;
@@ -240,7 +224,6 @@ public enum ActionEnum implements Enumerator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private final String name;
@@ -248,7 +231,6 @@ public enum ActionEnum implements Enumerator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private final String literal;
@@ -257,7 +239,6 @@ public enum ActionEnum implements Enumerator {
 	 * Only this class can construct instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private ActionEnum(int value, String name, String literal) {
@@ -269,38 +250,34 @@ public enum ActionEnum implements Enumerator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**
 	 * Returns the literal value of the enumerator, which is its string representation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

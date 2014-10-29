@@ -19,14 +19,13 @@ import storyboards.util.StoryboardsValidator;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class StoryboardImpl extends ActionNodeImpl implements Storyboard {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected StoryboardImpl() {
@@ -36,7 +35,6 @@ public class StoryboardImpl extends ActionNodeImpl implements Storyboard {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -78,15 +76,14 @@ public class StoryboardImpl extends ActionNodeImpl implements Storyboard {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case StoryboardsPackage.STORYBOARD___VALIDATE__DIAGNOSTICCHAIN_MAP:
-			return validate((DiagnosticChain) arguments.get(0), (Map<Object, Object>) arguments.get(1));
+			case StoryboardsPackage.STORYBOARD___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

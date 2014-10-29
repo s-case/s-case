@@ -19,7 +19,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
  * This is the item provider adapter for a {@link storyboards.Node} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class NodeItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -28,7 +27,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NodeItemProvider(AdapterFactory adapterFactory) {
@@ -39,7 +37,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -55,7 +52,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -68,7 +64,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -82,7 +77,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -94,7 +88,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

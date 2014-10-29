@@ -10,15 +10,15 @@ import org.eclipse.emf.common.util.EList;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link storyboards.Action#getProperties <em>Properties</em>}</li>
- * <li>{@link storyboards.Action#getType <em>Type</em>}</li>
+ *   <li>{@link storyboards.Action#getProperties <em>Properties</em>}</li>
+ *   <li>{@link storyboards.Action#getType <em>Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see storyboards.StoryboardsPackage#getAction()
  * @model
  * @generated
@@ -33,7 +33,6 @@ public interface Action extends ActionNode {
 	 * description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Properties</em>' reference list.
 	 * @see storyboards.StoryboardsPackage#getAction_Properties()
 	 * @model
@@ -49,7 +48,6 @@ public interface Action extends ActionNode {
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see storyboards.ActionEnum
 	 * @see #setType(ActionEnum)
@@ -63,7 +61,6 @@ public interface Action extends ActionNode {
 	 * Sets the value of the '{@link storyboards.Action#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see storyboards.ActionEnum
 	 * @see #getType()
@@ -74,7 +71,6 @@ public interface Action extends ActionNode {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @model
 	 * @generated
 	 */

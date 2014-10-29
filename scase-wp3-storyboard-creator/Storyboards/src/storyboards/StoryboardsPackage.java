@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EReference;
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
  * @see storyboards.StoryboardsFactory
  * @model kind="package"
  * @generated
@@ -31,7 +30,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	String eNAME = "storyboards";
@@ -40,7 +38,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The package namespace URI.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	String eNS_URI = "http:///auth/storyboards.ecore";
@@ -49,7 +46,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The package namespace name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	String eNS_PREFIX = "auth.storyboards";
@@ -58,7 +54,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The singleton instance of the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	StoryboardsPackage eINSTANCE = storyboards.impl.StoryboardsPackageImpl.init();
@@ -67,7 +62,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.PropertyImpl <em>Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.PropertyImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getProperty()
 	 * @generated
@@ -78,7 +72,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -88,7 +81,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -98,7 +90,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -108,7 +99,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -118,7 +108,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.StoryboardDiagramImpl <em>Storyboard Diagram</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.StoryboardDiagramImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getStoryboardDiagram()
 	 * @generated
@@ -129,7 +118,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardactions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -139,7 +127,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardproperties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -149,7 +136,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardconditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -159,7 +145,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardstartnode</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -169,7 +154,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardendnode</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -179,7 +163,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Storyboardstoryboards</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -189,7 +172,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Storyboard Diagram</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -199,7 +181,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -209,7 +190,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Storyboard Diagram</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -219,7 +199,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.NodeImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getNode()
 	 * @generated
@@ -230,7 +209,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.ActionImpl <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.ActionImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getAction()
 	 * @generated
@@ -241,7 +219,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.ActionEnum <em>Action Enum</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.ActionEnum
 	 * @see storyboards.impl.StoryboardsPackageImpl#getActionEnum()
 	 * @generated
@@ -252,7 +229,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -262,7 +238,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -272,7 +247,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.ActionNodeImpl <em>Action Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.ActionNodeImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getActionNode()
 	 * @generated
@@ -283,7 +257,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Next Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -293,7 +266,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -303,7 +275,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Action Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -313,7 +284,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Action Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -323,7 +293,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Next Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -333,7 +302,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -343,7 +311,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -353,7 +320,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -363,7 +329,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -373,7 +338,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -383,7 +347,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -393,7 +356,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.ConditionImpl <em>Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.ConditionImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getCondition()
 	 * @generated
@@ -404,7 +366,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -414,7 +375,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Condition Paths</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -424,7 +384,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -434,7 +393,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -444,7 +402,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -454,7 +411,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.StartNodeImpl <em>Start Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.StartNodeImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getStartNode()
 	 * @generated
@@ -465,7 +421,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Precondition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -475,7 +430,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>First Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -485,7 +439,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Start Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -495,7 +448,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -505,7 +457,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Start Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -515,7 +466,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.EndNodeImpl <em>End Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.EndNodeImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getEndNode()
 	 * @generated
@@ -526,7 +476,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>End Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -536,7 +485,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -546,7 +494,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>End Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -556,7 +503,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.ConditionPathImpl <em>Condition Path</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.ConditionPathImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getConditionPath()
 	 * @generated
@@ -567,7 +513,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -577,7 +522,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Next Condition Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -587,7 +531,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Condition Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -597,7 +540,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Condition Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -607,7 +549,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The meta object id for the '{@link storyboards.impl.StoryboardImpl <em>Storyboard</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.impl.StoryboardImpl
 	 * @see storyboards.impl.StoryboardsPackageImpl#getStoryboard()
 	 * @generated
@@ -618,7 +559,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Next Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -628,7 +568,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -638,7 +577,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of structural features of the '<em>Storyboard</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -648,7 +586,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The operation id for the '<em>Validate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -658,7 +595,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * The number of operations of the '<em>Storyboard</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 * @ordered
 	 */
@@ -668,7 +604,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Property</em>'.
 	 * @see storyboards.Property
 	 * @generated
@@ -679,7 +614,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.Property#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see storyboards.Property#getName()
 	 * @see #getProperty()
@@ -688,12 +622,9 @@ public interface StoryboardsPackage extends EPackage {
 	EAttribute getProperty_Name();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.Property#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -704,7 +635,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.StoryboardDiagram <em>Storyboard Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Storyboard Diagram</em>'.
 	 * @see storyboards.StoryboardDiagram
 	 * @generated
@@ -712,11 +642,9 @@ public interface StoryboardsPackage extends EPackage {
 	EClass getStoryboardDiagram();
 
 	/**
-	 * Returns the meta object for the containment reference list '
-	 * {@link storyboards.StoryboardDiagram#getStoryboardactions <em>Storyboardactions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link storyboards.StoryboardDiagram#getStoryboardactions <em>Storyboardactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference list '<em>Storyboardactions</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardactions()
 	 * @see #getStoryboardDiagram()
@@ -725,11 +653,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardactions();
 
 	/**
-	 * Returns the meta object for the containment reference list '
-	 * {@link storyboards.StoryboardDiagram#getStoryboardproperties <em>Storyboardproperties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link storyboards.StoryboardDiagram#getStoryboardproperties <em>Storyboardproperties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference list '<em>Storyboardproperties</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardproperties()
 	 * @see #getStoryboardDiagram()
@@ -738,11 +664,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardproperties();
 
 	/**
-	 * Returns the meta object for the containment reference list '
-	 * {@link storyboards.StoryboardDiagram#getStoryboardconditions <em>Storyboardconditions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link storyboards.StoryboardDiagram#getStoryboardconditions <em>Storyboardconditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference list '<em>Storyboardconditions</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardconditions()
 	 * @see #getStoryboardDiagram()
@@ -751,11 +675,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardconditions();
 
 	/**
-	 * Returns the meta object for the containment reference '
-	 * {@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}'.
+	 * Returns the meta object for the containment reference '{@link storyboards.StoryboardDiagram#getStoryboardstartnode <em>Storyboardstartnode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference '<em>Storyboardstartnode</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardstartnode()
 	 * @see #getStoryboardDiagram()
@@ -764,11 +686,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardstartnode();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link storyboards.StoryboardDiagram#getStoryboardendnode
-	 * <em>Storyboardendnode</em>}'.
+	 * Returns the meta object for the containment reference '{@link storyboards.StoryboardDiagram#getStoryboardendnode <em>Storyboardendnode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference '<em>Storyboardendnode</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardendnode()
 	 * @see #getStoryboardDiagram()
@@ -777,11 +697,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardendnode();
 
 	/**
-	 * Returns the meta object for the containment reference list '
-	 * {@link storyboards.StoryboardDiagram#getStoryboardstoryboards <em>Storyboardstoryboards</em>}'.
+	 * Returns the meta object for the containment reference list '{@link storyboards.StoryboardDiagram#getStoryboardstoryboards <em>Storyboardstoryboards</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference list '<em>Storyboardstoryboards</em>'.
 	 * @see storyboards.StoryboardDiagram#getStoryboardstoryboards()
 	 * @see #getStoryboardDiagram()
@@ -790,12 +708,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStoryboardDiagram_Storyboardstoryboards();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.StoryboardDiagram#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.StoryboardDiagram#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.StoryboardDiagram#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -806,7 +721,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Action</em>'.
 	 * @see storyboards.Action
 	 * @generated
@@ -817,7 +731,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the reference list '{@link storyboards.Action#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the reference list '<em>Properties</em>'.
 	 * @see storyboards.Action#getProperties()
 	 * @see #getAction()
@@ -829,7 +742,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.Action#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Type</em>'.
 	 * @see storyboards.Action#getType()
 	 * @see #getAction()
@@ -838,12 +750,9 @@ public interface StoryboardsPackage extends EPackage {
 	EAttribute getAction_Type();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.Action#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}
-	 * ' operation.
+	 * Returns the meta object for the '{@link storyboards.Action#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.Action#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -854,7 +763,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Node</em>'.
 	 * @see storyboards.Node
 	 * @generated
@@ -865,7 +773,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Condition</em>'.
 	 * @see storyboards.Condition
 	 * @generated
@@ -876,7 +783,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.Condition#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see storyboards.Condition#getName()
 	 * @see #getCondition()
@@ -885,11 +791,9 @@ public interface StoryboardsPackage extends EPackage {
 	EAttribute getCondition_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link storyboards.Condition#getConditionPaths
-	 * <em>Condition Paths</em>}'.
+	 * Returns the meta object for the containment reference list '{@link storyboards.Condition#getConditionPaths <em>Condition Paths</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the containment reference list '<em>Condition Paths</em>'.
 	 * @see storyboards.Condition#getConditionPaths()
 	 * @see #getCondition()
@@ -898,12 +802,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getCondition_ConditionPaths();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.Condition#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.Condition#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.Condition#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -914,7 +815,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.StartNode <em>Start Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Start Node</em>'.
 	 * @see storyboards.StartNode
 	 * @generated
@@ -925,7 +825,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.StartNode#getPrecondition <em>Precondition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Precondition</em>'.
 	 * @see storyboards.StartNode#getPrecondition()
 	 * @see #getStartNode()
@@ -937,7 +836,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the reference '{@link storyboards.StartNode#getFirstNode <em>First Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the reference '<em>First Node</em>'.
 	 * @see storyboards.StartNode#getFirstNode()
 	 * @see #getStartNode()
@@ -946,12 +844,9 @@ public interface StoryboardsPackage extends EPackage {
 	EReference getStartNode_FirstNode();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -962,7 +857,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.EndNode <em>End Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>End Node</em>'.
 	 * @see storyboards.EndNode
 	 * @generated
@@ -970,12 +864,9 @@ public interface StoryboardsPackage extends EPackage {
 	EClass getEndNode();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -986,7 +877,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.ConditionPath <em>Condition Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Condition Path</em>'.
 	 * @see storyboards.ConditionPath
 	 * @generated
@@ -997,7 +887,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.ConditionPath#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see storyboards.ConditionPath#getName()
 	 * @see #getConditionPath()
@@ -1006,11 +895,9 @@ public interface StoryboardsPackage extends EPackage {
 	EAttribute getConditionPath_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link storyboards.ConditionPath#getNextConditionNode
-	 * <em>Next Condition Node</em>}'.
+	 * Returns the meta object for the reference '{@link storyboards.ConditionPath#getNextConditionNode <em>Next Condition Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the reference '<em>Next Condition Node</em>'.
 	 * @see storyboards.ConditionPath#getNextConditionNode()
 	 * @see #getConditionPath()
@@ -1022,7 +909,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.Storyboard <em>Storyboard</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Storyboard</em>'.
 	 * @see storyboards.Storyboard
 	 * @generated
@@ -1030,12 +916,9 @@ public interface StoryboardsPackage extends EPackage {
 	EClass getStoryboard();
 
 	/**
-	 * Returns the meta object for the '
-	 * {@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Returns the meta object for the '{@link storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the '<em>Validate</em>' operation.
 	 * @see storyboards.Storyboard#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
@@ -1046,7 +929,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for class '{@link storyboards.ActionNode <em>Action Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for class '<em>Action Node</em>'.
 	 * @see storyboards.ActionNode
 	 * @generated
@@ -1057,7 +939,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the reference '{@link storyboards.ActionNode#getNextNode <em>Next Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the reference '<em>Next Node</em>'.
 	 * @see storyboards.ActionNode#getNextNode()
 	 * @see #getActionNode()
@@ -1069,7 +950,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for the attribute '{@link storyboards.ActionNode#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see storyboards.ActionNode#getName()
 	 * @see #getActionNode()
@@ -1081,7 +961,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the meta object for enum '{@link storyboards.ActionEnum <em>Action Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the meta object for enum '<em>Action Enum</em>'.
 	 * @see storyboards.ActionEnum
 	 * @generated
@@ -1092,7 +971,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
@@ -1109,7 +987,6 @@ public interface StoryboardsPackage extends EPackage {
 	 * <li>and each data type</li>
 	 * </ul>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	interface Literals {
@@ -1117,7 +994,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.PropertyImpl <em>Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.PropertyImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getProperty()
 		 * @generated
@@ -1128,7 +1004,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
@@ -1137,17 +1012,14 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EOperation PROPERTY___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getProperty__Validate__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '{@link storyboards.impl.StoryboardDiagramImpl <em>Storyboard Diagram</em>}'
-		 * class.
+		 * The meta object literal for the '{@link storyboards.impl.StoryboardDiagramImpl <em>Storyboard Diagram</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.StoryboardDiagramImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getStoryboardDiagram()
 		 * @generated
@@ -1158,7 +1030,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardactions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDACTIONS = eINSTANCE.getStoryboardDiagram_Storyboardactions();
@@ -1167,7 +1038,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardproperties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDPROPERTIES = eINSTANCE.getStoryboardDiagram_Storyboardproperties();
@@ -1176,7 +1046,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardconditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDCONDITIONS = eINSTANCE.getStoryboardDiagram_Storyboardconditions();
@@ -1185,7 +1054,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardstartnode</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDSTARTNODE = eINSTANCE.getStoryboardDiagram_Storyboardstartnode();
@@ -1194,7 +1062,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardendnode</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDENDNODE = eINSTANCE.getStoryboardDiagram_Storyboardendnode();
@@ -1203,7 +1070,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Storyboardstoryboards</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference STORYBOARD_DIAGRAM__STORYBOARDSTORYBOARDS = eINSTANCE.getStoryboardDiagram_Storyboardstoryboards();
@@ -1212,17 +1078,14 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
-		EOperation STORYBOARD_DIAGRAM___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE
-				.getStoryboardDiagram__Validate__DiagnosticChain_Map();
+		EOperation STORYBOARD_DIAGRAM___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStoryboardDiagram__Validate__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link storyboards.impl.ActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.ActionImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getAction()
 		 * @generated
@@ -1233,7 +1096,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference ACTION__PROPERTIES = eINSTANCE.getAction_Properties();
@@ -1242,7 +1104,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute ACTION__TYPE = eINSTANCE.getAction_Type();
@@ -1251,7 +1112,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EOperation ACTION___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getAction__Validate__DiagnosticChain_Map();
@@ -1260,7 +1120,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.NodeImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getNode()
 		 * @generated
@@ -1271,7 +1130,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.ConditionImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getCondition()
 		 * @generated
@@ -1282,7 +1140,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute CONDITION__NAME = eINSTANCE.getCondition_Name();
@@ -1291,7 +1148,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Condition Paths</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference CONDITION__CONDITION_PATHS = eINSTANCE.getCondition_ConditionPaths();
@@ -1300,7 +1156,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EOperation CONDITION___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCondition__Validate__DiagnosticChain_Map();
@@ -1309,7 +1164,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.StartNodeImpl <em>Start Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.StartNodeImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getStartNode()
 		 * @generated
@@ -1320,7 +1174,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Precondition</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute START_NODE__PRECONDITION = eINSTANCE.getStartNode_Precondition();
@@ -1329,7 +1182,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>First Node</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference START_NODE__FIRST_NODE = eINSTANCE.getStartNode_FirstNode();
@@ -1338,7 +1190,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EOperation START_NODE___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStartNode__Validate__DiagnosticChain_Map();
@@ -1347,7 +1198,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.EndNodeImpl <em>End Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.EndNodeImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getEndNode()
 		 * @generated
@@ -1358,7 +1208,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EOperation END_NODE___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getEndNode__Validate__DiagnosticChain_Map();
@@ -1367,7 +1216,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.ConditionPathImpl <em>Condition Path</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.ConditionPathImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getConditionPath()
 		 * @generated
@@ -1378,7 +1226,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute CONDITION_PATH__NAME = eINSTANCE.getConditionPath_Name();
@@ -1387,7 +1234,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Next Condition Node</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference CONDITION_PATH__NEXT_CONDITION_NODE = eINSTANCE.getConditionPath_NextConditionNode();
@@ -1396,7 +1242,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.impl.StoryboardImpl <em>Storyboard</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.StoryboardImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getStoryboard()
 		 * @generated
@@ -1407,17 +1252,14 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Validate</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
-		EOperation STORYBOARD___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE
-				.getStoryboard__Validate__DiagnosticChain_Map();
+		EOperation STORYBOARD___VALIDATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStoryboard__Validate__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link storyboards.impl.ActionNodeImpl <em>Action Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.impl.ActionNodeImpl
 		 * @see storyboards.impl.StoryboardsPackageImpl#getActionNode()
 		 * @generated
@@ -1428,7 +1270,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Next Node</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EReference ACTION_NODE__NEXT_NODE = eINSTANCE.getActionNode_NextNode();
@@ -1437,7 +1278,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		EAttribute ACTION_NODE__NAME = eINSTANCE.getActionNode_Name();
@@ -1446,7 +1286,6 @@ public interface StoryboardsPackage extends EPackage {
 		 * The meta object literal for the '{@link storyboards.ActionEnum <em>Action Enum</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @see storyboards.ActionEnum
 		 * @see storyboards.impl.StoryboardsPackageImpl#getActionEnum()
 		 * @generated

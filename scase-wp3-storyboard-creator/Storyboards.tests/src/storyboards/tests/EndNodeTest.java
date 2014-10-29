@@ -14,11 +14,9 @@ import storyboards.StoryboardsFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate
- * </em>}</li>
+ *   <li>{@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class EndNodeTest extends NodeTest {
@@ -26,7 +24,6 @@ public class EndNodeTest extends NodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -37,7 +34,6 @@ public class EndNodeTest extends NodeTest {
 	 * Constructs a new End Node test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EndNodeTest(String name) {
@@ -48,18 +44,16 @@ public class EndNodeTest extends NodeTest {
 	 * Returns the fixture for this End Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected EndNode getFixture() {
-		return (EndNode) fixture;
+		return (EndNode)fixture;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -71,7 +65,6 @@ public class EndNodeTest extends NodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -81,11 +74,9 @@ public class EndNodeTest extends NodeTest {
 	}
 
 	/**
-	 * Tests the '{@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Tests the '{@link storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.EndNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */

@@ -9,15 +9,15 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Start Node</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link storyboards.StartNode#getPrecondition <em>Precondition</em>}</li>
- * <li>{@link storyboards.StartNode#getFirstNode <em>First Node</em>}</li>
+ *   <li>{@link storyboards.StartNode#getPrecondition <em>Precondition</em>}</li>
+ *   <li>{@link storyboards.StartNode#getFirstNode <em>First Node</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see storyboards.StoryboardsPackage#getStartNode()
  * @model
  * @generated
@@ -31,7 +31,6 @@ public interface StartNode extends Node {
 	 * here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Precondition</em>' attribute.
 	 * @see #setPrecondition(String)
 	 * @see storyboards.StoryboardsPackage#getStartNode_Precondition()
@@ -44,7 +43,6 @@ public interface StartNode extends Node {
 	 * Sets the value of the '{@link storyboards.StartNode#getPrecondition <em>Precondition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>Precondition</em>' attribute.
 	 * @see #getPrecondition()
 	 * @generated
@@ -59,7 +57,6 @@ public interface StartNode extends Node {
 	 * here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>First Node</em>' reference.
 	 * @see #setFirstNode(Node)
 	 * @see storyboards.StoryboardsPackage#getStartNode_FirstNode()
@@ -72,7 +69,6 @@ public interface StartNode extends Node {
 	 * Sets the value of the '{@link storyboards.StartNode#getFirstNode <em>First Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>First Node</em>' reference.
 	 * @see #getFirstNode()
 	 * @generated
@@ -82,7 +78,6 @@ public interface StartNode extends Node {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @model
 	 * @generated
 	 */

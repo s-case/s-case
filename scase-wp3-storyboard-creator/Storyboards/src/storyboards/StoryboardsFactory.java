@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * 
  * @see storyboards.StoryboardsPackage
  * @generated
  */
@@ -18,7 +17,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	StoryboardsFactory eINSTANCE = storyboards.impl.StoryboardsFactoryImpl.init();
@@ -27,7 +25,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Property</em>'.
 	 * @generated
 	 */
@@ -37,7 +34,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Storyboard Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Storyboard Diagram</em>'.
 	 * @generated
 	 */
@@ -47,7 +43,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Action</em>'.
 	 * @generated
 	 */
@@ -57,7 +52,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Condition</em>'.
 	 * @generated
 	 */
@@ -67,7 +61,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Start Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Start Node</em>'.
 	 * @generated
 	 */
@@ -77,7 +70,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>End Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>End Node</em>'.
 	 * @generated
 	 */
@@ -87,7 +79,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Condition Path</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Condition Path</em>'.
 	 * @generated
 	 */
@@ -97,7 +88,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns a new object of class '<em>Storyboard</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return a new object of class '<em>Storyboard</em>'.
 	 * @generated
 	 */
@@ -107,7 +97,6 @@ public interface StoryboardsFactory extends EFactory {
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
