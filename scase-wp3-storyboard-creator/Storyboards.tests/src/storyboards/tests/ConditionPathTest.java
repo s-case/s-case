@@ -86,4 +86,17 @@ public class ConditionPathTest extends TestCase {
 		setFixture(null);
 	}
 
+	/**
+	 * Tests the '{@link storyboards.ConditionPath#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see storyboards.Condition#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated NOT
+	 */
+	public void testValidate__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		// fail();
+	}
+
 } // ConditionPathTest

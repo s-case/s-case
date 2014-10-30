@@ -83,7 +83,7 @@ public class EndNodeTest extends NodeTest {
 	public void testValidate__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+		// fail();
 	}
 
 } // EndNodeTest

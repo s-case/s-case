@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/StoryboardCreatorPlugin_1.0.0.201410291608.jar" id="StoryboardCreatorPlugin" version="1.0.0.201410291608">
+   <feature url="features/StoryboardCreatorPlugin_1.0.0.qualifier.jar" id="StoryboardCreatorPlugin" version="1.0.0.qualifier">
       <category name="storyboards"/>
    </feature>
    <category-def name="storyboards" label="Storyboard Creator"/>
