@@ -1,7 +1,7 @@
 NLP Server
 ================
 
-The NLP server S-CASE
+The NLP server of S-CASE
 
 
 Scaffolding Scalable Software Services (S-CASE)
