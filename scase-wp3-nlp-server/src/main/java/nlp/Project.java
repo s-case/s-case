@@ -13,7 +13,6 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
@@ -69,16 +68,7 @@ public class Project {
 				jsonResponse.put("created_at", currentTimeISO8601);
 				jsonResponse.put("project_name", request.get("project_name"));
 				jsonResponse.put("project_requirements", request.get("project_requirements"));
-				JSONArray annotations = new JSONArray();
-				JSONArray requirements = request.getJSONArray("project_requirements");
-				for (int i = 0; i < requirements.length(); i++) {
-					JSONObject requirement = requirements.getJSONObject(i);
-					JSONObject annotatedRequirement = new JSONObject();
-					annotatedRequirement.put("id", requirement.get("id"));
-					annotatedRequirement.put("annotation", "Annotation of " + requirement.get("text"));
-					annotations.put(annotatedRequirement);
-				}
-				jsonResponse.put("annotations", annotations);
+				jsonResponse.put("annotations", "Annotation of requirements");
 				jsonResponse.put("annotation_format", request.get("annotation_format"));
 			}
 		} catch (JSONException e) {
