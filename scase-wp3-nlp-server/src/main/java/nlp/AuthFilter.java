@@ -1,9 +1,6 @@
 package nlp;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.HashMap;
-import java.util.Scanner;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
@@ -59,25 +56,9 @@ public class AuthFilter implements ContainerRequestFilter {
 			String username = usernameAndPassword[0];
 			String password = usernameAndPassword[1];
 
-			// Read usernames and passwords from file
+			// Allowed usernames and passwords
 			HashMap<String, String> map = new HashMap<String, String>();
-			try {
-				// Change this path according to where the userdata path is set
-				String userdatatextfile = "C:\\Users\\themis\\workspaceNLP\\nlpserver\\userdata.txt";
-				Scanner scanner = new Scanner(new FileReader(userdatatextfile));
-				while (scanner.hasNextLine()) {
-					String line = scanner.nextLine();
-					if (!line.startsWith("#")) {
-						String[] columns = line.split(" ");
-						map.put(columns[0], columns[1]);
-					}
-				}
-				scanner.close();
-			} catch (FileNotFoundException e) {
-				throw new WebApplicationException(Response.status(500)
-						.entity("Internal Server Error! Try again later or contact the administrator..")
-						.type("text/plain").build());
-			}
+			map.put("user", "pass");
 
 			// Continue if the credentials are correct
 			if (map.containsKey(username) && map.get(username).equals(password)) {
