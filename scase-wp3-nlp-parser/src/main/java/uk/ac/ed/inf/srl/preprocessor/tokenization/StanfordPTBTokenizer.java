@@ -51,17 +51,17 @@ public class StanfordPTBTokenizer implements Tokenizer{
 	
 	public static void main(String[] args){
 //		String t="\"Oh, no,\" she's saying, \"our $400 blender can't handle something this hard!\"";
-		String t2="Another ex-Golden Stater, Paul Stankowski from Oxnard, is contending\n"+
-				"for a berth on the U.S. Ryder Cup team after winning his first PGA Tour\n"+
-				"event last year and staying within three strokes of the lead through\n"+
-				"three rounds of last month's U.S. Open. H.J. Heinz Company said it\n"+
-				"completed the sale of its Ore-Ida frozen-food business catering to the\n"+
-				"service industry to McCain Foods Ltd. for about $500 million.\n"+
-				"It's the first group action of its kind in Britain and one of\n"+
-				"only a handful of lawsuits against tobacco companies outside the\n"+
-				"U.S. A Paris lawyer last year sued France's Seita SA on behalf of\n"+
-				"two cancer-stricken smokers. Japan Tobacco Inc. faces a suit from\n"+
-				"five smokers who accuse the government-owned company of hooking\n"+
+		String t2="Another ex-Golden Stater, Paul Stankowski from Oxnard, is contending%n"+
+				"for a berth on the U.S. Ryder Cup team after winning his first PGA Tour%n"+
+				"event last year and staying within three strokes of the lead through%n"+
+				"three rounds of last month's U.S. Open. H.J. Heinz Company said it%n"+
+				"completed the sale of its Ore-Ida frozen-food business catering to the%n"+
+				"service industry to McCain Foods Ltd. for about $500 million.%n"+
+				"It's the first group action of its kind in Britain and one of%n"+
+				"only a handful of lawsuits against tobacco companies outside the%n"+
+				"U.S. A Paris lawyer last year sued France's Seita SA on behalf of%n"+
+				"two cancer-stricken smokers. Japan Tobacco Inc. faces a suit from%n"+
+				"five smokers who accuse the government-owned company of hooking%n"+
 				"them on an addictive product.";
 		String[] tokens=new StanfordPTBTokenizer().tokenize(t2);
 		for(String token:tokens)

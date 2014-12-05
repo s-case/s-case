@@ -57,7 +57,7 @@ public class Sentence2RDF {
 //            if (sentence2rdf.sentence.getPredicates().isEmpty()) {
 //                System.out.print(grammar);
 //            } else {
-//                System.out.print(grammar + ";\n" + semantics);
+//                System.out.print(grammar + ";%n" + semantics);
 //            }
 //            System.out.println(".");
 //        }
@@ -83,9 +83,9 @@ public class Sentence2RDF {
 //    }
 
 //    public String makeGramTriplesWithBlankNode() {
-//        String grammar = "rdf:type\t" + "gstruct:Sentence ;\n";
-//        grammar += "\tgstruct:inx\t" + inx + " ;\n";
-//        grammar += "\tgstruct:words\n";
+//        String grammar = "rdf:type\t" + "gstruct:Sentence ;%n";
+//        grammar += "\tgstruct:inx\t" + inx + " ;%n";
+//        grammar += "\tgstruct:words%n";
 //        for (int i = 1; i < sentence.size(); i++) {
 //            grammar += "\t\t[";
 //            grammar += "gstruct:id " + i + " ; ";
@@ -96,23 +96,23 @@ public class Sentence2RDF {
 //            grammar += "gstruct:deprel \"" + sentence.get(i).getDeprel() + "\"";
 //            grammar += "]";
 //            if (i != (sentence.size() - 1)) {
-//                grammar += ",\n";
+//                grammar += ",%n";
 //            }
 //        }
 //        return grammar;
 //    }
 
 //    public String makeSemTriples() {
-//        String semantics = "\tgstruct:predicates\n";
+//        String semantics = "\tgstruct:predicates%n";
 //        for (int i = 0; i < sentence.getPredicates().size(); i++) {
 //            semantics += "\t\t[";
 //            semantics += "gstruct:id " + sentence.getPredicates().get(i).getInx() + " ; ";
 //            semantics += "gstruct:predsense \"" + sentence.getPredicates().get(i).getSense() + "\"" + " ; ";
-//            semantics += "gstruct:args\n";
+//            semantics += "gstruct:args%n";
 //            semantics += makeArgString(sentence.getPredicates().get(i).getArgMap());
 //            semantics += "]";
 //            if (i != (sentence.getPredicates().size() - 1)) {
-//                semantics += ",\n";
+//                semantics += ",%n";
 //            }
 //        }
 //        return semantics;
@@ -127,9 +127,9 @@ public class Sentence2RDF {
         String tmp = "";
         for (Word word : ts) {
             tmp += "\t\t\t[gstruct:id " + word.getIdx() + " ; ";
-            tmp += " gstruct:argtype \"" + argMap.get(word) + "\"],\n";
+            tmp += " gstruct:argtype \"" + argMap.get(word) + "\"],%n";
         }
-        tmp = tmp.replaceAll(",\n$", "");
+        tmp = tmp.replaceAll(",%n$", "");
         return tmp;
     }
 
@@ -152,7 +152,7 @@ public class Sentence2RDF {
             tmp += "gstruct:deprel \"" + sentence.get(i).getDeprel() + "\"";
             tmp += "]";
             if (i != (sentence.size() - 1)) {
-                tmp += ",\n";
+                tmp += ",%n";
             }
             out.print(tmp);
         }
@@ -167,11 +167,11 @@ public class Sentence2RDF {
             tmp = "\t\t[";
             tmp += "gstruct:id " + sentence.getPredicates().get(i).getIdx() + " ; ";
             tmp += "gstruct:predsense \"" + sentence.getPredicates().get(i).getSense() + "\"" + " ; ";
-            tmp += "gstruct:args\n";
+            tmp += "gstruct:args%n";
             tmp += makeArgString(sentence.getPredicates().get(i).getArgMap());
             tmp += "]";
             if (i != (sentence.getPredicates().size() - 1)) {
-                tmp += ",\n";
+                tmp += ",%n";
             }
             out.print(tmp);
         }
@@ -180,8 +180,8 @@ public class Sentence2RDF {
 
 //    public String makePrefix() {
 //        // gstruct means grammatical structure 
-//        String prefix = "@prefix gstruct: <http://cs.lth.se/ontologies/gstruct.owl#> .\n";
-//        prefix += "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n";
+//        String prefix = "@prefix gstruct: <http://cs.lth.se/ontologies/gstruct.owl#> .%n";
+//        prefix += "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .%n";
 //        return prefix;
 //    }
 

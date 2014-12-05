@@ -237,7 +237,7 @@ public class AnnotationMerger {
 			}
 		}
 		
-		//System.out.printf("Raw agreement: %2f\n", (double)(agreements)/(double)(agreements+disagreements) );
+		//System.out.printf("Raw agreement: %2f%n", (double)(agreements)/(double)(agreements+disagreements) );
 		return new int[]{0,0,0/*rel_agreements,rel_disagreements,missing*/};
 	}
 	

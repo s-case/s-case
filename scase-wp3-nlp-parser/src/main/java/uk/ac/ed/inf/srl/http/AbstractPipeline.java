@@ -45,7 +45,7 @@ public abstract class AbstractPipeline {
 			StringBuilder in=new StringBuilder();
 			String line;
 			while((line=reader.readLine())!=null)
-				in.append(line).append('\n');
+				in.append(line).append("%n");
 			reader.close();
 			return in.toString();
 		} catch (Exception e){

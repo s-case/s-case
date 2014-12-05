@@ -18,7 +18,7 @@ public class DepsOnlyCoNLL09Reader extends AbstractCoNLL09Reader {
 		StringBuilder senBuffer=new StringBuilder();
 		while ((str = in.readLine()) != null) {
 			if(!str.trim().equals("")) {
-				senBuffer.append(str).append("\n");
+				senBuffer.append(str).append("%n");
 			} else {
 				sen=Sentence.newDepsOnlySentence(NEWLINE_PATTERN.split(senBuffer.toString()));
 				break;

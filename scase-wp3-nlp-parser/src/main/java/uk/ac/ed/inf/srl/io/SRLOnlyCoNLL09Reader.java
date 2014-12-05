@@ -24,7 +24,7 @@ public class SRLOnlyCoNLL09Reader extends AbstractCoNLL09Reader {
 		StringBuilder senBuffer=new StringBuilder();
 		while ((str = in.readLine()) != null) {
 			if(!str.trim().equals("")) {
-				senBuffer.append(str).append("\n");
+				senBuffer.append(str).append("%n");
 			} else {
 				if(!senBuffer.toString().startsWith("_"))
 					c = new Corpus(senBuffer.toString().split("\t")[0]);

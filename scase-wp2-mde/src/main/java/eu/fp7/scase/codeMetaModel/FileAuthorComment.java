@@ -26,7 +26,7 @@ import eu.fp7.scase.customUtilities.UniqueIdProducer;
 public class FileAuthorComment{
 	
 	private int iFileAuthorCommentId;
-	private static String strOrganizationStamp = String.format("/*\n * ARISTOSTLE UNIVERSITY OF THESSALONIKI\n * Copyright (C) %d\n * Aristotle University of Thessaloniki\n * Department of Electrical & Computer Engineering\n * Division of Electronics & Computer Engineering\n * Intelligent Systems & Software Engineering Lab\n *", Calendar.getInstance().get(Calendar.YEAR));
+	private static String strOrganizationStamp = String.format("/*%n * ARISTOSTLE UNIVERSITY OF THESSALONIKI%n * Copyright (C) %d%n * Aristotle University of Thessaloniki%n * Department of Electrical & Computer Engineering%n * Division of Electronics & Computer Engineering%n * Intelligent Systems & Software Engineering Lab%n *", Calendar.getInstance().get(Calendar.YEAR));
 	private String strProject = "";
 	private String strWorkFile = "";
 	private String strCompiler = "";
@@ -34,8 +34,8 @@ public class FileAuthorComment{
 	private String strDocumentDescription = "";
 	private String strRelatedDocuments = "";
 	private String strNote = "";
-	private static String strProgrammer = String.format("\n* Programmer		   : RESTful MDE Engine created by Christoforos Zolotas");
-	private static String strContact = String.format("\n* Contact			   : christopherzolotas@issel.ee.auth.gr\n*/");
+	private static String strProgrammer = String.format("%n* Programmer		   : RESTful MDE Engine created by Christoforos Zolotas");
+	private static String strContact = String.format("%n* Contact			   : christopherzolotas@issel.ee.auth.gr%n*/");
 	
 	public FileAuthorComment(){
 		this.iFileAuthorCommentId = UniqueIdProducer.getNewUniqueId();
@@ -46,31 +46,31 @@ public class FileAuthorComment{
 	}
 	
 	public void setProject(String strProject){
-		this.strProject = String.format("\n * Project             : %s", strProject);
+		this.strProject = String.format("%n * Project             : %s", strProject);
 	}
 	
 	public void setWorkFile(String strWorkFile){
-		this.strWorkFile = String.format("\n * WorkFile            : %s",strWorkFile);
+		this.strWorkFile = String.format("%n * WorkFile            : %s",strWorkFile);
 	}
 	
 	public void setCompiler(String strCompiler){
-		this.strCompiler = String.format("\n * Compiler            : %s",strCompiler);
+		this.strCompiler = String.format("%n * Compiler            : %s",strCompiler);
 	}
 	
 	public void setFileDescription(String strFileDescription){
-		this.strFileDescription = String.format("\n * File Description    : %s", strFileDescription);
+		this.strFileDescription = String.format("%n * File Description    : %s", strFileDescription);
 	}
 	
 	public void setDocumentDescription(String strDocumentDescription){
-		this.strDocumentDescription = String.format("\n * Document Description: %s", strDocumentDescription);
+		this.strDocumentDescription = String.format("%n * Document Description: %s", strDocumentDescription);
 	}
 	
 	public void setRelatedDocuments(String strRelatedDocuments){
-		this.strRelatedDocuments = String.format("\n* Related Documents	   : %s", strRelatedDocuments);
+		this.strRelatedDocuments = String.format("%n* Related Documents	   : %s", strRelatedDocuments);
 	}
 	
 	public void setNote(String strNote){
-		this.strNote = String.format("\n* Note				   : %s", strNote);
+		this.strNote = String.format("%n* Note				   : %s", strNote);
 	}
 	
 	public String exportFileAuthorComment(){

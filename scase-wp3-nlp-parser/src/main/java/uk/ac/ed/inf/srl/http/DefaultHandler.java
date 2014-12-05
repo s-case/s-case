@@ -52,6 +52,6 @@ public class DefaultHandler extends AbstractHandler {
 	private void setupPages(L currentL) {
 		pages.put("default",pipeline.getParseInterfaceHTML(currentL));		
 		pages.put("notReady",
-				  "Pipeline is not loaded yet, please be patient. (Shouldn't be longer than 1-2 minutes, roughly)\n");
+				  "Pipeline is not loaded yet, please be patient. (Shouldn't be longer than 1-2 minutes, roughly)%n");
 	}
 }

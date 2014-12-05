@@ -91,7 +91,7 @@ public class PreprocessAndMerge {
 					//line = line.replace("-", " "); 
 					line = line.replace("/", " ");
 					
-					System.out.printf("%3d: %s\n", (senCount+1), line);
+					System.out.printf("%3d: %s%n", (senCount+1), line);
 					Sentence s = parseX(line);
 					int[] counts = am.mergeAndApply(anno1.get(senCount), anno2.get(senCount), s);
 					
@@ -122,7 +122,7 @@ public class PreprocessAndMerge {
 		long totalTime=System.currentTimeMillis()-startTime;
 		System.out.println("Done.");
 		System.out.println();
-		//System.out.printf("Raw agreement: %2f\n", (double)(agreements)/(double)(agreements+disagreements) );
+		//System.out.printf("Raw agreement: %2f%n", (double)(agreements)/(double)(agreements+disagreements) );
 		am.computeKappa();
 		System.out.println();
 		System.out.println("Processed "+total_senCount+ " sentence(s)");

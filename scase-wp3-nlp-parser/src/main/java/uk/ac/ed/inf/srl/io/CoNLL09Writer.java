@@ -19,14 +19,14 @@ public class CoNLL09Writer implements SentenceWriter {
 	    	out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename),Charset.forName("UTF-8")));
 	        //out = new BufferedWriter(new FileWriter(filename));
 	    } catch (IOException e) {
-	    	System.out.println("Failed while opening writer...\n"+e.toString());
+	    	System.out.println("Failed while opening writer...%n"+e.toString());
 	    	System.exit(1);
 	    }
 	}
 	
 	public void write(Sentence s){
         try {
-			out.write(s.toString()+"\n\n");
+			out.write(s.toString()+"%n%n");
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Failed to write sentance.");
@@ -37,7 +37,7 @@ public class CoNLL09Writer implements SentenceWriter {
 	@Override
 	public void specialwrite(Sentence s) {
         try {
-			out.write(s.toSpecialString()+"\n\n");
+			out.write(s.toSpecialString()+"%n%n");
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Failed to write sentance.");

@@ -96,7 +96,7 @@ public class NLPClient {
 		JSONObject phraseInput = new JSONObject();
 		phraseInput.put("phrase", "create bookmark");
 		phraseInput.put("annotation_format", "ann");
-		System.out.println("\nPOST " + phraseAddress);
+		System.out.println("%nPOST " + phraseAddress);
 		JSONObject phraseOutput = performJsonPostRequest(phraseAddress, phraseInput, "user", "pass");
 		System.out.println(phraseOutput.toString(3).replaceAll("\\\\/", "/"));
 
@@ -105,7 +105,7 @@ public class NLPClient {
 		JSONObject sentenceInput = new JSONObject();
 		sentenceInput.put("sentence", "The user must be able to create a bookmark.");
 		sentenceInput.put("annotation_format", "ttl");
-		System.out.println("\nPOST " + sentenceAddress);
+		System.out.println("%nPOST " + sentenceAddress);
 		JSONObject sentenceOutput = performJsonPostRequest(sentenceAddress, sentenceInput, "user", "pass");
 		System.out.println(sentenceOutput.toString(3).replaceAll("\\\\/", "/"));
 
@@ -134,13 +134,13 @@ public class NLPClient {
 		}
 		projectInput.put("project_requirements", projectRequirements);
 		projectInput.put("annotation_format", "ttl");
-		System.out.println("\nPOST " + projectAddress);
+		System.out.println("%nPOST " + projectAddress);
 		JSONObject projectOutput = performJsonPostRequest(projectAddress, projectInput, "user", "pass");
 		System.out.println(projectOutput.toString(3).replaceAll("\\\\/", "/"));
 
 		// Perform the project endpoint ("/project") query again with ann annotation format
 		projectInput.put("annotation_format", "ann");
-		System.out.println("\nPOST " + projectAddress);
+		System.out.println("%nPOST " + projectAddress);
 		projectOutput = performJsonPostRequest(projectAddress, projectInput, "user", "pass");
 		System.out.println(projectOutput.toString(3).replaceAll("\\\\/", "/"));
 	}

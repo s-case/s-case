@@ -32,9 +32,9 @@ public class FakePredicateReference implements Serializable {
 			}
 		}
 		if(Learn.learnOptions.skipNonMatchingPredicates){ 
-			//System.out.println("Ignoring predicate\n"+p+"\n because its POS tag is not among the prefixes we are learning.");
+			//System.out.println("Ignoring predicate%n"+p+"%n because its POS tag is not among the prefixes we are learning.");
 		} else {
-			//System.out.println("Treating predicate\n"+p+"\n as a "+POSPrefixes[0]+" during predicate sense extraction because its POS-tag doesn't match any of the ones we're learning.");
+			//System.out.println("Treating predicate%n"+p+"%n as a "+POSPrefixes[0]+" during predicate sense extraction because its POS-tag doesn't match any of the ones we're learning.");
 			map.get(POSPrefixes[0]).add("", p.getSense());
 		}
 	}

@@ -19,13 +19,13 @@ public abstract class SemanticRoleLabeler {
 	protected abstract void parse(Sentence s);
 	
 	public String getStatus(){
-		StringBuilder ret=new StringBuilder("Semantic role labeler started at "+startDate+"\n");
-		ret.append("Time spent loading SRL models (ms)\t\t"+Util.insertCommas(loadingTime)+"\n");
-		ret.append("Time spent parsing semantic roles (ms)\t\t"+Util.insertCommas(parsingTime)+"\n");
-		ret.append("\n");
-		ret.append("Number of sentences\t"+Util.insertCommas(senCount)+"\n");
-		ret.append("Number of predicates\t"+Util.insertCommas(predCount)+"\n");
-		ret.append("SRL speed (ms/sen)\t"+((double) parsingTime/senCount)+"\n");
+		StringBuilder ret=new StringBuilder("Semantic role labeler started at "+startDate+"%n");
+		ret.append("Time spent loading SRL models (ms)\t\t"+Util.insertCommas(loadingTime)+"%n");
+		ret.append("Time spent parsing semantic roles (ms)\t\t"+Util.insertCommas(parsingTime)+"%n");
+		ret.append("%n");
+		ret.append("Number of sentences\t"+Util.insertCommas(senCount)+"%n");
+		ret.append("Number of predicates\t"+Util.insertCommas(predCount)+"%n");
+		ret.append("SRL speed (ms/sen)\t"+((double) parsingTime/senCount)+"%n");
 		ret.append(getSubStatus());
 		return ret.toString();
 	}

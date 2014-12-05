@@ -153,25 +153,25 @@ public abstract class FullPipelineOptions {
 			out.println(USAGE_OPTIONS);
 			out.println(getSubUsageOptions());
 			out.println();
-			out.println("The model files neccessary vary between languages. E.g. German uses a morphological tagger,\n" +
-						"whereas Chinese and English doesn't. The parser and srl models are always required though.\n" +
-						"For Chinese, the tokenizer model should point to the data directory of the Stanford Chinese\n" +
-						"Segmenter, as provided in the 2008-05-21 distribution.\n" +
-						"\n" +
-						"For further information check the website:\n" +
-						"http://code.google.com/p/mate-tools/\n");
+			out.println("The model files neccessary vary between languages. E.g. German uses a morphological tagger,%n" +
+						"whereas Chinese and English doesn't. The parser and srl models are always required though.%n" +
+						"For Chinese, the tokenizer model should point to the data directory of the Stanford Chinese%n" +
+						"Segmenter, as provided in the 2008-05-21 distribution.%n" +
+						"%n" +
+						"For further information check the website:%n" +
+						"http://code.google.com/p/mate-tools/%n");
 		
 	}
 	private static final String USAGE_OPTIONS=
-		"-token  <file>    path to the tokenizer model file\n"+
-		"-lemma  <file>    path to the lemmatizer model file\n"+
-		"-tagger <file>    path to the pos tagger model file\n"+
-		"-morph  <file>    path to the morphological tagger model file\n"+
-		"-parser <file>    path to the parser model file\n"+
-		"-srl    <file>    path to the srl model file\n"+
-		"-reranker         use the reranker for the srl-system (default is not)\n"+
-		"-aibeam <int>     set the beam width of the ai component (default 4)\n"+
-		"-acbeam <int>     set the beam width of the ac component (default 4)\n"+
+		"-token  <file>    path to the tokenizer model file%n"+
+		"-lemma  <file>    path to the lemmatizer model file%n"+
+		"-tagger <file>    path to the pos tagger model file%n"+
+		"-morph  <file>    path to the morphological tagger model file%n"+
+		"-parser <file>    path to the parser model file%n"+
+		"-srl    <file>    path to the srl model file%n"+
+		"-reranker         use the reranker for the srl-system (default is not)%n"+
+		"-aibeam <int>     set the beam width of the ai component (default 4)%n"+
+		"-acbeam <int>     set the beam width of the ac component (default 4)%n"+
 		"-alfa   <double>  set the alfa for the reranker (default 1.0)";
 
 

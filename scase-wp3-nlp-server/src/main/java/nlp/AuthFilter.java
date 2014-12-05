@@ -63,7 +63,7 @@ public class AuthFilter implements ContainerRequestFilter {
 			HashMap<String, String> map = new HashMap<String, String>();
 			try {
 				// Change this path according to where the userdata path is set
-				String userdatatextfile = "C:\\Users\\themis\\workspaceNLP\\nlpserver\\userdata.txt";
+				String userdatatextfile = "C:\\Users\\themis\\workspaceNLP\%nlpserver\\userdata.txt";
 				Scanner scanner = new Scanner(new FileReader(userdatatextfile));
 				while (scanner.hasNextLine()) {
 					String line = scanner.nextLine();

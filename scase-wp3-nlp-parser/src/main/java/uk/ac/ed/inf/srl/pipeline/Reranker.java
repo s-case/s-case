@@ -373,18 +373,18 @@ public class Reranker extends SemanticRoleLabeler {
 
 	@Override
 	protected String getSubStatus() {
-		StringBuilder ret=new StringBuilder("Reranker status:\n");
-		ret.append("AI beam:\t\t"+aiBeam+"\n");
-		ret.append("AC beam:\t\t"+acBeam+"\n");
-		ret.append("Alfa:\t\t\t"+alfa+"\n");
-		ret.append("\n");
-		ret.append("Reranker choices:\n");
-		ret.append("Rank\tFrequency\n");
+		StringBuilder ret=new StringBuilder("Reranker status:%n");
+		ret.append("AI beam:\t\t"+aiBeam+"%n");
+		ret.append("AC beam:\t\t"+acBeam+"%n");
+		ret.append("Alfa:\t\t\t"+alfa+"%n");
+		ret.append("%n");
+		ret.append("Reranker choices:%n");
+		ret.append("Rank\tFrequency%n");
 		for(int i=0;i<rankCount.length;++i){
-			ret.append((i+1)+"\t"+rankCount[i]+"\n");
+			ret.append((i+1)+"\t"+rankCount[i]+"%n");
 		}
-		ret.append("\n");
-		ret.append("Number of zero size argmaps:\t"+zeroArgMapCount+"\n");
+		ret.append("%n");
+		ret.append("Number of zero size argmaps:\t"+zeroArgMapCount+"%n");
 		return ret.toString();
 	}
 	

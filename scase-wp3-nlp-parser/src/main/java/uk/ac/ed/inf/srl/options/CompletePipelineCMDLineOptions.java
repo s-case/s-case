@@ -18,9 +18,9 @@ public class CompletePipelineCMDLineOptions extends FullPipelineOptions {
 	
 	@Override
 	String getSubUsageOptions() {
-		return "-test   <file>    the input corpus. assumed to be tokenized like CoNLL 09 data\n" +
-			   "-out    <file>    the file to write output to (default out.txt)\n" +
-			   "-nopi             skips the predicate identification\n" +
+		return "-test   <file>    the input corpus. assumed to be tokenized like CoNLL 09 data%n" +
+			   "-out    <file>    the file to write output to (default out.txt)%n" +
+			   "-nopi             skips the predicate identification%n" +
 			   "-tokenize         implies the input is unsegmented, with one sentence per line, i.e. _not_ CoNLL09 format";
 	}
 

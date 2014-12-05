@@ -16,10 +16,10 @@ public class FileExistenceVerifier {
 		StringBuilder sb=new StringBuilder();
 		for(File f:files){
 			if(f==null || !f.exists()){
-			    sb.append("File "+f+" does not exist.\n");
+			    sb.append("File "+f+" does not exist.%n");
 			}
 			if(f==null || !f.canRead()){
-			    sb.append("File "+f+" can not be read.\n");
+			    sb.append("File "+f+" can not be read.%n");
 			}
 		}
 		if(sb.length()==0)

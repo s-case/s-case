@@ -124,12 +124,12 @@ public class Preprocessor {
 	public StringBuilder getStatus(){
 		StringBuilder sb=new StringBuilder();
 		if(tokenizer!=null)
-			sb.append("Tokenizer: "+tokenizer.getClass().getSimpleName()).append('\n');
-		sb.append("Tokenizer time:  "+Util.insertCommas(tokenizeTime)).append('\n');
-		sb.append("Lemmatizer time: "+Util.insertCommas(lemmatizeTime)).append('\n');
-		sb.append("Tagger time:     "+Util.insertCommas(tagTime)).append('\n');
-		sb.append("MTagger time:    "+Util.insertCommas(mtagTime)).append('\n');
-		sb.append("Parser time:     "+Util.insertCommas(dpTime)).append('\n');
+			sb.append("Tokenizer: "+tokenizer.getClass().getSimpleName()).append("%n");
+		sb.append("Tokenizer time: "+Util.insertCommas(tokenizeTime)).append("%n");
+		sb.append("Lemmatizer time: "+Util.insertCommas(lemmatizeTime)).append("%n");
+		sb.append("Tagger time: "+Util.insertCommas(tagTime)).append("%n");
+		sb.append("MTagger time: "+Util.insertCommas(mtagTime)).append("%n");
+		sb.append("Parser time: "+Util.insertCommas(dpTime)).append("%n");
 		return sb;
 	}
 

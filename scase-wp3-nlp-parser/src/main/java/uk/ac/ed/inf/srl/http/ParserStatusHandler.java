@@ -19,9 +19,9 @@ public class ParserStatusHandler extends AbstractHandler {
 		
 		StringBuilder ret=new StringBuilder("Web demo status, ");
 		ret.append("server started ").append(dateformat.format(HttpPipeline.serverStart));
-		ret.append('\n').append("Demo class: ").append(pipeline.getClass().getCanonicalName());
-		ret.append('\n').append("Sentence max length: ").append(pipeline.sentenceMaxLength);
-		ret.append("\n\n");
+		ret.append("%n").append("Demo class: ").append(pipeline.getClass().getCanonicalName());
+		ret.append("%n").append("Sentence max length: ").append(pipeline.sentenceMaxLength);
+		ret.append("%n%n");
 
 		ret.append(pipeline.getStatusString());
 		sendContent(exchange,ret.toString().trim(),"text/plain",200);
