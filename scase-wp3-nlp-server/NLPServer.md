@@ -253,7 +253,7 @@ If the request is correct the server should return a Response 200
                                           ...
                                        ],
                "created_at": "2014-11-06T13:44Z",
-               "annotations": "..." (single ann) or [{"id": "FR1", "annotation": "..."}, {"id": "FR2", "annotation": "..."}, ...], (list of ttls)
+               "annotations": "..." (single ann) or (single ttl)
                "annotation_format": "ann" or "ttl"
             }
 

@@ -1,3 +1,0 @@
-#File containing usernames and passwords for authentication
-#The storage form is: Username Password
-user pass
