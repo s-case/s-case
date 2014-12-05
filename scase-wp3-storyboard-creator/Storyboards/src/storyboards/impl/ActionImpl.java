@@ -28,11 +28,11 @@ import storyboards.util.StoryboardsValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link storyboards.impl.ActionImpl#getProperties <em>Properties</em>}</li>
- * <li>{@link storyboards.impl.ActionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link storyboards.impl.ActionImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link storyboards.impl.ActionImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ActionImpl extends ActionNodeImpl implements Action {
@@ -40,7 +40,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getProperties()
 	 * @generated
 	 * @ordered
@@ -51,7 +50,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -62,7 +60,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getType()
 	 * @generated
 	 * @ordered
@@ -72,7 +69,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ActionImpl() {
@@ -82,7 +78,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -93,13 +88,11 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<Property> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<Property>(Property.class, this,
-					StoryboardsPackage.ACTION__PROPERTIES);
+			properties = new EObjectResolvingEList<Property>(Property.class, this, StoryboardsPackage.ACTION__PROPERTIES);
 		}
 		return properties;
 	}
@@ -107,7 +100,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ActionEnum getType() {
@@ -117,7 +109,6 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setType(ActionEnum newType) {
@@ -173,16 +164,15 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case StoryboardsPackage.ACTION__PROPERTIES:
-			return getProperties();
-		case StoryboardsPackage.ACTION__TYPE:
-			return getType();
+			case StoryboardsPackage.ACTION__PROPERTIES:
+				return getProperties();
+			case StoryboardsPackage.ACTION__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -230,16 +220,15 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case StoryboardsPackage.ACTION__PROPERTIES:
-			return properties != null && !properties.isEmpty();
-		case StoryboardsPackage.ACTION__TYPE:
-			return type != TYPE_EDEFAULT;
+			case StoryboardsPackage.ACTION__PROPERTIES:
+				return properties != null && !properties.isEmpty();
+			case StoryboardsPackage.ACTION__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -247,15 +236,14 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case StoryboardsPackage.ACTION___VALIDATE__DIAGNOSTICCHAIN_MAP:
-			return validate((DiagnosticChain) arguments.get(0), (Map<Object, Object>) arguments.get(1));
+			case StoryboardsPackage.ACTION___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -263,13 +251,11 @@ public class ActionImpl extends ActionNodeImpl implements Action {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (type: ");

@@ -22,6 +22,22 @@
       </wizard>
    </extension-->
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated storyboards -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="storyboards.presentation.StoryboardsModelWizardID"
+            name="%_UI_StoryboardsModelWizard_label"
+            class="storyboards.presentation.StoryboardsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/StoryboardsModelFile.gif">
+         <description>%_UI_StoryboardsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
    <extension point="org.eclipse.ui.editors">
       <!-- @generated storyboards -->
       <editor

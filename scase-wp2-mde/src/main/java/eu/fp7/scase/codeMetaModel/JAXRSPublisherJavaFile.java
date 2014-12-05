@@ -63,24 +63,24 @@ public class JAXRSPublisherJavaFile extends AJavaFile{
 
 	@Override
 	public String addFileImports() {
-		this.strFileImports = String.format("%s%simport java.util.HashSet;\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strFileImports = String.format("%s%simport java.util.Set;\n\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strFileImports = String.format("%s%simport javax.ws.rs.ApplicationPath;\n\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strFileImports = String.format("%s%simport javax.ws.rs.core.Application;\n\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strFileImports = String.format("%s%simport java.util.HashSet;%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strFileImports = String.format("%s%simport java.util.Set;%n%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strFileImports = String.format("%s%simport javax.ws.rs.ApplicationPath;%n%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strFileImports = String.format("%s%simport javax.ws.rs.core.Application;%n%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation());
 		for(int n = 0; n < this.listOfSystemResourceControllers.size(); n++){
-			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
+			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.strProjectName.toLowerCase(),
 					this.listOfSystemResourceControllers.get(n).getPIMParentResourceController().getParentCIMResource().getResourceName().toLowerCase(),
 					this.listOfSystemResourceControllers.get(n).getJavaResourceControllerName());
 		}
 		for(int n = 0; n < this.listOfSystemResourceControllerManagers.size(); n++){
-			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
+			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.strProjectName.toLowerCase(),
 					this.listOfSystemResourceControllerManagers.get(n).getPIMParentResourceControllerManager().getParentCIMResource().getResourceName().toLowerCase(),
 					this.listOfSystemResourceControllerManagers.get(n).getJavaResourceControllerManagerName());
 		}
 		for(int n = 0; n < this.listOfSystemAlgoResourceControllers.size(); n++){
-			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;\n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
+			this.strFileImports = String.format("%s%simport src.main.java.%s.%s.%s;%n", this.strFileImports, this.oJavaFileIdentation.getCurrentIdentation(),
 					this.strProjectName.toLowerCase(),
 					this.listOfSystemAlgoResourceControllers.get(n).getParentPIMAlgoResourceController().getParentCIMResource().getResourceName().toLowerCase(),
 					this.listOfSystemAlgoResourceControllers.get(n).getJavaAlgoResourceControllerName());
@@ -91,8 +91,8 @@ public class JAXRSPublisherJavaFile extends AJavaFile{
 
 	@Override
 	public String addClassHeader() {
-		this.strClassHeader = String.format("%s%s@ApplicationPath(\"/api/\")\n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassHeader = String.format("%s%spublic class JAXRSPublisher extends Application{\n\n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassHeader = String.format("%s%s@ApplicationPath(\"/api/\")%n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassHeader = String.format("%s%spublic class JAXRSPublisher extends Application{%n%n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
 		this.oJavaFileIdentation.increaseIdentation();
 		return this.strClassHeader;
 	}
@@ -104,25 +104,25 @@ public class JAXRSPublisherJavaFile extends AJavaFile{
 	
 	@Override
 	public String addClassFunctions() {
-		this.strClassFunctions = String.format("%s%spublic JAXRSPublisher(){}\n\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%s@Override\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%spublic Set<Class<?>> getClasses(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sHashSet<Class<?>> SetOfClasses = new HashSet<Class<?>>();\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic JAXRSPublisher(){}%n%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%s@Override%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%spublic Set<Class<?>> getClasses(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sHashSet<Class<?>> SetOfClasses = new HashSet<Class<?>>();%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
 		for(int n = 0; n < this.listOfSystemResourceControllers.size(); n++){
-			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemResourceControllers.get(n).getJavaResourceControllerName());
+			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemResourceControllers.get(n).getJavaResourceControllerName());
 		}
 		for(int n = 0; n < this.listOfSystemResourceControllerManagers.size(); n++){
-			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemResourceControllerManagers.get(n).getJavaResourceControllerManagerName());
+			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemResourceControllerManagers.get(n).getJavaResourceControllerManagerName());
 		}
 		for(int n = 0; n < this.listOfSystemAlgoResourceControllers.size(); n++){
-			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemAlgoResourceControllers.get(n).getJavaAlgoResourceControllerName());
+			this.strClassFunctions = String.format("%s%sSetOfClasses.add(%s.class);%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation(), this.listOfSystemAlgoResourceControllers.get(n).getJavaAlgoResourceControllerName());
 		}
-		this.strClassFunctions = String.format("%s\n%sreturn SetOfClasses;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%s@Override\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%spublic Set<Object> getSingletons(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn new HashSet<Object>();\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%n%sreturn SetOfClasses;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%s@Override%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%spublic Set<Object> getSingletons(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn new HashSet<Object>();%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 		
 		return this.strClassFunctions;
 	}

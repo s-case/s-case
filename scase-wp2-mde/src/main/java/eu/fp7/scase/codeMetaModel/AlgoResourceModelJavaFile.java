@@ -65,20 +65,20 @@ public class AlgoResourceModelJavaFile extends AJavaFile{
 
 	@Override
 	public String addClassHeader() {
-		this.strClassHeader = String.format("%s%spublic class %s{\n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentAlgoJavaModel.getJavaAlgoResourceModelName());
+		this.strClassHeader = String.format("%s%spublic class %s{%n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation(), this.oParentAlgoJavaModel.getJavaAlgoResourceModelName());
 		this.oJavaFileIdentation.increaseIdentation();
 		return this.strClassHeader;
 	}
 
 	@Override
 	public String addClassProperties() {
-		this.strClassProperties = String.format("%s%s//Please add any properties of this model here.\n\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%s//Please add any properties of this model here.%n%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
 		return this.strClassProperties;
 	}
 
 	@Override
 	public String addClassFunctions() {
-		this.strClassFunctions = String.format("%s%s//Please add the constructors and any functions of this model here.\n\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%s//Please add the constructors and any functions of this model here.%n%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
 		return this.strClassFunctions;
 	}
 

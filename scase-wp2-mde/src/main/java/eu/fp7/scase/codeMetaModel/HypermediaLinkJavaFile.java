@@ -58,37 +58,37 @@ public class HypermediaLinkJavaFile extends AJavaFile{
 
 	@Override
 	public String addClassHeader() {
-		this.strClassHeader = String.format("%s%spublic class HypermediaLink{\n\n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassHeader = String.format("%s%spublic class HypermediaLink{%n%n", this.strClassHeader, this.oJavaFileIdentation.getCurrentIdentation());
 		this.oJavaFileIdentation.increaseIdentation();
 		return this.strClassHeader;
 	}
 
 	@Override
 	public String addClassProperties() {
-		this.strClassProperties = String.format("%s%sprivate String LinkURI;\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassProperties = String.format("%s%sprivate String LinkRel;\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassProperties = String.format("%s%sprivate String LinkVerb;\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassProperties = String.format("%s%sprivate String LinkType;\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassProperties = String.format("%s%sprivate int IdType;\n\n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%sprivate String LinkURI;%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%sprivate String LinkRel;%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%sprivate String LinkVerb;%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%sprivate String LinkType;%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassProperties = String.format("%s%sprivate int IdType;%n%n", this.strClassProperties, this.oJavaFileIdentation.getCurrentIdentation());
 		return this.strClassProperties;
 	}
 
 	@Override
 	public String addClassFunctions() {
-		this.strClassFunctions = String.format("%s%spublic HypermediaLink(){}\n\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%spublic HypermediaLink(String strLinkURI, String strLinkRel, String strLinkVerb, String strLinkType, int iIdType){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.IdType = iIdType;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic HypermediaLink(String strLinkURI, String strLinkRel, String strLinkVerb, String strLinkType){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic HypermediaLink(){}%n%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%spublic HypermediaLink(String strLinkURI, String strLinkRel, String strLinkVerb, String strLinkType, int iIdType){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.IdType = iIdType;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic HypermediaLink(String strLinkURI, String strLinkRel, String strLinkVerb, String strLinkType){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 		
 		addSetterFunctions();
 		addGetterFunctions();
@@ -103,39 +103,39 @@ public class HypermediaLinkJavaFile extends AJavaFile{
 	}
 	
 	private void addSetterFunctions(){
-		this.strClassFunctions = String.format("%s%spublic void setLinkURI(String strLinkURI){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic void setLinkRel(String strLinkRel){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic void setLinkVerb(String strLinkVerb){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic void setLinkType(String strLinkType){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic void setIdType(int iIdType){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sthis.IdType = iIdType;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic void setLinkURI(String strLinkURI){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkURI = strLinkURI;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic void setLinkRel(String strLinkRel){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkRel = strLinkRel;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic void setLinkVerb(String strLinkVerb){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkVerb = strLinkVerb;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic void setLinkType(String strLinkType){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.LinkType = strLinkType;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic void setIdType(int iIdType){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sthis.IdType = iIdType;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 		
 	}
 	
 	private void addGetterFunctions(){
-		this.strClassFunctions = String.format("%s%spublic String getLinkURI(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn this.LinkURI;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic String getLinkRel(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn this.LinkRel;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic String getLinkVerb(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn this.LinkVerb;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic String getLinkType(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn this.LinkType;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
-		this.strClassFunctions = String.format("%s%spublic int getIdType(){\n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
-		this.strClassFunctions = String.format("%s%sreturn this.IdType;\n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
-		this.strClassFunctions = String.format("%s%s}\n\n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic String getLinkURI(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn this.LinkURI;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic String getLinkRel(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn this.LinkRel;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic String getLinkVerb(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn this.LinkVerb;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic String getLinkType(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn this.LinkType;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
+		this.strClassFunctions = String.format("%s%spublic int getIdType(){%n", this.strClassFunctions, this.oJavaFileIdentation.getCurrentIdentation());
+		this.strClassFunctions = String.format("%s%sreturn this.IdType;%n", this.strClassFunctions, this.oJavaFileIdentation.increaseIdentation());
+		this.strClassFunctions = String.format("%s%s}%n%n", this.strClassFunctions, this.oJavaFileIdentation.decreaseIdentation());
 	}
 }

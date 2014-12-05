@@ -20,11 +20,11 @@ import storyboards.StoryboardsPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link storyboards.impl.ConditionPathImpl#getName <em>Name</em>}</li>
- * <li>{@link storyboards.impl.ConditionPathImpl#getNextConditionNode <em>Next Condition Node</em>}</li>
+ *   <li>{@link storyboards.impl.ConditionPathImpl#getName <em>Name</em>}</li>
+ *   <li>{@link storyboards.impl.ConditionPathImpl#getNextConditionNode <em>Next Condition Node</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ConditionPathImpl extends MinimalEObjectImpl.Container implements ConditionPath {
@@ -33,7 +33,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -44,7 +43,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -55,7 +53,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	 * The cached value of the '{@link #getNextConditionNode() <em>Next Condition Node</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getNextConditionNode()
 	 * @generated
 	 * @ordered
@@ -65,7 +62,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ConditionPathImpl() {
@@ -75,7 +71,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -96,32 +91,27 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StoryboardsPackage.CONDITION_PATH__NAME, oldName,
-					name));
+			eNotify(new ENotificationImpl(this, Notification.SET, StoryboardsPackage.CONDITION_PATH__NAME, oldName, name));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Node getNextConditionNode() {
 		if (nextConditionNode != null && nextConditionNode.eIsProxy()) {
-			InternalEObject oldNextConditionNode = (InternalEObject) nextConditionNode;
-			nextConditionNode = (Node) eResolveProxy(oldNextConditionNode);
+			InternalEObject oldNextConditionNode = (InternalEObject)nextConditionNode;
+			nextConditionNode = (Node)eResolveProxy(oldNextConditionNode);
 			if (nextConditionNode != oldNextConditionNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE, oldNextConditionNode,
-							nextConditionNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE, oldNextConditionNode, nextConditionNode));
 			}
 		}
 		return nextConditionNode;
@@ -130,7 +120,6 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Node basicGetNextConditionNode() {
@@ -140,15 +129,13 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setNextConditionNode(Node newNextConditionNode) {
 		Node oldNextConditionNode = nextConditionNode;
 		nextConditionNode = newNextConditionNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE, oldNextConditionNode, nextConditionNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE, oldNextConditionNode, nextConditionNode));
 	}
 
 	/**
@@ -172,18 +159,16 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case StoryboardsPackage.CONDITION_PATH__NAME:
-			return getName();
-		case StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE:
-			if (resolve)
-				return getNextConditionNode();
-			return basicGetNextConditionNode();
+			case StoryboardsPackage.CONDITION_PATH__NAME:
+				return getName();
+			case StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE:
+				if (resolve) return getNextConditionNode();
+				return basicGetNextConditionNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -229,16 +214,15 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case StoryboardsPackage.CONDITION_PATH__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE:
-			return nextConditionNode != null;
+			case StoryboardsPackage.CONDITION_PATH__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case StoryboardsPackage.CONDITION_PATH__NEXT_CONDITION_NODE:
+				return nextConditionNode != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -246,13 +230,11 @@ public class ConditionPathImpl extends MinimalEObjectImpl.Container implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

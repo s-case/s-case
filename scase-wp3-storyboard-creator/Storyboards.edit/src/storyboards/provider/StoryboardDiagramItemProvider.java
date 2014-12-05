@@ -24,7 +24,6 @@ import storyboards.StoryboardsPackage;
  * This is the item provider adapter for a {@link storyboards.StoryboardDiagram} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class StoryboardDiagramItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -33,7 +32,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardDiagramItemProvider(AdapterFactory adapterFactory) {
@@ -44,7 +42,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -62,7 +59,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -82,7 +78,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -97,7 +92,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * This returns StoryboardDiagram.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -109,7 +103,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -122,7 +115,6 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -130,14 +122,14 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(StoryboardDiagram.class)) {
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDACTIONS:
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDPROPERTIES:
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDCONDITIONS:
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDSTARTNODE:
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDENDNODE:
-		case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDSTORYBOARDS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDACTIONS:
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDPROPERTIES:
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDCONDITIONS:
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDSTARTNODE:
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDENDNODE:
+			case StoryboardsPackage.STORYBOARD_DIAGRAM__STORYBOARDSTORYBOARDS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -147,41 +139,47 @@ public class StoryboardDiagramItemProvider extends ItemProviderAdapter implement
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDACTIONS,
-				StoryboardsFactory.eINSTANCE.createAction()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDACTIONS,
+				 StoryboardsFactory.eINSTANCE.createAction()));
 
-		newChildDescriptors.add(createChildParameter(
-				StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDPROPERTIES,
-				StoryboardsFactory.eINSTANCE.createProperty()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDPROPERTIES,
+				 StoryboardsFactory.eINSTANCE.createProperty()));
 
-		newChildDescriptors.add(createChildParameter(
-				StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDCONDITIONS,
-				StoryboardsFactory.eINSTANCE.createCondition()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDCONDITIONS,
+				 StoryboardsFactory.eINSTANCE.createCondition()));
 
-		newChildDescriptors.add(createChildParameter(
-				StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDSTARTNODE,
-				StoryboardsFactory.eINSTANCE.createStartNode()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDSTARTNODE,
+				 StoryboardsFactory.eINSTANCE.createStartNode()));
 
-		newChildDescriptors.add(createChildParameter(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDENDNODE,
-				StoryboardsFactory.eINSTANCE.createEndNode()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDENDNODE,
+				 StoryboardsFactory.eINSTANCE.createEndNode()));
 
-		newChildDescriptors.add(createChildParameter(
-				StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDSTORYBOARDS,
-				StoryboardsFactory.eINSTANCE.createStoryboard()));
+		newChildDescriptors.add
+			(createChildParameter
+				(StoryboardsPackage.Literals.STORYBOARD_DIAGRAM__STORYBOARDSTORYBOARDS,
+				 StoryboardsFactory.eINSTANCE.createStoryboard()));
 	}
 
 	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

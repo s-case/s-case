@@ -10,15 +10,15 @@ import org.eclipse.emf.common.util.EList;
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Condition</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link storyboards.Condition#getName <em>Name</em>}</li>
- * <li>{@link storyboards.Condition#getConditionPaths <em>Condition Paths</em>}</li>
+ *   <li>{@link storyboards.Condition#getName <em>Name</em>}</li>
+ *   <li>{@link storyboards.Condition#getConditionPaths <em>Condition Paths</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see storyboards.StoryboardsPackage#getCondition()
  * @model
  * @generated
@@ -31,7 +31,6 @@ public interface Condition extends Node {
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see storyboards.StoryboardsPackage#getCondition_Name()
@@ -44,7 +43,6 @@ public interface Condition extends Node {
 	 * Sets the value of the '{@link storyboards.Condition#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
@@ -60,7 +58,6 @@ public interface Condition extends Node {
 	 * more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the value of the '<em>Condition Paths</em>' containment reference list.
 	 * @see storyboards.StoryboardsPackage#getCondition_ConditionPaths()
 	 * @model containment="true" lower="2" upper="2"
@@ -71,7 +68,6 @@ public interface Condition extends Node {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @model
 	 * @generated
 	 */

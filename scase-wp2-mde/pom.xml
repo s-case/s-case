@@ -5,7 +5,7 @@
   <artifactId>scase-wp2-mde</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>RESTfulMDEEngine</name>
+  <name>SCASE - WP2 - RESTfulMDEEngine</name>
   <url>http://maven.apache.org</url>
 
 	<parent>

@@ -19,7 +19,6 @@ import storyboards.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * 
  * @see storyboards.StoryboardsPackage
  * @generated
  */
@@ -28,7 +27,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected static StoryboardsPackage modelPackage;
@@ -37,7 +35,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardsSwitch() {
@@ -50,7 +47,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @parameter ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
@@ -61,105 +57,84 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that
-	 * result.
+	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case StoryboardsPackage.PROPERTY: {
-			Property property = (Property) theEObject;
-			T result = caseProperty(property);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.STORYBOARD_DIAGRAM: {
-			StoryboardDiagram storyboardDiagram = (StoryboardDiagram) theEObject;
-			T result = caseStoryboardDiagram(storyboardDiagram);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.ACTION: {
-			Action action = (Action) theEObject;
-			T result = caseAction(action);
-			if (result == null)
-				result = caseActionNode(action);
-			if (result == null)
-				result = caseNode(action);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.NODE: {
-			Node node = (Node) theEObject;
-			T result = caseNode(node);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.CONDITION: {
-			Condition condition = (Condition) theEObject;
-			T result = caseCondition(condition);
-			if (result == null)
-				result = caseNode(condition);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.START_NODE: {
-			StartNode startNode = (StartNode) theEObject;
-			T result = caseStartNode(startNode);
-			if (result == null)
-				result = caseNode(startNode);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.END_NODE: {
-			EndNode endNode = (EndNode) theEObject;
-			T result = caseEndNode(endNode);
-			if (result == null)
-				result = caseNode(endNode);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.CONDITION_PATH: {
-			ConditionPath conditionPath = (ConditionPath) theEObject;
-			T result = caseConditionPath(conditionPath);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.STORYBOARD: {
-			Storyboard storyboard = (Storyboard) theEObject;
-			T result = caseStoryboard(storyboard);
-			if (result == null)
-				result = caseActionNode(storyboard);
-			if (result == null)
-				result = caseNode(storyboard);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case StoryboardsPackage.ACTION_NODE: {
-			ActionNode actionNode = (ActionNode) theEObject;
-			T result = caseActionNode(actionNode);
-			if (result == null)
-				result = caseNode(actionNode);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		default:
-			return defaultCase(theEObject);
+			case StoryboardsPackage.PROPERTY: {
+				Property property = (Property)theEObject;
+				T result = caseProperty(property);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.STORYBOARD_DIAGRAM: {
+				StoryboardDiagram storyboardDiagram = (StoryboardDiagram)theEObject;
+				T result = caseStoryboardDiagram(storyboardDiagram);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.ACTION: {
+				Action action = (Action)theEObject;
+				T result = caseAction(action);
+				if (result == null) result = caseActionNode(action);
+				if (result == null) result = caseNode(action);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.NODE: {
+				Node node = (Node)theEObject;
+				T result = caseNode(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.CONDITION: {
+				Condition condition = (Condition)theEObject;
+				T result = caseCondition(condition);
+				if (result == null) result = caseNode(condition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.START_NODE: {
+				StartNode startNode = (StartNode)theEObject;
+				T result = caseStartNode(startNode);
+				if (result == null) result = caseNode(startNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.END_NODE: {
+				EndNode endNode = (EndNode)theEObject;
+				T result = caseEndNode(endNode);
+				if (result == null) result = caseNode(endNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.CONDITION_PATH: {
+				ConditionPath conditionPath = (ConditionPath)theEObject;
+				T result = caseConditionPath(conditionPath);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.STORYBOARD: {
+				Storyboard storyboard = (Storyboard)theEObject;
+				T result = caseStoryboard(storyboard);
+				if (result == null) result = caseActionNode(storyboard);
+				if (result == null) result = caseNode(storyboard);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StoryboardsPackage.ACTION_NODE: {
+				ActionNode actionNode = (ActionNode)theEObject;
+				T result = caseActionNode(actionNode);
+				if (result == null) result = caseNode(actionNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			default: return defaultCase(theEObject);
 		}
 	}
 
@@ -169,7 +144,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -185,7 +159,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Storyboard Diagram</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -201,7 +174,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -217,7 +189,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -233,7 +204,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -249,7 +219,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Start Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -265,7 +234,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>End Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -281,7 +249,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Condition Path</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -297,7 +264,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Storyboard</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -313,7 +279,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Action Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
@@ -329,7 +294,6 @@ public class StoryboardsSwitch<T> extends Switch<T> {
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch, but this is the last case anyway.
 	 * <!-- end-user-doc -->
-	 * 
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)

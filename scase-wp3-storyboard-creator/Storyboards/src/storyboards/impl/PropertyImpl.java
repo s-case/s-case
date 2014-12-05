@@ -23,10 +23,10 @@ import storyboards.util.StoryboardsValidator;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link storyboards.impl.PropertyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link storyboards.impl.PropertyImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class PropertyImpl extends MinimalEObjectImpl.Container implements Property {
@@ -35,7 +35,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -46,7 +45,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -56,7 +54,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected PropertyImpl() {
@@ -66,7 +63,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -87,7 +83,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -119,14 +114,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case StoryboardsPackage.PROPERTY__NAME:
-			return getName();
+			case StoryboardsPackage.PROPERTY__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -134,15 +128,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case StoryboardsPackage.PROPERTY__NAME:
-			setName((String) newValue);
-			return;
+			case StoryboardsPackage.PROPERTY__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -150,15 +143,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case StoryboardsPackage.PROPERTY__NAME:
-			setName(NAME_EDEFAULT);
-			return;
+			case StoryboardsPackage.PROPERTY__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -166,14 +158,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case StoryboardsPackage.PROPERTY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case StoryboardsPackage.PROPERTY__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -181,15 +172,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case StoryboardsPackage.PROPERTY___VALIDATE__DIAGNOSTICCHAIN_MAP:
-			return validate((DiagnosticChain) arguments.get(0), (Map<Object, Object>) arguments.get(1));
+			case StoryboardsPackage.PROPERTY___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -197,13 +187,11 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

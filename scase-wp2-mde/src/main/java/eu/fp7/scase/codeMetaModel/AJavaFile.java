@@ -85,7 +85,7 @@ public abstract class AJavaFile{
 	}
 	
 	public String exportJavaFile(){
-		return String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n", this.strAuthorComment, this.strPackageStamp, this.strFileImports, this.strClassHeader, this.strClassProperties, this.strClassFunctions, this.strClassTail);
+		return String.format("%s%n%s%n%s%n%s%n%s%n%s%n%s%n", this.strAuthorComment, this.strPackageStamp, this.strFileImports, this.strClassHeader, this.strClassProperties, this.strClassFunctions, this.strClassTail);
 	}
 	
 	public void transformFile(){
@@ -101,7 +101,7 @@ public abstract class AJavaFile{
 	public abstract String addAuthorComment();
 	
 	public String addPackageStamp(){
-		this.strPackageStamp = String.format("\n\n%s\n\n", this.strPackageStamp);
+		this.strPackageStamp = String.format("%n%n%s%n%n", this.strPackageStamp);
 		return this.strPackageStamp;
 	}
 	
