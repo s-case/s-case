@@ -27,35 +27,37 @@ import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.trees.*;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 
-public class SimpleStanford {
+public class SimpleStanford
+{
 
-	LexicalizedParser lp;
-	GrammaticalStructureFactory gsf;
-	public static void main(String[] args) throws IOException {
-		SimpleStanford c2s = new SimpleStanford();
-	}
-	
-	public SimpleStanford() throws IOException {
-	    lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishRNN.ser.gz");
-	    TreebankLanguagePack tlp = lp.getOp().langpack();
-		BufferedReader br = new BufferedReader(new FileReader(new File("../geoquery/berkeley/geo/train/geo880.e")));
-	    
-		String line = "";
-		while((line = br.readLine())!=null) {
-			TokenizerFactory<CoreLabel> tokenizerFactory =
-				PTBTokenizer.factory(new CoreLabelTokenFactory(), "");
-			Tokenizer<CoreLabel> tok =
-				tokenizerFactory.getTokenizer(new StringReader(line));
-			List<CoreLabel> rawWords2 = tok.tokenize();
-			Tree parse = lp.apply(rawWords2);
-			System.out.println(parse);
-		}
-	    br.close();
-	    //GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
-	    //GrammaticalStructure gs = gsf.newGrammaticalStructure(parse);
-	    //List<TypedDependency> tdl = gs.typedDependenciesCCprocessed();
-	    //System.out.println(tdl);
-	    //System.out.println();
-	    
-	}
+    LexicalizedParser lp;
+    GrammaticalStructureFactory gsf;
+
+    public static void main(String[] args)
+            throws IOException
+    {
+        SimpleStanford c2s = new SimpleStanford();
+    }
+
+    public SimpleStanford() throws IOException {
+        lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishRNN.ser.gz");
+        TreebankLanguagePack tlp = lp.getOp().langpack();
+        BufferedReader br = new BufferedReader(new FileReader(new File("../geoquery/berkeley/geo/train/geo880.e")));
+
+        String line = "";
+        while ((line = br.readLine()) != null) {
+            TokenizerFactory<CoreLabel> tokenizerFactory = PTBTokenizer.factory(new CoreLabelTokenFactory(), "");
+            Tokenizer<CoreLabel> tok = tokenizerFactory.getTokenizer(new StringReader(line));
+            List<CoreLabel> rawWords2 = tok.tokenize();
+            Tree parse = lp.apply(rawWords2);
+            System.out.println(parse);
+        }
+        br.close();
+        // GrammaticalStructureFactory gsf = tlp.grammaticalStructureFactory();
+        // GrammaticalStructure gs = gsf.newGrammaticalStructure(parse);
+        // List<TypedDependency> tdl = gs.typedDependenciesCCprocessed();
+        // System.out.println(tdl);
+        // System.out.println();
+
+    }
 }

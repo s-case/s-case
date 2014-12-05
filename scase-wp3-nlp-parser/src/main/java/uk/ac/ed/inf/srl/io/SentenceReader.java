@@ -4,12 +4,12 @@ import java.util.List;
 
 import uk.ac.ed.inf.srl.corpus.Sentence;
 
-public interface SentenceReader extends Iterable<Sentence>{
+public interface SentenceReader
+        extends Iterable<Sentence>
+{
 
-	List<Sentence> readAll();
+    List<Sentence> readAll();
 
-	public void close();
+    public void close();
 
-	
-	
 }
