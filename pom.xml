@@ -28,10 +28,7 @@
         <module>scase-wp2-kyrcha-test</module>
         <module>scase-wp2-mde</module>
         <module>scase-wp3-nlp-parser</module>
+        <module>scase-wp3-nlp-server</module>
     </modules>
-
-    <prerequisites>
-        <maven>3.0.5</maven>
-    </prerequisites>
 
 </project>
