@@ -123,8 +123,8 @@ public class NLPClient {
 				"A logged in user must be able to update any bookmark from his account.",
 				"A logged in user must be able to mark his bookmarks as public or private.",
 				"A logged in user must be able to add tags to his bookmarks.",
-				"Any user must be able to retrieve the public bookmarks of any RESTMARKS’s community user.",
-				"Any user must be able to search by tag the public bookmarks of a specific RESTMARKS’s user.",
+				"Any user must be able to retrieve the public bookmarks of any RESTMARKS's community user.",
+				"Any user must be able to search by tag the public bookmarks of a specific RESTMARKS's user.",
 				"Any user must be able to search by tag the public bookmarks of all RESTMARKS users.",
 				"A logged in user, must be able to search by tag his private bookmarks as well." };
 		JSONArray projectRequirements = new JSONArray();
