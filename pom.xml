@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>eu.fp7.scase</groupId>
     <artifactId>scase</artifactId>
     <packaging>pom</packaging>
         <name>SCASE</name>
@@ -25,10 +26,10 @@
         <module>scase-build</module>
         <module>scase-base</module>
         <module>scase-eclipse</module>
-        <module>scase-wp2-kyrcha-test</module>
         <module>scase-wp2-mde</module>
         <module>scase-wp3-nlp-parser</module>
         <module>scase-wp3-nlp-server</module>
+        <module>scase-wp5</module>
     </modules>
 
 </project>
