@@ -8,12 +8,15 @@
 		<artifactId>scase</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>scase-wp3-nlp-parser</artifactId>
-	<name>scase-wp3-nlp-parser</name>
+	<name>SCASE - WP3 - NLP-PARSER</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.googlecode.mate-tools</groupId>
