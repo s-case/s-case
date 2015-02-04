@@ -18,6 +18,10 @@ public class CompletePipelineCMDLineOptions
     public CompletePipelineCMDLineOptions() {
         super.loadPreprocessorWithTokenizer = false; // We think default is CoNLL09 corpus,
     }
+    
+    public CompletePipelineCMDLineOptions(String[] args) {
+    	this.parseCmdLineArgs(args);
+    }
 
     @Override
     String getSubUsageOptions()
