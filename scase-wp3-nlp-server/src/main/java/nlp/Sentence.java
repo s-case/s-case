@@ -13,9 +13,9 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
+import uk.ac.ed.inf.srl.StaticPipeline;
 /**
  * The sentence endpoint used to annotate sentences.
  * 
@@ -48,16 +48,24 @@ public class Sentence {
 
 		JSONObject jsonResponse = null;
 		try {
-			if (!(request.get("annotation_format").equals("ann") || request.get("annotation_format").equals("ttl"))) {
+			if (!(request.get("annotation_format").equals("ann") || request.get("annotation_format").equals("ann"))) {
 				throw new WebApplicationException(Response.status(422)
 						.entity("\"annotation_format\" must be either \"ann\" or \"ttl\"").type("text/plain").build());
 			}
+			StaticPipeline.clear();
+		
+			Object annotation = 
+					request.get("annotation_format").equals("ttl")?
+							StaticPipeline.parseSentenceTTL(request.get("sentence").toString()):
+								StaticPipeline.parseSentenceANN(request.get("sentence").toString());			
+
 			jsonResponse = new JSONObject();
 			jsonResponse.put("created_at", currentTimeISO8601);
-			jsonResponse.put("sentence", request.get("sentence"));
-			jsonResponse.put("annotations", "Annotation of " + request.get("sentence"));
+			jsonResponse.put("sentence", request.get("sentence"));							
+			jsonResponse.put("annotations", annotation);
 			jsonResponse.put("annotation_format", request.get("annotation_format"));
-		} catch (JSONException e) {
+		} catch (Exception e) {
+			e.printStackTrace();
 			throw new WebApplicationException(Response.status(422).entity(e.getMessage()).type("text/plain").build());
 		}
 

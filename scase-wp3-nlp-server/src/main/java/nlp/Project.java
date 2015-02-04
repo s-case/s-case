@@ -3,6 +3,7 @@ package nlp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.TimeZone;
 
 import javax.ws.rs.Consumes;
@@ -13,8 +14,11 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+
+import uk.ac.ed.inf.srl.StaticPipeline;
 
 /**
  * The project endpoint used to annotate projects.
@@ -55,22 +59,41 @@ public class Project {
 				throw new WebApplicationException(Response.status(422)
 						.entity("\"annotation_format\" must be either \"ann\" or \"ttl\"").type("text/plain").build());
 			}
-			if (request.get("annotation_format").equals("ann")) {
-				jsonResponse = new JSONObject();
-				jsonResponse.put("created_at", currentTimeISO8601);
-				jsonResponse.put("project_name", request.get("project_name"));
-				jsonResponse.put("project_requirements", request.get("project_requirements"));
-				jsonResponse.put("annotations", "Annotation of requirements");
-				jsonResponse.put("annotation_format", request.get("annotation_format"));
+			Object annotation = request.get("annotation_format").equals("ttl")?new JSONObject():new JSONArray();
+			StaticPipeline.clear();
+			for(int i=0; i<((JSONArray)request.get("project_requirements")).length(); i++) {
+				JSONObject o = (JSONObject) ((JSONArray)request.get("project_requirements")).get(i);
+				if(request.get("annotation_format").equals("ttl")) {
+					if(i==0) StaticPipeline.newProject(request.get("project_name").toString());
+					JSONObject curr = StaticPipeline.parseSentenceTTL(o.get("text").toString(), o.get("id").toString());
+					Iterator iter = curr.keys();
+					while(iter.hasNext()) {
+						String key = (String) iter.next();
+						((JSONObject)annotation).put(key, curr.get(key));
+					}
+					if(i==((JSONArray)request.get("project_requirements")).length()-1) {
+						curr = StaticPipeline.getProject();
+						iter = curr.keys();
+						while(iter.hasNext()) {
+							String key = (String) iter.next();
+							((JSONObject)annotation).put(key, curr.get(key));
+						}
+					}
+				} else {
+					JSONObject curr = new JSONObject();
+					curr.put("id", o.get("id").toString());
+					curr.put("annotation",  StaticPipeline.parseSentenceANN(o.get("text").toString()));
+					((JSONArray)annotation).put(curr);
+					StaticPipeline.clear();
+				}
 			}
-			else if (request.get("annotation_format").equals("ttl")) {
-				jsonResponse = new JSONObject();
-				jsonResponse.put("created_at", currentTimeISO8601);
-				jsonResponse.put("project_name", request.get("project_name"));
-				jsonResponse.put("project_requirements", request.get("project_requirements"));
-				jsonResponse.put("annotations", "Annotation of requirements");
-				jsonResponse.put("annotation_format", request.get("annotation_format"));
-			}
+			jsonResponse = new JSONObject();
+			jsonResponse.put("created_at", currentTimeISO8601);
+			jsonResponse.put("project_name", request.get("project_name"));
+			jsonResponse.put("project_requirements", request.get("project_requirements"));
+			jsonResponse.put("annotations", annotation);
+			jsonResponse.put("annotation_format", request.get("annotation_format"));
+
 		} catch (JSONException e) {
 			throw new WebApplicationException(Response.status(422).entity(e.getMessage()).type("text/plain").build());
 		}
