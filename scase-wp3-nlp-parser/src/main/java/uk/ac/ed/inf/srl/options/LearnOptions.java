@@ -21,8 +21,6 @@ public class LearnOptions
         map.put(Step.pd, "pd.feats");
         map.put(Step.ai, "ai.feats");
         map.put(Step.ac, "ac.feats");
-        map.put(Step.ao, "ao.feats");
-        map.put(Step.po, "po.feats");
         featureFileNames = Collections.unmodifiableMap(map);
     }
 

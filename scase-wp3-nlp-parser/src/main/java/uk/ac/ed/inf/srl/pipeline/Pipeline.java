@@ -52,9 +52,6 @@ public class Pipeline
         if (featureSets.containsKey(Step.ac)) {
             argLabels = new ArrayList<String>();
         }
-        if (featureSets.containsKey(Step.ao)) {
-            convArgLabels = new ArrayList<String>();
-        }
         extractLabels(sentences, predicateReference, argLabels);
         // extractLabels(sentences, featureSets.get(Step.pd).POSPrefixes); //TODO, sort of nasty.
         this.fg = fg;

@@ -35,7 +35,7 @@ public class FeatureGenerator
         Map<Step, FeatureSet> featureSets = new HashMap<Step, FeatureSet>();
         Map<String, List<String>> piNames = FeatureFile.readFile(files.get(Step.pi));
         featureSets.put(Step.pi, createFeatureSet(piNames, true, bc, we));
-        for (Step s : new Step[] { Step.pd, Step.ai, Step.ac, Step.po, Step.ao }) {
+        for (Step s : new Step[] { Step.pd, Step.ai, Step.ac }) {
             Map<String, List<String>> names = FeatureFile.readFile(files.get(s));
             featureSets.put(s, createFeatureSet(names, false, bc, we));
         }

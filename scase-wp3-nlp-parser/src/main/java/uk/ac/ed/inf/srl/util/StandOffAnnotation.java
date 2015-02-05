@@ -22,29 +22,16 @@ public class StandOffAnnotation
         return annos[i];
     }
 
-    public StandOffAnnotation(File standoffFile) {
-        if (standoffFile.getPath().endsWith((".txt"))) {
-            if (standoffFile.getPath().contains("_vk") || standoffFile.getPath().contains("_cs"))
-                sentences = readSentences(new File(standoffFile.getPath().replaceAll("_.*", ".txt")));
-            else
-                sentences = readSentences(standoffFile);
+    public StandOffAnnotation(File textfile, File annofile) {
+        sentences = readSentences(textfile);
 
-            standoffFile = new File(standoffFile.getPath().replaceAll(".txt", ".ann"));
-            annos = new SentenceAnnotation[sentEndIndices.size()];
-            for (int i = 0; i < annos.length; i++)
-                annos[i] = new SentenceAnnotation(i == 0 ? 0 : sentEndIndices.get(i - 1) + 1, sentEndIndices.get(i));
+        annofile = new File(annofile.getPath().replaceAll(".txt", ".ann"));
+        annos = new SentenceAnnotation[sentEndIndices.size()];
+        for (int i = 0; i < annos.length; i++)
+            annos[i] = new SentenceAnnotation(i == 0 ? 0 : sentEndIndices.get(i - 1) + 1, sentEndIndices.get(i));
 
-            id2sent = new HashMap<String, Integer>();
-            readAnnotations(standoffFile);
-        } else {
-            Object[] objects = readSentencesAndFrames(standoffFile);
-            sentences = (List<String>) objects[0];
-            List<SentenceAnnotation> anno = (List<SentenceAnnotation>) objects[1];
-
-            annos = new SentenceAnnotation[sentences.size()];
-            for (int i = 0; i < annos.length; i++)
-                annos[i] = anno.get(i);
-        }
+        id2sent = new HashMap<String, Integer>();
+        readAnnotations(annofile);
     }
 
     private void readAnnotations(File inputCorpus)
@@ -103,86 +90,6 @@ public class StandOffAnnotation
             if (charpos < sentEndIndices.get(i))
                 return i;
         return -1;
-    }
-
-    private Object[] readSentencesAndFrames(File inputCorpus)
-    {
-        List<String> retval = new LinkedList<String>();
-        List<SentenceAnnotation> anno = new LinkedList<SentenceAnnotation>();
-
-        // int offset = 0;
-        BufferedReader br = null;
-        String currentSen = "";
-        SentenceAnnotation currentAnno = null;
-        String currentFrame = "";
-        int currentFrameId = 0;
-        int currentFEId = 0;
-
-        boolean fix_dointonight = inputCorpus.getName().equals("LUCorpus-v0.3__SNO-525.xml");
-
-        try {
-            br = new BufferedReader(new FileReader(inputCorpus));
-            String line = "";
-            String layer = "";
-            while ((line = br.readLine()) != null) {
-                if (line.contains("<layer ")) {
-                    layer = line.replaceAll(".*name=\"", "").replaceAll("\".*", "");
-                } else if (line.contains("</layer>")) {
-                    layer = "";
-                } else if (line.contains("<text>")) {
-                    if (currentAnno != null) {
-                        anno.add(currentAnno);
-                    }
-                    currentSen = line.replaceAll(".*<text>", "").replaceAll(" ?</text>.*", "");
-                    if (fix_dointonight && currentSen.contains("doin'tonight"))
-                        currentSen = currentSen.replaceAll("doin'tonight", "doin tonight");
-                    retval.add(currentSen);
-                    // System.out.println(currentSen);
-                    currentAnno = new SentenceAnnotation(0, currentSen.length());
-                } else if (line.matches(".*<annotationSet .*frameName=.*")) {
-                    currentFrameId++;
-                    currentFrame = line.replaceAll(".* frameName=\"", "").replaceAll("\".*", "").replaceAll(" ", "_");
-                } else if (line.matches(".*<label .*") && line.matches(".* start=.*") && line.matches(".* end=.*")) {
-
-                    int begin = Integer.parseInt(line.replaceAll(".* start=\"", "").replaceAll("\".*", ""));
-                    int end = Integer.parseInt(line.replaceAll(".* end=\"", "").replaceAll("\".*", ""));
-
-                    if (layer.equals("Target")) {
-                        /** TODO: Sometimes, the target comprises two words... what to do with them? **/
-                        String[] num_anno_word = new String[] { "F" + currentFrameId,
-                                (currentFrame + " " + begin + " " + end), currentSen.substring(begin, end) };
-                        currentAnno.addAnnotation(num_anno_word);
-                    }
-                    if (layer.equals("FE")) {
-                        currentFEId++;
-                        String FE = line.replaceAll(".*name=\"", "").replaceAll("\".*", "").replaceAll(" ", "_");
-
-                        // add FE as a concept
-                        String[] num_anno_word = new String[] { "E" + currentFEId, (FE + " " + begin + " " + end),
-                                currentSen.substring(begin, end) };
-                        currentAnno.addAnnotation(num_anno_word);
-
-                        // add Relation between Frame and FE
-                        num_anno_word = new String[] { "Rx",
-                                currentFrame + ":" + FE + " " + ":F" + currentFrameId + " " + ":E" + currentFEId };
-                        currentAnno.addAnnotation(num_anno_word);
-
-                    }
-                }
-            }
-            anno.add(currentAnno);
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.exit(1);
-        } finally {
-            try {
-                br.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.exit(1);
-            }
-        }
-        return new Object[] { retval, anno };
     }
 
     private List<String> readSentences(File inputCorpus)

@@ -21,7 +21,8 @@ public class CoNLL09Writer
             out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), Charset.forName("UTF-8")));
             // out = new BufferedWriter(new FileWriter(filename));
         } catch (IOException e) {
-            System.out.println("Failed while opening writer...%n" + e.toString());
+            System.out.println("Failed while opening writer...");
+            System.out.println(e.toString());
             System.exit(1);
         }
     }
@@ -29,7 +30,9 @@ public class CoNLL09Writer
     public void write(Sentence s)
     {
         try {
-            out.write(s.toString() + "%n%n");
+            out.write(s.toString());
+            out.newLine();
+            out.newLine();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Failed to write sentance.");
@@ -41,7 +44,9 @@ public class CoNLL09Writer
     public void specialwrite(Sentence s)
     {
         try {
-            out.write(s.toSpecialString() + "%n%n");
+            out.write(s.toSpecialString());
+            out.newLine();
+            out.newLine();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Failed to write sentance.");

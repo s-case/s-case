@@ -90,16 +90,15 @@ public class SentenceAnnotation
                     currids.add(i);
             }
             if (currids.size() == 0) {
-                System.err.println(sen.toString());
-                System.err.println("Error: no matching token found for span from " + startCharacter + ":"
-                        + endCharacter);
-                System.err.println("Tokens are:");
+                System.err.println("WARNING: no matching token found for span " + startCharacter + ":" + endCharacter);
                 for (int i = 0; i < begins.length; i++) {
-                    System.err.println("  " + begins[i] + ":" + ends[i] + "\t" + sen.get(i + 1).getForm());
+                    if (begins[i] >= startCharacter && ends[i] > endCharacter) {                    	
+                        currids.add(i);
+                        System.err.println("... assigned to closest match instead ("+ begins[i] + ":" + ends[i] + ")");
+                        break;
+                    }
                 }
-                continue;
             }
-            // System.out.println(anno[0]);
 
             concept2word.put(anno[0], sen.get(head(sen, currids) + 1));
             concept2label.put(anno[0], label);
