@@ -1,0 +1,20 @@
+N
+Position
+PredLemmaSense
+ArgPOS                  # 
+DeprelPath 
+POSDepPath 
+ArgDeprel+PredPOS
+PredLemmaSense+ArgPOS
+Position+Distance
+
+V
+ArgWord
+Position
+PredLemmaSense
+ArgPOS                  # 
+DeprelPath 
+POSDepPath 
+ArgDeprel+PredPOS       # 1105 1549
+PredLemmaSense+ArgPOS   # 1103 1536
+Position+Distance       # 1126 1569
