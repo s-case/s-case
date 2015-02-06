@@ -48,7 +48,7 @@ public class Sentence {
 
 		JSONObject jsonResponse = null;
 		try {
-			if (!(request.get("annotation_format").equals("ann") || request.get("annotation_format").equals("ann"))) {
+			if (!(request.get("annotation_format").equals("ann") || request.get("annotation_format").equals("ttl"))) {
 				throw new WebApplicationException(Response.status(422)
 						.entity("\"annotation_format\" must be either \"ann\" or \"ttl\"").type("text/plain").build());
 			}

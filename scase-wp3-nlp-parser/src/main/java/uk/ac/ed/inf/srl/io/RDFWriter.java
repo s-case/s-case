@@ -38,7 +38,7 @@ public class RDFWriter
     {
         try {
             rdf = new RDF();
-            SentenceRDF rdfs = new SentenceRDF(rdf, semlink, s, ++snum);
+            SentenceRDF rdfs = new SentenceRDF(rdf, semlink, s, new Integer(++snum).toString());
             rdf.write(out);
             // out.write(s.toString()+"%n%n");
         } catch (Exception e) {

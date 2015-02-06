@@ -42,7 +42,7 @@ public class CoNLL2TTL
         RDF rdf = new RDF();
 
         for (Sentence sen : reader.readAll()) {
-            SentenceRDF rdfs = new SentenceRDF(rdf, semlink, sen, snum);
+            SentenceRDF rdfs = new SentenceRDF(rdf, semlink, sen, new Integer(snum).toString());
             snum++;
             break;
         }
