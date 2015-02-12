@@ -1,4 +1,4 @@
-package eu.fp7.scase.assetregistry;
+package eu.fp7.scase.assetregistry.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

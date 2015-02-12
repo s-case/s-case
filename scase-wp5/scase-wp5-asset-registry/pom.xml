@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>scase-wp-5-asset-registry</artifactId>
-    <name>SCASE - WP5 - AssetRegistry</name>
-    <description>The Asset Registry is responsible for storing
-    requirements and software artefacts</description>
-
-    <parent>
-        <groupId>eu.fp7.scase</groupId>
-        <artifactId>scase-wp5</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
-
-    <dependencies>
-        <dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
             <groupId>eu.fp7.scase</groupId>
-            <artifactId>scase-base</artifactId>
+            <artifactId>scase-wp5</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
-            <scope>provided</scope>
-            <version>3.0.10.Final</version>
-        </dependency>
-
-
-    </dependencies>
-
+	</parent>
+	<artifactId>scase-wp5-asset-registry</artifactId>
+	<packaging>pom</packaging>
+	<name>SCASE - WP5 - Asset Registry</name>
+	<modules>
+		<module>scase-wp5-asset-registry-datamodel</module>
+		<module>scase-wp5-asset-registry-backend</module>
+	</modules>
 </project>
