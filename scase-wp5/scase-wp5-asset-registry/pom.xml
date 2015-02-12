@@ -15,11 +15,25 @@
     </parent>
 
     <dependencies>
-            <dependency>
-                    <groupId>eu.fp7.scase</groupId>
-                    <artifactId>scase-base</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
-            </dependency>
+        <dependency>
+            <groupId>eu.fp7.scase</groupId>
+            <artifactId>scase-base</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <scope>provided</scope>
+            <version>3.0.10.Final</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
