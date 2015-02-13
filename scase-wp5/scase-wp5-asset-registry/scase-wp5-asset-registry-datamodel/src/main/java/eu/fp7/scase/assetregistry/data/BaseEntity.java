@@ -8,6 +8,11 @@ import javax.persistence.Version;
 import javax.xml.bind.annotation.XmlElement;
 
 
+/**
+ * base entity.
+ * @author Robert Magnus
+ *
+ */
 @MappedSuperclass
 public abstract class BaseEntity
 {
@@ -23,7 +28,7 @@ public abstract class BaseEntity
 
     public Long getId()
     {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id)
@@ -33,7 +38,7 @@ public abstract class BaseEntity
 
     public Long getVersion()
     {
-        return version;
+        return this.version;
     }
 
     @Override

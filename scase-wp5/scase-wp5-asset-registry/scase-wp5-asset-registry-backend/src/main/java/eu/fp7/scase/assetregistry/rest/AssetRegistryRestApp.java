@@ -3,6 +3,11 @@ package eu.fp7.scase.assetregistry.rest;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+/**
+ * class for holding all the names.
+ * @author Robert Magnus
+ *
+ */
 @ApplicationPath(AssetRegistryRestApp.BASE)
 public class AssetRegistryRestApp extends Application {
 
