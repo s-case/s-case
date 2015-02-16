@@ -25,7 +25,6 @@ import uk.ac.ed.inf.srl.pipeline.Pipeline;
 import uk.ac.ed.inf.srl.pipeline.Reranker;
 import uk.ac.ed.inf.srl.pipeline.Step;
 import uk.ac.ed.inf.srl.preprocessor.Preprocessor;
-import uk.ac.ed.inf.srl.util.ChineseDesegmenter;
 import uk.ac.ed.inf.srl.util.FileExistenceVerifier;
 import uk.ac.ed.inf.srl.util.Util;
 
@@ -181,12 +180,7 @@ public class CompletePipeline
 
         while ((str = in.readLine()) != null) {
             if (str.trim().equals("")) {
-                Sentence s;
-                if (options.desegment) {
-                    s = pipeline.parse(ChineseDesegmenter.desegment(forms.toArray(new String[0])));
-                } else {
-                    s = options.skipPI ? pipeline.parseOraclePI(forms, isPred) : pipeline.parse(forms);
-                }
+                Sentence s = options.skipPI ? pipeline.parseOraclePI(forms, isPred) : pipeline.parse(forms);
                 forms.clear();
                 forms.add("<root>");
                 isPred.clear();

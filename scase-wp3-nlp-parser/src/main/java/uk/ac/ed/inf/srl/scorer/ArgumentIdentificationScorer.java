@@ -5,27 +5,29 @@ import java.util.Set;
 
 import uk.ac.ed.inf.srl.corpus.Predicate;
 import uk.ac.ed.inf.srl.corpus.Sentence;
+import uk.ac.ed.inf.srl.corpus.Word;
 
-public class PredicateIdentificationScorer extends AbstractScorer {
+public class ArgumentIdentificationScorer extends AbstractScorer {
 
 	
 	public static double score(Sentence gold, Sentence parsed) {
 		if(gold.getPredicates().size()==0 && parsed.getPredicates().size()==0)
 			return 1;
 		int tp=0,fp=0,fn=0;
-		Set<Integer> tpSet=new HashSet<Integer>();
-		for(Predicate pred:parsed.getPredicates()){
-			int index=parsed.indexOf(pred);
-			if(gold.get(index) instanceof Predicate){
-				tp++;
-				tpSet.add(index);
-			} else {
-				fp++;
-			}
-		}
 		for(Predicate pred:gold.getPredicates()){
-			if(!tpSet.contains(gold.indexOf(pred)))
-				fn++;
+			Set<Integer> tpSet=new HashSet<Integer>();
+			for(Word w : ((Predicate)parsed.get(pred.getIdx())).getArgMap().keySet()) {
+				int index=w.getIdx();
+				if(pred.getArgMap().containsKey(gold.get(index))){
+					tp++;
+					tpSet.add(index);
+				} else {
+					fp++;
+				}
+			}
+			for(Word w : pred.getArgMap().keySet())
+				if(!tpSet.contains(w.getIdx())) 
+					fn++;
 		}
 		double p=(double) tp/(tp+fp);
 		double r=(double) tp/(tp+fn);

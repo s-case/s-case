@@ -22,7 +22,7 @@ public abstract class Language
 
     public enum L
     {
-        cat, chi, cze, eng, ger, jap, spa, swe, fre, nul
+        eng
     };
 
     private static Language language;
@@ -37,7 +37,7 @@ public abstract class Language
 
     public static String getLsString()
     {
-        return "chi, eng, ger";
+        return "eng";
     }
 
     public static Language setLanguage(L l)
@@ -45,15 +45,6 @@ public abstract class Language
         switch (l) {
         case eng:
             language = new English();
-            break;
-        case ger:
-            language = new German();
-            break;
-        case spa:
-            language = new Spanish();
-            break;
-        case nul:
-            language = new NullLanguage();
             break;
         default:
             throw new IllegalArgumentException("Unknown language: '" + l + "'");

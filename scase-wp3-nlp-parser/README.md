@@ -72,6 +72,7 @@ Package  | Description
 `uk.ac.ed.inf.srl.languages` | Contains classes related to language-specific settings
 `uk.ac.ed.inf.srl.ml` | Provides classes and interfaces for learning and applying statistical models
 `uk.ac.ed.inf.srl.options` | Defines command-line options and helper classes
+`uk.ac.ed.inf.srl.pipeline` | Provides classes and interfaces for the individual semantic analysis steps
 `uk.ac.ed.inf.srl.preprocessor` | Provides classes for syntactic preprocessing steps
 `uk.ac.ed.inf.srl.rdf` | Utility classes for producing RDF representations
 `uk.ac.ed.inf.srl.scorer` | Provides classes and interfaces for internally scoring predicted versus gold annotations  
