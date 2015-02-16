@@ -63,8 +63,19 @@ Note that the specified model file will be overwritten if it already exists.
 
 ## Package overview
 
-TODO
-
+Package  | Description
+-------- | -----------
+`uk.ac.ed.inf.srl`  | Contains all `main` function classes for running the parsing pipeline 
+`uk.ac.ed.inf.srl.corpus` | Provides the classes for internally representing words, sentences, corpora and annotation objects
+`uk.ac.ed.inf.srl.features` | Provides the classes that define features for statistical classification
+`uk.ac.ed.inf.srl.io` | Provides IO classes for reading annotated texts and producing output in different formats
+`uk.ac.ed.inf.srl.languages` | Contains classes related to language-specific settings
+`uk.ac.ed.inf.srl.ml` | Provides classes and interfaces for learning and applying statistical models
+`uk.ac.ed.inf.srl.options` | Defines command-line options and helper classes
+`uk.ac.ed.inf.srl.preprocessor` | Provides classes for syntactic preprocessing steps
+`uk.ac.ed.inf.srl.rdf` | Utility classes for producing RDF representations
+`uk.ac.ed.inf.srl.scorer` | Provides classes and interfaces for internally scoring predicted versus gold annotations  
+`uk.ac.ed.inf.srl.util` | Miscellaneous utility classes 
 
 ## License
 
