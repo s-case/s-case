@@ -18,4 +18,10 @@ public class AssetRegistryRestApp extends Application {
     public static final String PART_VERSION = "/version/";
     public static final String VERSION = ROOT + BASE + PART_VERSION;
 
+    public static final String PART_PROJECT = "/project/";
+    public static final String PROJECT = ROOT + BASE + PART_VERSION;
+
+    public static final String PART_ARTEFACT = "/artefact/";
+    public static final String ARTEFACT = ROOT + BASE + PART_VERSION;
+
 }

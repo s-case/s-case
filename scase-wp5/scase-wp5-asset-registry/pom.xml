@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>scase-wp5-asset-registry</artifactId>
+    <name>SCASE - WP5 - AssetRegistry</name>
+    <description>The Asset Registry is responsible for storing
+    requirements and software artefacts</description>
+
+    <parent>
+        <groupId>eu.fp7.scase</groupId>
+        <artifactId>scase-wp5</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <jackson.version>2.4.4</jackson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
             <groupId>eu.fp7.scase</groupId>
-            <artifactId>scase-wp5</artifactId>
+            <artifactId>scase-base</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-	</parent>
-	<artifactId>scase-wp5-asset-registry</artifactId>
-	<packaging>pom</packaging>
-	<name>SCASE - WP5 - Asset Registry</name>
-	<modules>
-		<module>scase-wp5-asset-registry-datamodel</module>
-		<module>scase-wp5-asset-registry-backend</module>
-	</modules>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+    </dependencies>
+
 </project>
