@@ -1,8 +1,7 @@
 package eu.fp7.scase.assetregistry.data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 /**
  * entity class for project.
@@ -10,10 +9,12 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="project")
+@Table(name= "PROJECT")
 public class Project extends BaseEntity 
 {
-    @Column(name="column", nullable=false)
+    private static final long serialVersionUID = 1L;
+
+    @Column(name="PROJECTNAME", nullable=false)
     private String name;
 
     public String getName() {
@@ -23,5 +24,4 @@ public class Project extends BaseEntity
     public void setName(String name) {
         this.name = name;
     }
-
 }

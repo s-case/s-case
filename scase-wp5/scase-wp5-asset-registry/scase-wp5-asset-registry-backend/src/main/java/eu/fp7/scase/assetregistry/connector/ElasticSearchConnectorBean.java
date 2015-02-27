@@ -22,7 +22,7 @@ public class ElasticSearchConnectorBean {
 
     private Client client;
 
-    // instance a json mapper
+    // instance of a json mapper
     private ObjectMapper mapper;
 
 
@@ -34,8 +34,10 @@ public class ElasticSearchConnectorBean {
 
         LOG.info( "Sarting ElasticSearch Connector" );
 
+        final String esServerNode = System.getProperty("es_node");
+
         client = new TransportClient()
-                .addTransportAddress(new InetSocketTransportAddress("host1", 9300));
+                .addTransportAddress(new InetSocketTransportAddress(esServerNode, 9300));
     }
 
     @Produces

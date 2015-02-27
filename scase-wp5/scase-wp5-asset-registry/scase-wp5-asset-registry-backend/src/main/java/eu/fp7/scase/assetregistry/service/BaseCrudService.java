@@ -1,5 +1,6 @@
 package eu.fp7.scase.assetregistry.service;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -20,6 +21,7 @@ abstract class BaseCrudService<E extends BaseEntity> {
 
     public E create( final E entity ) {
         if ( entity.getId() == null ) {
+            entity.setCreatedAt(new Date());
             em().persist( entity );
             return entity;
         } else {
@@ -31,9 +33,8 @@ abstract class BaseCrudService<E extends BaseEntity> {
 
     public void delete( final E entity ) {
         if ( countUsed( entity ) > 0 ) {
-            throw new ScaseException( "Löschen fehlgeschlagen " +
-                                            getEntityClass().getSimpleName() +
-                                            " wird noch verwendet." );
+            throw new ScaseException( "Could not delete " +
+                                            getEntityClass().getSimpleName());
         }
         em().remove( entity );
     }

@@ -23,7 +23,7 @@ public final class ResourceTools {
     }
 
     /**
-     * Build a redirect UIR like path + entity.getId().
+     * Build a redirect URI like path + entity.getId().
      * @param path
      * @param entity
      * @return da URI

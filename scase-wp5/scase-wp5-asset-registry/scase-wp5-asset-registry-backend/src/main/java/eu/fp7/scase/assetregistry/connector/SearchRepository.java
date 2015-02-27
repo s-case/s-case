@@ -2,6 +2,7 @@ package eu.fp7.scase.assetregistry.connector;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.fp7.scase.assetregistry.data.Artefact;
+import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -47,6 +48,10 @@ public class SearchRepository {
         }
 
         return result;
+    }
+
+    public DeleteResponse delete(final Long id, final String type){
+        return client.prepareDelete(ElasticSearchConnectorBean.INDEX,type,id.toString()).execute().actionGet();
     }
 
     private QueryBuilder queryStringQuery( final String query ) {

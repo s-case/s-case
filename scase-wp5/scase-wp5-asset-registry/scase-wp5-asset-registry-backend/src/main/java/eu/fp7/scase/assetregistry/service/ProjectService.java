@@ -1,15 +1,20 @@
 package eu.fp7.scase.assetregistry.service;
 
+import javax.ejb.Stateful;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import eu.fp7.scase.assetregistry.data.Project;
+
+import java.util.Date;
 
 /**
  * service class for project.
  * @author rmagnus
  *
  */
+@Stateless
 public class ProjectService extends BaseCrudService<Project> {
 
     @PersistenceContext
@@ -25,6 +30,7 @@ public class ProjectService extends BaseCrudService<Project> {
         Project loaded = find(entity.getId());
         validateVersion(loaded, entity);
         loaded.setName(entity.getName());
+        loaded.setUpdatedAt(new Date());
 
         return loaded;
     }
