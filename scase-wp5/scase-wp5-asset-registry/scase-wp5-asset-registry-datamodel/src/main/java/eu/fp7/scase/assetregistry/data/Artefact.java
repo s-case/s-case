@@ -1,9 +1,6 @@
 package eu.fp7.scase.assetregistry.data;
 
-import org.elasticsearch.common.joda.time.DateTime;
-
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 @Entity

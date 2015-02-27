@@ -1,7 +1,6 @@
 package eu.fp7.scase.assetregistry.data;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * entity class for project.
