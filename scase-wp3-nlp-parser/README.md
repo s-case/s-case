@@ -41,7 +41,7 @@ There are two ways in which the pipeline can be applied to process and semantica
 
 (1) If all project dependencies are installed, the full pipeline can be invoked using the following command:
 
-`java -cp <CLASSPATH> uk.ac.ed.inf.srl.Parse eng -tokenize -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model -srl models/s-case.model [-printANN|-printRDF] <TEXTFILE>`
+`java -Xmx4g -cp <CLASSPATH> uk.ac.ed.inf.srl.CompletePipeline eng -tokenize -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model -srl models/s-case.model [-printANN|-printRDF] -test <TEXTFILE> -out <OUTPUTFILE>`
 
 Note that all `.model` files are statistical classification models that have been trained on corpora with syntactic and semantic annotations. The corpora are based on newswire text and a collection of requirements, respectively.   
 
@@ -57,7 +57,7 @@ Note that ANN and TTL represent to different output formats. ANN is a space-sepa
 
 Given a pair of text file and stand-off annotations in the ANN format, the statistical model underlying the semantic analysis module can be re-trained by executing the following command:
 
-`java -cp <CLASSPATH> uk.ac.ed.inf.srl.TrainSRL <TEXTFILE> <ANNFILE> <MODELFILE>`
+`java -Xmx4g -cp <CLASSPATH> uk.ac.ed.inf.srl.TrainSRL -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model <TEXTFILE> <ANNFILE> <MODELFILE>`
 
 Note that the specified model file will be overwritten if it already exists.
 
