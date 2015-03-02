@@ -31,6 +31,7 @@ public class ProjectService extends BaseCrudService<Project> {
         validateVersion(loaded, entity);
         loaded.setName(entity.getName());
         loaded.setUpdatedAt(new Date());
+        loaded.setArtefacts(entity.getArtefacts());
 
         return loaded;
     }
