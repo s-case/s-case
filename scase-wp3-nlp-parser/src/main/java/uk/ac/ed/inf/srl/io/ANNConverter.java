@@ -22,17 +22,14 @@ import uk.ac.ed.inf.srl.util.StandOffAnnotation;
 public class ANNConverter {
 
     private SentenceWriter writer;
-    private static CompletePipelineCMDLineOptions options;
     private static Preprocessor pp;
     
-    public ANNConverter(File f) {
+    public ANNConverter(CompletePipelineCMDLineOptions options) {
 		try {
-			writer = new CoNLL09Writer(f);
-	        options = new CompletePipelineCMDLineOptions(new String[] {"eng", "-tokenize", "-lemma", "models/lemma-train-eng.model", "-parser",
-	                "models/parse-train-eng.model", "-tagger", "models/tagger-train-eng.model", "-srl", "/dev/null", });
+			writer = new CoNLL09Writer(options.output); 
 	        pp = Language.getLanguage().getPreprocessor(options);
 		} catch (IOException e) {
-			System.err.println("Could not open output file " + f);
+			System.err.println("Could not open output file " + options.output);
 		}
 	}
 	
