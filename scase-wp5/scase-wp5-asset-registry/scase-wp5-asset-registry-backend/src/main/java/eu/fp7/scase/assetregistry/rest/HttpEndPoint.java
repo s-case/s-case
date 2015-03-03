@@ -1,6 +1,6 @@
 package eu.fp7.scase.assetregistry.rest;
 
-import eu.fp7.scase.assetregistry.connector.SearchRepository;
+import eu.fp7.scase.assetregistry.connector.ElasticSearchRepositoryService;
 import eu.fp7.scase.assetregistry.data.Artefact;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class HttpEndPoint extends Application{
     private final static Logger LOG = LoggerFactory.getLogger(HttpEndPoint.class);
 
     @Inject
-    SearchRepository search;
+    ElasticSearchRepositoryService search;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

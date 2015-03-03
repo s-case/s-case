@@ -16,9 +16,9 @@ import javax.enterprise.inject.Produces;
 
 @Singleton
 @Startup
-public class ElasticSearchConnectorBean {
+public class ElasticSearchConnectorService {
 
-    private final static Logger LOG = LoggerFactory.getLogger(ElasticSearchConnectorBean.class);
+    private final static Logger LOG = LoggerFactory.getLogger(ElasticSearchConnectorService.class);
 
     private Client client;
 
