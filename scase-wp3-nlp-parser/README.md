@@ -33,17 +33,17 @@ Roth, M., and Klein, E. (2015). Parsing Software Requirements with an Ontology-b
     
 ## Main classes
 
-This section describes the main classes for running and (re-)training the semantic analysis model used for extracting SE artifacts from text. 
+This section describes the main classes for running and (re-)training the semantic analysis model used for extracting SE artifacts from text. Note that it is recommended to use compile the module using `maven clean compile assembly:single` to produce a single JAR file that contains all dependencies. 
 
 ### Running the pipeline
 
-There are two ways in which the pipeline can be applied to process and semantically analyse software requirements expressed as natural language text: (1) as a standalone application from the command line, (2) via a Java class that provides static utility methods.
+There are two ways in which the pipeline can be applied to process and semantically analyse software requirements expressed as natural language text: (1) as a standalone application from the command line, (2) via a Java class that provides static utility methods. 
 
-(1) If all project dependencies are installed, the full pipeline can be invoked using the following command:
+(1) If all project dependencies are in the CLASSPATH, the full pipeline can be invoked using the following command:
 
 `java -Xmx4g -cp <CLASSPATH> uk.ac.ed.inf.srl.CompletePipeline eng -tokenize -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model -srl models/s-case.model [-printANN|-printRDF] -test <TEXTFILE> -out <OUTPUTFILE>`
 
-Note that all `.model` files are statistical classification models that have been trained on corpora with syntactic and semantic annotations. The corpora are based on newswire text and a collection of requirements, respectively.   
+Note that all `.model` files are statistical classification models that have been trained on corpora with syntactic and semantic annotations. These corpora are based on newswire text and a collection of requirements, respectively.   
 
 (2) Alternatively, the following class and methods can be used to setup and query a static instance of the pipeline:
 
@@ -55,9 +55,9 @@ Note that ANN and TTL represent to different output formats. ANN is a space-sepa
 
 ### Training the semantic analysis module
 
-Given a pair of text file and stand-off annotations in the ANN format, the statistical model underlying the semantic analysis module can be re-trained by executing the following command:
+Given pairs of text and stand-off annotation files, the statistical model underlying the semantic analysis module can be re-trained by executing the following command:
 
-`java -Xmx4g -cp <CLASSPATH> uk.ac.ed.inf.srl.TrainSRL -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model <TEXTFILE> <ANNFILE> <MODELFILE>`
+`java -Xmx4g -cp <CLASSPATH> uk.ac.ed.inf.srl.TrainSRL -lemma models/lemma-train-eng.model -tagger models/tagger-train-eng.model -parser models/parse-train-eng.model <TEXTFILE> <ANNFILE> [<TEXTFILE2> <ANNFILE2> ...] <MODELFILE>`
 
 Note that the specified model file will be overwritten if it already exists.
 
