@@ -11,17 +11,20 @@ import org.elasticsearch.search.SearchHit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchRepository {
+@Stateless
+public class ElasticSearchRepositoryService {
 
-    private final static Logger LOG = LoggerFactory.getLogger(SearchRepository.class);
+    private final static Logger LOG = LoggerFactory.getLogger(ElasticSearchRepositoryService.class);
 
-    @Inject
-    Client client;
+    @EJB
+    private ElasticSearchConnectorService elasticSearchConnectorService;
 
     @Inject
     ObjectMapper mapper;
@@ -29,8 +32,8 @@ public class SearchRepository {
     public List<Artefact> find(final String query){
         final QueryBuilder queryBuilder = queryStringQuery( query );
 
-        SearchResponse response = client.prepareSearch( ElasticSearchConnectorBean.INDEX )
-                .setTypes(ElasticSearchConnectorBean.SEARCH_TYPE )
+        SearchResponse response = getElasticSearchClient().prepareSearch(ElasticSearchConnectorService.INDEX)
+                .setTypes(ElasticSearchConnectorService.SEARCH_TYPE )
                 .setQuery( queryBuilder )
                 .setFrom( 0 ).setSize( 500 ).setExplain( true )
                 .execute()
@@ -51,11 +54,15 @@ public class SearchRepository {
     }
 
     public DeleteResponse delete(final Long id, final String type){
-        return client.prepareDelete(ElasticSearchConnectorBean.INDEX,type,id.toString()).execute().actionGet();
+        return getElasticSearchClient().prepareDelete(ElasticSearchConnectorService.INDEX,type,id.toString()).execute().actionGet();
     }
 
     private QueryBuilder queryStringQuery( final String query ) {
         QueryBuilder qb = QueryBuilders.queryString(query);
         return qb;
+    }
+
+    private Client getElasticSearchClient(){
+       return elasticSearchConnectorService.getClient();
     }
 }
