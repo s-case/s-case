@@ -3,8 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>scase-wp-5-asset-registry-datamodell</artifactId>
+	<artifactId>scase-wp5-asset-registry-datamodel</artifactId>
 	<name>SCASE - WP5 - AssetRegistry DataModel</name>
+    <packaging>jar</packaging>
 
 	<parent>
 		<groupId>eu.fp7.scase</groupId>

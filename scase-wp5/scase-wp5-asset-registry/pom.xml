@@ -7,12 +7,18 @@
     <name>SCASE - WP5 - AssetRegistry</name>
     <description>The Asset Registry is responsible for storing
     requirements and software artefacts</description>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>eu.fp7.scase</groupId>
         <artifactId>scase-wp5</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
+    <modules>
+        <module>scase-wp5-asset-registry-datamodel</module>
+        <module>scase-wp5-asset-registry-backend</module>
+    </modules>
 
     <properties>
         <jackson.version>2.4.4</jackson.version>
