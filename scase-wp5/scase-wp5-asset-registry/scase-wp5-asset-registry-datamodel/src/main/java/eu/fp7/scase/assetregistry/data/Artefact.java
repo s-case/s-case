@@ -4,12 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
  * JPA entity representation of an artefact
  *
  */
+@XmlRootElement
 @Entity
 @Table(name = "ARTEFACT")
 public class Artefact extends BaseEntity {

@@ -11,6 +11,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
+import javax.xml.bind.annotation.XmlElement;
 
 
 /**
@@ -40,6 +41,7 @@ implements Serializable
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
+    @XmlElement
     @Version
     private Long version;
 
