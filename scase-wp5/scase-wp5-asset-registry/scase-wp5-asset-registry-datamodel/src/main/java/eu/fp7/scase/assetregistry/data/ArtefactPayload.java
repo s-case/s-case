@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
+/**
+ * JPA entity representation of an artefact payload
+ */
 @Entity
 @Table(name = "ARTEFACTPAYLOAD")
 public class ArtefactPayload extends BaseEntity {

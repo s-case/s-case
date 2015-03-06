@@ -7,6 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.Date;
 
+/**
+ * Service to handle CRUD operations of artefacts
+ */
 @Stateless
 public class ArtefactService extends BaseCrudService<Artefact> {
 

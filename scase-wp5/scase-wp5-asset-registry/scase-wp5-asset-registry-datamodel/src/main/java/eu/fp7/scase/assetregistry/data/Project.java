@@ -1,12 +1,14 @@
 package eu.fp7.scase.assetregistry.data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.List;
 
 /**
- * entity class for project.
+ * JPA entity representation of a project.
  * @author rmagnus
- *
  */
 @Entity
 @Table(name= "PROJECT")

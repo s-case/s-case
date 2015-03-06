@@ -1,11 +1,10 @@
 package eu.fp7.scase.assetregistry.rest;
 
-import java.net.URI;
-import java.net.URISyntaxException;
+import eu.fp7.scase.assetregistry.data.BaseEntity;
 
 import javax.ws.rs.core.Response;
-
-import eu.fp7.scase.assetregistry.data.BaseEntity;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * Response Helpers.
