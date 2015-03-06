@@ -14,11 +14,6 @@
 	</parent>
 
 	<dependencies>
-		<dependency>
-			<groupId>eu.scasefp7</groupId>
-			<artifactId>scase-base</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -60,6 +55,20 @@
 			<version>3.0.10.Final</version>
 		</dependency>
 	</dependencies>
+
+        <build>
+        <plugins>
+
+		<plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <configuration>
+                            <excludeFilterFile>${project.build.outputDirectory}/findbugs/exclude.xml</excludeFilterFile>
+                        </configuration>
+		</plugin>
+
+        </plugins>
+        </build>
 
 
 </project>
