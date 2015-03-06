@@ -43,7 +43,7 @@ public class ArtefactResource {
     @DELETE
     @Path("{id}")
     public void delete( @PathParam("id") long id ) {
-        delete(id);
+        this.artefactService.delete(id);
     }
 
 }
