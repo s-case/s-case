@@ -1,7 +1,6 @@
 package eu.fp7.scase.assetregistry.service;
 
 import eu.fp7.scase.assetregistry.data.Artefact;
-import org.elasticsearch.common.joda.time.DateTime;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

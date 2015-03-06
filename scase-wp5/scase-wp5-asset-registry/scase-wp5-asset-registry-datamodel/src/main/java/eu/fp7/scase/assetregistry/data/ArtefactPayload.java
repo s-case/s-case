@@ -9,7 +9,10 @@ import javax.persistence.Table;
 @Table(name = "ARTEFACTPAYLOAD")
 public class ArtefactPayload extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 542435835493989083L;
 
     @Column(name = "TYPE")
     private PlayloadType type;

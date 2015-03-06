@@ -7,7 +7,10 @@ import java.util.List;
 @Table(name = "ARTEFACT")
 public class Artefact extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -8329957242653476838L;
 
     @Column(name="URI")
     private String uri;

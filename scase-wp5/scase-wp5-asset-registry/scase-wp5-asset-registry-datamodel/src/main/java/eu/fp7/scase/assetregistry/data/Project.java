@@ -12,7 +12,11 @@ import java.util.List;
 @Table(name= "PROJECT")
 public class Project extends BaseEntity 
 {
-    private static final long serialVersionUID = 1L;
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -6840914948412009544L;
 
     @Column(name="PROJECTNAME", nullable=false)
     private String name;
