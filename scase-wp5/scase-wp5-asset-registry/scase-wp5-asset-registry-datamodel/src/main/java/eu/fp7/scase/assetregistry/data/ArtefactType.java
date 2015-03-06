@@ -1,5 +1,8 @@
 package eu.fp7.scase.assetregistry.data;
 
+/**
+ * Enumeration of artefact types
+ */
 public enum ArtefactType {
     USE_CASE,
     ACTIVITY_DIAGRAM,
