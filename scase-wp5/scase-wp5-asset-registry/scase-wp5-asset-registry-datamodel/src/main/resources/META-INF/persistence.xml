@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="assetregistry">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <jta-data-source>java:/AssetRegistryDS</jta-data-source>
+
+        <class>eu.fp7.scase.assetregistry.data.Artefact</class>
+        <class>eu.fp7.scase.assetregistry.data.ArtefactPayload</class>
+        <class>eu.fp7.scase.assetregistry.data.Project</class>
+
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
         </properties>

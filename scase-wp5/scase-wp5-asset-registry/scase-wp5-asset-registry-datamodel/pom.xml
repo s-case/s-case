@@ -37,15 +37,15 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<scope>test</scope>
-			<version>4.2.14.Final</version>
+			<scope>provided</scope>
+			<version>4.2.17.Final</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<scope>provided</scope>
-			<version>4.2.14.Final</version>
+			<version>4.2.17.Final</version>
 		</dependency>
 
 		<dependency>
@@ -54,21 +54,33 @@
 			<scope>provided</scope>
 			<version>3.0.10.Final</version>
 		</dependency>
-	</dependencies>
 
-        <build>
+        <dependency>
+            <groupId>de.akquinet.jbosscc</groupId>
+            <artifactId>jbosscc-needle</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.8</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
         <plugins>
-
-		<plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>findbugs-maven-plugin</artifactId>
-                        <configuration>
-                            <excludeFilterFile>${project.build.outputDirectory}/findbugs/exclude.xml</excludeFilterFile>
-                        </configuration>
-		</plugin>
-
+    		<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <configuration>
+                    <excludeFilterFile>${project.build.outputDirectory}/findbugs/exclude.xml</excludeFilterFile>
+                </configuration>
+		    </plugin>
         </plugins>
-        </build>
-
+    </build>
 
 </project>

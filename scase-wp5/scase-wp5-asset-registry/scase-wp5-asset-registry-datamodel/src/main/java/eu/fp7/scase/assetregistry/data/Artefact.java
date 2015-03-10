@@ -1,10 +1,13 @@
 package eu.fp7.scase.assetregistry.data;
 
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,7 +33,7 @@ public class Artefact extends BaseEntity {
     @Column(name = "ARTEFACTNAME")
     private String name;
 
-    @Column(name = "DEPENDENCIES")
+    @ElementCollection
     private List<Long> dependencies;
 
     @Column(name = "TYPE")
@@ -39,7 +42,7 @@ public class Artefact extends BaseEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column(name = "TAGS")
+    @ElementCollection
     private List<String> tags;
 
     @OneToMany
