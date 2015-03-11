@@ -1,9 +1,12 @@
 package eu.fp7.scase.assetregistry.data;
 
-import javax.persistence.CollectionTable;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,7 +15,6 @@ import java.util.List;
 
 /**
  * JPA entity representation of an artefact
- *
  */
 @XmlRootElement
 @Entity
@@ -20,11 +22,11 @@ import java.util.List;
 public class Artefact extends BaseEntity {
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = -8329957242653476838L;
 
-    @Column(name="URI")
+    @Column(name = "URI")
     private String uri;
 
     @Column(name = "GROUPID")
@@ -33,7 +35,7 @@ public class Artefact extends BaseEntity {
     @Column(name = "ARTEFACTNAME")
     private String name;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Long> dependencies;
 
     @Column(name = "TYPE")
@@ -42,10 +44,10 @@ public class Artefact extends BaseEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> tags;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = javax.persistence.CascadeType.ALL)
     @Column(name = "PLAYLOAD")
     private List<ArtefactPayload> payload;
 
@@ -113,6 +115,13 @@ public class Artefact extends BaseEntity {
 
     public void setPayload(List<ArtefactPayload> payload) {
         this.payload = payload;
+    }
+
+    public void addPayload(ArtefactPayload artefactPayload) {
+        if (null == payload) {
+            payload = new ArrayList<ArtefactPayload>();
+        }
+        payload.add(artefactPayload);
     }
 
 }

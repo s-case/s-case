@@ -1,7 +1,9 @@
 package eu.fp7.scase.assetregistry.data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -25,7 +27,7 @@ public class Project extends BaseEntity
     @Column(name="PROJECTNAME", nullable=false)
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @Column(nullable = true)
     private List<Artefact> artefacts;
 
