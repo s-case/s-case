@@ -26,7 +26,10 @@ public class ElasticSearchConnectorService {
     private ObjectMapper mapper;
 
 
-    public static final String INDEX = "searchindex";
+    public static final String INDEX_PROJECTS = "project_index";
+    public static final String INDEX_ARTEFACTS = "artefact_index";
+    public static final String TYPE_ARTEFACT = "Artefact";
+    public static final String TYPE_PROJECT = "Project";
     public static final String SEARCH_TYPE = "searchtype";
 
     @PostConstruct

@@ -26,6 +26,7 @@ public class ArtefactTest {
         Artefact artefact = builder.buildAndSave();
         Artefact artefactFromDb = entityManager.find(Artefact.class, artefact.getId());
         Assert.assertEquals(artefact.getId(), artefactFromDb.getId());
+        Assert.assertEquals(2,artefactFromDb.getTags().size());
 
         databaseRule.getTransactionHelper().executeInTransaction(new VoidRunnable() {
             @Override
@@ -34,6 +35,7 @@ public class ArtefactTest {
                 entityManager.persist(artefactWithPlayload);
                 Artefact artefactFromDbWithPayload = entityManager.find(Artefact.class, artefactWithPlayload.getId());
                 Assert.assertEquals(artefactWithPlayload.getPayload().size(),artefactFromDbWithPayload.getPayload().size());
+                Assert.assertEquals(2,artefactFromDbWithPayload.getPayload().size());
             }
         });
     }

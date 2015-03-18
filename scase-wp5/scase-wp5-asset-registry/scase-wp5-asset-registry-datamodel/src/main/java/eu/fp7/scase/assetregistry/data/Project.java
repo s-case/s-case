@@ -1,5 +1,8 @@
 package eu.fp7.scase.assetregistry.data;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,8 +30,9 @@ public class Project extends BaseEntity
     @Column(name="PROJECTNAME", nullable=false)
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @Column(nullable = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Artefact> artefacts;
 
     public String getName() {

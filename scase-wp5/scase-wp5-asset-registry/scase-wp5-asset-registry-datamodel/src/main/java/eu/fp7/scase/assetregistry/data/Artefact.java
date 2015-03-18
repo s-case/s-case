@@ -1,7 +1,9 @@
 package eu.fp7.scase.assetregistry.data;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -11,7 +13,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * JPA entity representation of an artefact
@@ -35,7 +39,8 @@ public class Artefact extends BaseEntity {
     @Column(name = "ARTEFACTNAME")
     private String name;
 
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection()
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Long> dependencies;
 
     @Column(name = "TYPE")
@@ -44,11 +49,13 @@ public class Artefact extends BaseEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection()
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<String> tags;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = javax.persistence.CascadeType.ALL)
+    @OneToMany(cascade = javax.persistence.CascadeType.ALL)
     @Column(name = "PLAYLOAD")
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<ArtefactPayload> payload;
 
     public String getUri() {
@@ -123,5 +130,4 @@ public class Artefact extends BaseEntity {
         }
         payload.add(artefactPayload);
     }
-
 }
