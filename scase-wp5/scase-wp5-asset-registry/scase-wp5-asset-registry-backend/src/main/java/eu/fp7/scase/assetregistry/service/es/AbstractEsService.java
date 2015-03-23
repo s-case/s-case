@@ -28,11 +28,11 @@ public abstract class AbstractEsService<E extends BaseEntity> {
     public abstract UpdateResponse update(final E entity) throws JsonProcessingException;
 
     public DeleteResponse delete(long id, final String index, final String type){
-        return connectorService.getClient().prepareDelete(index,type,new Long(id).toString()).execute().actionGet();
+        return connectorService.getClient().prepareDelete(index,type,Long.toString(id)).execute().actionGet();
     }
 
     public DeleteResponse delete(final E entity, final String index, final String type){
-        return connectorService.getClient().prepareDelete(index,type,entity.getId().toString()).execute().actionGet();
+        return connectorService.getClient().prepareDelete(index,type,Long.toString(entity.getId())).execute().actionGet();
     }
 
     protected QueryBuilder queryStringQuery( final String query ) {
