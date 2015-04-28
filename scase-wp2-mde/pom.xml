@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>eu.fp7.scase</groupId>
+
+    <parent>
+            <groupId>eu.scasefp7</groupId>
+            <artifactId>scase</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
   <artifactId>scase-wp2-mde</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>RESTfulMDEEngine</name>
-  <url>http://maven.apache.org</url>
 
-	<parent>
-		<groupId>eu.fp7</groupId>
-		<artifactId>scase</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-	</parent>
+  <name>SCASE - WP2 - RESTfulMDEEngine</name>
 
 </project>

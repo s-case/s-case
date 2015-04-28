@@ -1,0 +1,19 @@
+N
+ArgWord
+Position                # 
+ArgDeprel      
+ArgDeprel+PredLemma
+ArgPOS+PredLemmaSense   
+PredParentPOS
+PredWord
+POSPath+Position        # WordEmbeddingAvgArg WordEmbeddingCompArg
+
+V
+ArgWord                 #
+Position                # 
+ArgDeprel               # 
+ArgDeprel+PredLemma     #
+ArgPOS+PredLemmaSense   # new split: 996 
+PredParentPOS           # 999
+PredWord                # 1000
+POSPath+Position        # 1003 (+RR => 72.22) WordEmbeddingAvgArg     # +RR: 72.32 WordEmbeddingCompArg    # +RR: 72.41 (gold predicates: 79.05)

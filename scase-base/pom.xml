@@ -5,10 +5,10 @@
 
 	<artifactId>scase-base</artifactId>
 	<name>SCASE - Base</name>
-        <description>base classes and tests</description>
+	<description>base classes and tests</description>
 
 	<parent>
-		<groupId>eu.fp7</groupId>
+		<groupId>eu.scasefp7</groupId>
 		<artifactId>scase</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
@@ -28,8 +28,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-                        <groupId>org.easytesting</groupId>
-                        <artifactId>fest-assert-core</artifactId>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-assert-core</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

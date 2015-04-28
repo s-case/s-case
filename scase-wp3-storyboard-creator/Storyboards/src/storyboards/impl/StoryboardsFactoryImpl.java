@@ -17,7 +17,6 @@ import storyboards.*;
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsFactory {
@@ -25,17 +24,16 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static StoryboardsFactory init() {
 		try {
-			StoryboardsFactory theStoryboardsFactory = (StoryboardsFactory) EPackage.Registry.INSTANCE
-					.getEFactory(StoryboardsPackage.eNS_URI);
+			StoryboardsFactory theStoryboardsFactory = (StoryboardsFactory)EPackage.Registry.INSTANCE.getEFactory(StoryboardsPackage.eNS_URI);
 			if (theStoryboardsFactory != null) {
 				return theStoryboardsFactory;
 			}
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new StoryboardsFactoryImpl();
@@ -45,7 +43,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardsFactoryImpl() {
@@ -55,69 +52,57 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case StoryboardsPackage.PROPERTY:
-			return createProperty();
-		case StoryboardsPackage.STORYBOARD_DIAGRAM:
-			return createStoryboardDiagram();
-		case StoryboardsPackage.ACTION:
-			return createAction();
-		case StoryboardsPackage.CONDITION:
-			return createCondition();
-		case StoryboardsPackage.START_NODE:
-			return createStartNode();
-		case StoryboardsPackage.END_NODE:
-			return createEndNode();
-		case StoryboardsPackage.CONDITION_PATH:
-			return createConditionPath();
-		case StoryboardsPackage.STORYBOARD:
-			return createStoryboard();
-		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+			case StoryboardsPackage.PROPERTY: return createProperty();
+			case StoryboardsPackage.STORYBOARD_DIAGRAM: return createStoryboardDiagram();
+			case StoryboardsPackage.ACTION: return createAction();
+			case StoryboardsPackage.CONDITION: return createCondition();
+			case StoryboardsPackage.START_NODE: return createStartNode();
+			case StoryboardsPackage.END_NODE: return createEndNode();
+			case StoryboardsPackage.CONDITION_PATH: return createConditionPath();
+			case StoryboardsPackage.STORYBOARD: return createStoryboard();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case StoryboardsPackage.ACTION_ENUM:
-			return createActionEnumFromString(eDataType, initialValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case StoryboardsPackage.ACTION_ENUM:
+				return createActionEnumFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case StoryboardsPackage.ACTION_ENUM:
-			return convertActionEnumToString(eDataType, instanceValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case StoryboardsPackage.ACTION_ENUM:
+				return convertActionEnumToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Property createProperty() {
@@ -128,7 +113,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardDiagram createStoryboardDiagram() {
@@ -139,7 +123,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Action createAction() {
@@ -150,7 +133,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Condition createCondition() {
@@ -161,7 +143,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StartNode createStartNode() {
@@ -172,7 +153,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EndNode createEndNode() {
@@ -183,7 +163,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ConditionPath createConditionPath() {
@@ -194,7 +173,6 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Storyboard createStoryboard() {
@@ -205,21 +183,17 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ActionEnum createActionEnumFromString(EDataType eDataType, String initialValue) {
 		ActionEnum result = ActionEnum.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-					+ eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertActionEnumToString(EDataType eDataType, Object instanceValue) {
@@ -229,17 +203,15 @@ public class StoryboardsFactoryImpl extends EFactoryImpl implements StoryboardsF
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardsPackage getStoryboardsPackage() {
-		return (StoryboardsPackage) getEPackage();
+		return (StoryboardsPackage)getEPackage();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @deprecated
 	 * @generated
 	 */

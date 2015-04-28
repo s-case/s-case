@@ -86,7 +86,6 @@ import org.eclipse.ui.PartInitException;
  * This is a simple wizard for creating a new model file.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class StoryboardsModelWizard extends Wizard implements INewWizard {
@@ -94,28 +93,22 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
-	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
-			.asList(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsEditorFilenameExtensions").split(
-					"\\s*,\\s*")));
+	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
-	public static final String FORMATTED_FILE_EXTENSIONS = StoryboardsEditorPlugin.INSTANCE.getString(
-			"_UI_StoryboardsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+	public static final String FORMATTED_FILE_EXTENSIONS = StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected StoryboardsPackage storyboardsPackage = StoryboardsPackage.eINSTANCE;
@@ -124,7 +117,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This caches an instance of the model factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected StoryboardsFactory storyboardsFactory = storyboardsPackage.getStoryboardsFactory();
@@ -133,7 +125,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This is the file creation page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected StoryboardsModelWizardNewFileCreationPage newFileCreationPage;
@@ -142,7 +133,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This is the initial object creation page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected StoryboardsModelWizardInitialObjectCreationPage initialObjectCreationPage;
@@ -151,7 +141,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Remember the selection during initialization for populating the default container.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected IStructuredSelection selection;
@@ -160,7 +149,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Remember the workbench during initialization.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected IWorkbench workbench;
@@ -169,7 +157,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Caches the names of the types that can be created as the root object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected List<String> initialObjectNames;
@@ -178,22 +165,19 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This just records the information.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(StoryboardsEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-				.getImageDescriptor(StoryboardsEditorPlugin.INSTANCE.getImage("full/wizban/NewStoryboards")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(StoryboardsEditorPlugin.INSTANCE.getImage("full/wizban/NewStoryboards")));
 	}
 
 	/**
 	 * Returns the names of the types that can be created as the root object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected Collection<String> getInitialObjectNames() {
@@ -201,7 +185,7 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 			initialObjectNames = new ArrayList<String>();
 			for (EClassifier eClassifier : storyboardsPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
-					EClass eClass = (EClass) eClassifier;
+					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
 						initialObjectNames.add(eClass.getName());
 					}
@@ -216,11 +200,10 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Create a new model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass) storyboardsPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EClass eClass = (EClass)storyboardsPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
 		EObject rootObject = storyboardsFactory.create(eClass);
 		return rootObject;
 	}
@@ -229,7 +212,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Do the work after everything is specified.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -241,41 +223,44 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 
 			// Do the work within an operation.
 			//
-			WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-				@Override
-				protected void execute(IProgressMonitor progressMonitor) {
-					try {
-						// Create a resource set
-						//
-						ResourceSet resourceSet = new ResourceSetImpl();
+			WorkspaceModifyOperation operation =
+				new WorkspaceModifyOperation() {
+					@Override
+					protected void execute(IProgressMonitor progressMonitor) {
+						try {
+							// Create a resource set
+							//
+							ResourceSet resourceSet = new ResourceSetImpl();
 
-						// Get the URI of the model file.
-						//
-						URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+							// Get the URI of the model file.
+							//
+							URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
-						// Create a resource for this file.
-						//
-						Resource resource = resourceSet.createResource(fileURI);
+							// Create a resource for this file.
+							//
+							Resource resource = resourceSet.createResource(fileURI);
 
-						// Add the initial model object to the contents.
-						//
-						EObject rootObject = createInitialModel();
-						if (rootObject != null) {
-							resource.getContents().add(rootObject);
+							// Add the initial model object to the contents.
+							//
+							EObject rootObject = createInitialModel();
+							if (rootObject != null) {
+								resource.getContents().add(rootObject);
+							}
+
+							// Save the contents of the resource to the file system.
+							//
+							Map<Object, Object> options = new HashMap<Object, Object>();
+							options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
+							resource.save(options);
 						}
-
-						// Save the contents of the resource to the file system.
-						//
-						Map<Object, Object> options = new HashMap<Object, Object>();
-						options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-						resource.save(options);
-					} catch (Exception exception) {
-						StoryboardsEditorPlugin.INSTANCE.log(exception);
-					} finally {
-						progressMonitor.done();
+						catch (Exception exception) {
+							StoryboardsEditorPlugin.INSTANCE.log(exception);
+						}
+						finally {
+							progressMonitor.done();
+						}
 					}
-				}
-			};
+				};
 
 			getContainer().run(false, false, operation);
 
@@ -286,28 +271,29 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 			final IWorkbenchPart activePart = page.getActivePart();
 			if (activePart instanceof ISetSelectionTarget) {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
-				getShell().getDisplay().asyncExec(new Runnable() {
-					public void run() {
-						((ISetSelectionTarget) activePart).selectReveal(targetSelection);
-					}
-				});
+				getShell().getDisplay().asyncExec
+					(new Runnable() {
+						 public void run() {
+							 ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
+						 }
+					 });
 			}
 
 			// Open an editor on the new file.
 			//
 			try {
-				page.openEditor(new FileEditorInput(modelFile),
-						workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
-			} catch (PartInitException exception) {
-				MessageDialog
-						.openError(workbenchWindow.getShell(),
-								StoryboardsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
-								exception.getMessage());
+				page.openEditor
+					(new FileEditorInput(modelFile),
+					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
+			}
+			catch (PartInitException exception) {
+				MessageDialog.openError(workbenchWindow.getShell(), StoryboardsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			StoryboardsEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
@@ -317,7 +303,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This is the one page of the wizard.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public class StoryboardsModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
@@ -325,7 +310,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public StoryboardsModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
@@ -336,7 +320,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		 * The framework calls this to see if the file is correct.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		@Override
@@ -345,8 +328,7 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(StoryboardsEditorPlugin.INSTANCE.getString(key,
-							new Object[] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(StoryboardsEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -357,7 +339,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public IFile getModelFile() {
@@ -369,14 +350,12 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * This is the page where the type of object to create is selected.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public class StoryboardsModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected Combo initialObjectField;
@@ -391,7 +370,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected Combo encodingField;
@@ -400,7 +378,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public StoryboardsModelWizardInitialObjectCreationPage(String pageId) {
@@ -410,12 +387,10 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -484,19 +459,17 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected ModifyListener validator = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				setPageComplete(validatePage());
-			}
-		};
+				public void modifyText(ModifyEvent e) {
+					setPageComplete(validatePage());
+				}
+			};
 
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected boolean validatePage() {
@@ -506,7 +479,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		@Override
@@ -516,7 +488,8 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 				if (initialObjectField.getItemCount() == 1) {
 					initialObjectField.clearSelection();
 					encodingField.setFocus();
-				} else {
+				}
+				else {
 					encodingField.clearSelection();
 					initialObjectField.setFocus();
 				}
@@ -526,7 +499,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public String getInitialObjectName() {
@@ -543,7 +515,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		public String getEncoding() {
@@ -554,13 +525,13 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		 * Returns the label for the specified type name.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected String getLabel(String typeName) {
 			try {
 				return StoryboardsEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
-			} catch (MissingResourceException mre) {
+			}
+			catch(MissingResourceException mre) {
 				StoryboardsEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
@@ -569,15 +540,12 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * 
 		 * @generated
 		 */
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(
-						StoryboardsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-						.hasMoreTokens();) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(StoryboardsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -589,7 +557,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * The framework calls this to create the contents of the wizard.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -598,10 +565,8 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 		//
 		newFileCreationPage = new StoryboardsModelWizardNewFileCreationPage("Whatever", selection);
 		newFileCreationPage.setTitle(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsModelWizard_label"));
-		newFileCreationPage.setDescription(StoryboardsEditorPlugin.INSTANCE
-				.getString("_UI_StoryboardsModelWizard_description"));
-		newFileCreationPage.setFileName(StoryboardsEditorPlugin.INSTANCE
-				.getString("_UI_StoryboardsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage.setDescription(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsModelWizard_description"));
+		newFileCreationPage.setFileName(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -613,7 +578,7 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 			if (selectedElement instanceof IResource) {
 				// Get the resource parent, if its a file.
 				//
-				IResource selectedResource = (IResource) selectedElement;
+				IResource selectedResource = (IResource)selectedElement;
 				if (selectedResource.getType() == IResource.FILE) {
 					selectedResource = selectedResource.getParent();
 				}
@@ -627,11 +592,10 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = StoryboardsEditorPlugin.INSTANCE
-							.getString("_UI_StoryboardsEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
-					for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
+					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
 						modelFilename = defaultModelBaseFilename + i + "." + defaultModelFilenameExtension;
 					}
 					newFileCreationPage.setFileName(modelFilename);
@@ -639,10 +603,8 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 			}
 		}
 		initialObjectCreationPage = new StoryboardsModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(StoryboardsEditorPlugin.INSTANCE
-				.getString("_UI_StoryboardsModelWizard_label"));
-		initialObjectCreationPage.setDescription(StoryboardsEditorPlugin.INSTANCE
-				.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage.setTitle(StoryboardsEditorPlugin.INSTANCE.getString("_UI_StoryboardsModelWizard_label"));
+		initialObjectCreationPage.setDescription(StoryboardsEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 
@@ -650,7 +612,6 @@ public class StoryboardsModelWizard extends Wizard implements INewWizard {
 	 * Get the file from the page.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public IFile getModelFile() {

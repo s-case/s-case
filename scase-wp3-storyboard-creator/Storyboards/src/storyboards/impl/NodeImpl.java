@@ -16,7 +16,7 @@ import storyboards.StoryboardsPackage;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node {
@@ -29,7 +29,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected NodeImpl() {
@@ -39,7 +38,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

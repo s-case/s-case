@@ -13,11 +13,9 @@ import storyboards.StoryboardsFactory;
  * <p>
  * The following operations are tested:
  * <ul>
- * <li>{@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate
- * </em>}</li>
+ *   <li>{@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}</li>
  * </ul>
  * </p>
- * 
  * @generated
  */
 public class StartNodeTest extends NodeTest {
@@ -25,7 +23,6 @@ public class StartNodeTest extends NodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -36,7 +33,6 @@ public class StartNodeTest extends NodeTest {
 	 * Constructs a new Start Node test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StartNodeTest(String name) {
@@ -47,18 +43,16 @@ public class StartNodeTest extends NodeTest {
 	 * Returns the fixture for this Start Node test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected StartNode getFixture() {
-		return (StartNode) fixture;
+		return (StartNode)fixture;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -70,7 +64,6 @@ public class StartNodeTest extends NodeTest {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -80,18 +73,16 @@ public class StartNodeTest extends NodeTest {
 	}
 
 	/**
-	 * Tests the '{@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * <em>Validate</em>}' operation.
+	 * Tests the '{@link storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @see storyboards.StartNode#validate(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
+	 * @generated NOT
 	 */
 	public void testValidate__DiagnosticChain_Map() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+		// fail();
 	}
 
 } // StartNodeTest

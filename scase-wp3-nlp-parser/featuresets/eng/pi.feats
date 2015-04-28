@@ -1,0 +1,16 @@
+N
+PredLemma
+PredParentPOS     # 
+PredDeprel        # 
+DepSubCat
+PredPOS
+PredWord                # 
+ChildWordSet            # WordEmbeddingPred
+
+V
+PredWord          #  TP  TP+FN
+PredParentPOS     # 763  1057           
+PredDeprel        # 764  1039 
+DepSubCat         
+PredPOS           # 
+ChildWordSet      # 756   920 WordEmbeddingPred # always in :)

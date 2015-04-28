@@ -11,7 +11,6 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test suite for the '<em><b>Storyboards</b></em>' model.
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class StoryboardsAllTests extends TestSuite {
@@ -19,7 +18,6 @@ public class StoryboardsAllTests extends TestSuite {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -29,7 +27,6 @@ public class StoryboardsAllTests extends TestSuite {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static Test suite() {
@@ -41,7 +38,6 @@ public class StoryboardsAllTests extends TestSuite {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public StoryboardsAllTests(String name) {
