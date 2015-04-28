@@ -24,11 +24,11 @@
 	<modules>
 		<module>scase-build</module>
 		<module>scase-base</module>
-		<module>scase-eclipse</module>
+		<module>scase-eclipse-template</module>
 		<module>scase-wp2-kyrcha-test</module>
 		<module>scase-wp2-mde</module>
-    <module>scase-wp3-nlp-parser</module>
-  </modules>
+                <module>scase-wp3-nlp-parser</module>
+        </modules>
 
 	<prerequisites>
 		<maven>3.0.0</maven>
