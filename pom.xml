@@ -9,7 +9,7 @@
     <url/>
 
     <parent>
-        <groupId>eu.fp7.scase</groupId>
+        <groupId>eu.scasefp7</groupId>
         <artifactId>scase-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>./parent/pom.xml</relativePath>

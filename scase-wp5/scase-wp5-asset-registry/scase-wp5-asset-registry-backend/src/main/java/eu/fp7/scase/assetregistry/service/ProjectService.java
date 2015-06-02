@@ -1,43 +1,67 @@
 package eu.fp7.scase.assetregistry.service;
 
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
+import eu.fp7.scase.assetregistry.connector.ElasticSearchConnectorService;
 import eu.fp7.scase.assetregistry.data.Project;
+import eu.fp7.scase.assetregistry.service.db.ProjectDbService;
+import eu.fp7.scase.assetregistry.service.es.ProjectEsService;
+import eu.fp7.scase.assetregistry.service.exception.NotCreatedException;
+import eu.fp7.scase.assetregistry.service.exception.NotUpdatedException;
 
-import java.util.Date;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import java.util.List;
 
 /**
- * service class for project.
- * @author rmagnus
- *
+ * Created by missler on 17/03/15.
  */
 @Stateless
-public class ProjectService extends BaseCrudService<Project> {
+public class ProjectService {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    @EJB
+    private ProjectDbService dbService;
 
-    @Override
-    Class<Project> getEntityClass() {
-        return Project.class;
+    @EJB
+    private ProjectEsService esService;
+
+    public Project find(long id){
+        Project project = dbService.find(id);
+        return project;
     }
 
-    @Override
-    public Project update(Project entity) {
-        Project loaded = find(entity.getId());
-        validateVersion(loaded, entity);
-        loaded.setName(entity.getName());
-        loaded.setUpdatedAt(new Date());
-        loaded.setArtefacts(entity.getArtefacts());
-
-        return loaded;
+    public List<Project> find(String query){
+        List<Project> projects = esService.find(query);
+        return projects;
     }
 
-    @Override
-    protected EntityManager em() {
-        return entityManager;
+    public Project create(Project project){
+
+        try {
+            project = dbService.create(project);
+            esService.index(project);
+        } catch (Throwable thrown) {
+            throw new NotCreatedException(Project.class,project.getId(),thrown);
+        }
+
+        return project;
     }
 
+    public Project update(Project project){
+        try{
+            project = dbService.update(project);
+            esService.update(project);
+        }catch(Throwable thrown){
+            throw new NotUpdatedException(Project.class,project.getId(),thrown);
+        }
+        return project;
+    }
+
+    public void delete(long id){
+        esService.delete(id, ElasticSearchConnectorService.INDEX_PROJECTS,ElasticSearchConnectorService.TYPE_PROJECT);
+        dbService.delete(id);
+    }
+
+    public void delete(Project project){
+        esService.delete(project, ElasticSearchConnectorService.INDEX_PROJECTS,ElasticSearchConnectorService.TYPE_PROJECT);
+        dbService.delete(project);
+    }
 }

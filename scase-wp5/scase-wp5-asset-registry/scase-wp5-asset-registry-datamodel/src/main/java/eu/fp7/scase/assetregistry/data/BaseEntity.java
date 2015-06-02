@@ -1,9 +1,17 @@
 package eu.fp7.scase.assetregistry.data;
 
-import org.elasticsearch.common.joda.time.DateTime;
-
-import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Version;
+import javax.xml.bind.annotation.XmlElement;
 
 
 /**
@@ -13,8 +21,13 @@ import java.util.Date;
  */
 @MappedSuperclass
 public abstract class BaseEntity
+implements Serializable
+
 {
-    private static final long serialVersionUID = 1L;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 4775486465844722741L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +41,7 @@ public abstract class BaseEntity
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
+    @XmlElement
     @Version
     private Long version;
 

@@ -1,15 +1,36 @@
 package eu.fp7.scase.assetregistry.data;
 
-import javax.persistence.*;
-import java.util.List;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * JPA entity representation of an artefact
+ */
+@XmlRootElement
 @Entity
 @Table(name = "ARTEFACT")
 public class Artefact extends BaseEntity {
 
-    private static final long serialVersionUID = 1L;
+    /**
+     *
+     */
+    private static final long serialVersionUID = -8329957242653476838L;
 
-    @Column(name="URI")
+    @Column(name = "URI")
     private String uri;
 
     @Column(name = "GROUPID")
@@ -18,7 +39,8 @@ public class Artefact extends BaseEntity {
     @Column(name = "ARTEFACTNAME")
     private String name;
 
-    @Column(name = "DEPENDENCIES")
+    @ElementCollection()
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Long> dependencies;
 
     @Column(name = "TYPE")
@@ -27,11 +49,13 @@ public class Artefact extends BaseEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column(name = "TAGS")
+    @ElementCollection()
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<String> tags;
 
-    @OneToMany
+    @OneToMany(cascade = javax.persistence.CascadeType.ALL)
     @Column(name = "PLAYLOAD")
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<ArtefactPayload> payload;
 
     public String getUri() {
@@ -100,4 +124,10 @@ public class Artefact extends BaseEntity {
         this.payload = payload;
     }
 
+    public void addPayload(ArtefactPayload artefactPayload) {
+        if (null == payload) {
+            payload = new ArrayList<ArtefactPayload>();
+        }
+        payload.add(artefactPayload);
+    }
 }

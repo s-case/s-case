@@ -1,4 +1,4 @@
-package eu.fp7.scase.assetregistry.service;
+package eu.fp7.scase.assetregistry.service.db;
 
 import java.util.Date;
 import java.util.List;
@@ -13,7 +13,7 @@ import eu.fp7.scase.assetregistry.data.BaseEntity;
 import eu.fp7.scase.base.ScaseException;
 
 
-abstract class BaseCrudService<E extends BaseEntity> {
+abstract class BaseCrudDbService<E extends BaseEntity> {
 
     public static final int MAX_RESULTS = 5000;
 

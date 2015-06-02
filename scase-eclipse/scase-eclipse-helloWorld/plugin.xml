@@ -7,7 +7,7 @@
       <actionSet
             label="Sample Action Set"
             visible="true"
-            id="eu.fp7.scase.scaseEclipse.scaseEclipeHelloWorld.actionSet">
+            id="eu.scasefp7.scaseEclipse.scaseEclipeHelloWorld.actionSet">
          <menu
                label="Sample &amp;Menu"
                id="sampleMenu">
@@ -18,11 +18,11 @@
          <action
                label="&amp;Sample Action"
                icon="icons/sample.gif"
-               class="eu.fp7.scase.scaseeclipse.scaseeclipehelloworld.actions.SampleAction"
+               class="eu.scasefp7.scaseeclipse.scaseeclipehelloworld.actions.SampleAction"
                tooltip="Hello, Eclipse world"
                menubarPath="sampleMenu/sampleGroup"
                toolbarPath="sampleGroup"
-               id="eu.fp7.scase.scaseeclipse.scaseeclipehelloworld.actions.SampleAction">
+               id="eu.scasefp7.scaseeclipse.scaseeclipehelloworld.actions.SampleAction">
          </action>
       </actionSet>
    </extension>

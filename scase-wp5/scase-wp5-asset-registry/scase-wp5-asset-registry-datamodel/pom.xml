@@ -3,21 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>scase-wp-5-asset-registry-datamodell</artifactId>
+	<artifactId>scase-wp5-asset-registry-datamodel</artifactId>
 	<name>SCASE - WP5 - AssetRegistry DataModel</name>
+    <packaging>jar</packaging>
 
 	<parent>
-		<groupId>eu.fp7.scase</groupId>
+		<groupId>eu.scasefp7</groupId>
 		<artifactId>scase-wp5-asset-registry</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
-		<dependency>
-			<groupId>eu.fp7.scase</groupId>
-			<artifactId>scase-base</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -41,15 +37,15 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<scope>test</scope>
-			<version>4.2.14.Final</version>
+			<scope>provided</scope>
+			<version>4.2.17.Final</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<scope>provided</scope>
-			<version>4.2.14.Final</version>
+			<version>4.2.17.Final</version>
 		</dependency>
 
 		<dependency>
@@ -58,7 +54,33 @@
 			<scope>provided</scope>
 			<version>3.0.10.Final</version>
 		</dependency>
-	</dependencies>
 
+        <dependency>
+            <groupId>de.akquinet.jbosscc</groupId>
+            <artifactId>jbosscc-needle</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.8</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+    		<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <configuration>
+                    <excludeFilterFile>${project.build.outputDirectory}/findbugs/exclude.xml</excludeFilterFile>
+                </configuration>
+		    </plugin>
+        </plugins>
+    </build>
 
 </project>
