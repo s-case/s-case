@@ -186,6 +186,30 @@ public class StaticPipeline
 		}
 		return retval;
 	}
+
+    public static JSONArray findQueryTerms(String question)
+    {
+	JSONArray terms = new JSONArray();
+
+	try
+	{
+	    Sentence s = pipeline.parse(question);
+
+	    for(Word w : s)
+	    {
+//		System.err.println("Word: " + w.getForm() + " " + w.getPOS());
+		if(w.getPOS().startsWith("NN"))
+		    terms.put(w.getLemma());
+	    }
+
+	    return terms;
+	} 
+	catch(Exception e)
+	{
+	    e.printStackTrace();
+	    return terms;
+	}
+    }
 	
     private static String id(Word w)
     {
